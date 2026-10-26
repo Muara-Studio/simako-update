@@ -1,0 +1,152 @@
+/* Master > API dan Integrasi (5.32), dimuat dari modules/integrasi/views/api.php.
+   Satu aksen hijau dari token SIMAKO, warna status hanya untuk lencana status. Huruf monospace hanya untuk kunci,
+   awalan kunci, jalur endpoint, dan contoh kode. Ponsel di bawah 767.98 px memakai pola global ponsel.css. */
+.s-integrasi{--s-mono:ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace}
+.s-int-pengantar{margin:-6px 0 20px;max-width:78ch;font-size:13px;color:var(--s-mid)}
+.s-int-kartu .s-card-h .t span{display:block;margin-top:2px}
+.s-integrasi .s-kosong-blok .btn span{color:inherit;font-size:inherit;max-width:none}
+.s-integrasi .s-kosong-blok .btn i{font-size:16px;color:inherit;margin:0}
+
+/* Tab: lencana jumlah mengikuti .s-tabs bawaan */
+.s-int-tablist{display:flex;gap:4px;flex-wrap:wrap}
+
+/* Tabel */
+.s-int-tabel td{vertical-align:top!important}
+.s-int-nama{display:block;font-weight:600;color:var(--s-ink)}
+.s-int-sub{display:block;font-size:12px;color:var(--s-mid);line-height:1.4;margin-top:2px}
+.s-int-sub.d-inline{display:inline}
+.s-int-prefix,.s-int-jalur,.s-int-daftar code,.s-int-rinci code{font-family:var(--s-mono);font-size:12px;color:var(--s-ink2);background:var(--s-alt);border:1px solid var(--s-line2);border-radius:var(--r-sm);padding:1px 6px;white-space:nowrap}
+.s-int-jalur{white-space:normal;overflow-wrap:anywhere}
+.s-int-chips{display:flex;flex-wrap:wrap;gap:4px}
+.s-int-chip{display:inline-flex;align-items:center;font-size:11.5px;font-weight:500;color:var(--s-ink2);background:var(--s-alt);border:1px solid var(--s-line);border-radius:var(--r-sm);padding:1px 7px;white-space:nowrap}
+.s-int-aksi{justify-content:flex-end}
+.s-int-daftar{list-style:none;margin:0;padding:0;display:grid;gap:3px;font-size:12.5px;min-width:150px}
+.s-int-daftar li{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.s-int-daftar li span{color:var(--s-mid);font-variant-numeric:tabular-nums}
+.s-int-galat-tinggi{color:var(--s-bad-ink);font-weight:600}
+.s-int-tanpa td{background:color-mix(in srgb,var(--s-warn) 5%,var(--s-paper))!important}
+.s-int-metode{display:inline-block;font-size:11px;font-weight:600;letter-spacing:.04em;color:var(--s-brand-ink)}
+.s-int-waktu{white-space:nowrap;font-variant-numeric:tabular-nums}
+.s-int-kode-galat{color:var(--s-mid);font-size:12px}
+.s-int-potong{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+
+/* Filter log */
+.s-int-filter{grid-template-columns:repeat(5,minmax(0,1fr)) auto}
+.s-int-paging{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 24px;border-top:1px solid var(--s-line);font-size:12.5px;color:var(--s-mid)}
+
+/* Formulir klien */
+.s-int-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px 20px}
+.s-int-grid .penuh{grid-column:1/-1}
+.s-int-grid fieldset{border:0;margin:0;padding:0;min-width:0}
+.s-int-grid legend{float:none;width:auto;font-size:inherit;margin-bottom:8px}
+.s-int-dua{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.s-int-opsional{font-weight:400;color:var(--s-mid);font-size:12px;margin-left:4px}
+.s-int-bantuan{display:block;margin-top:6px;font-size:12px;color:var(--s-mid)}
+.s-int-scope{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.s-int-scope-item{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border:1px solid var(--s-line);border-radius:var(--r-ctl);background:var(--s-paper);cursor:pointer;margin:0}
+.s-int-scope-item:has(input:checked){border-color:var(--s-brand);background:var(--s-brand-soft)}
+.s-int-scope-item .form-check-input{margin:2px 0 0;flex:none}
+.s-int-scope-item b{display:block;font-size:13px;font-weight:600;color:var(--s-ink)}
+.s-int-scope-item small{display:block;font-size:12px;color:var(--s-mid);line-height:1.4;margin-top:2px}
+.s-int-museum-alat{display:flex;justify-content:space-between;align-items:center;gap:8px;font-size:12.5px;color:var(--s-mid);margin-bottom:6px}
+.s-int-museum-alat button{font:inherit;font-size:12.5px;font-weight:500;background:none;border:0;color:var(--s-brand-ink);padding:2px 6px;cursor:pointer}
+.s-int-museum-alat button:hover{text-decoration:underline}
+.s-int-museum-daftar{display:grid;grid-template-columns:1fr 1fr;gap:2px 16px;max-height:220px;overflow:auto;padding:8px 12px;border:1px solid var(--s-line);border-radius:var(--r-ctl);background:var(--s-alt)}
+.s-int-museum-daftar .form-check{margin:0;padding-top:4px;padding-bottom:4px;font-size:13px}
+.is-invalid~.s-int-scope,.s-int-scope:has(.is-invalid){outline:1px solid var(--s-bad);outline-offset:4px;border-radius:var(--r-ctl)}
+
+/* Kunci tampil sekali */
+.s-int-peringatan{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;border-radius:var(--r-ctl);background:var(--s-warn-soft);color:var(--s-warn-ink);font-size:12.5px;line-height:1.5}
+.s-int-peringatan i{font-size:17px;margin-top:1px}
+.s-int-kunci-kotak{display:flex;gap:8px;align-items:stretch}
+.s-int-kunci-kotak .btn{flex:none}
+.s-int-kunci-nilai{font-family:var(--s-mono)!important;font-size:13px!important;letter-spacing:.01em;background:var(--s-alt)!important;color:var(--s-ink)!important}
+
+/* Rincian klien */
+.s-int-rinci{display:grid;grid-template-columns:180px 1fr;gap:10px 16px;margin:0;font-size:13px}
+.s-int-rinci dt{font-weight:600;color:var(--s-mid);font-size:12px;letter-spacing:.02em}
+.s-int-rinci dd{margin:0;color:var(--s-ink2);overflow-wrap:anywhere}
+
+/* Dokumentasi */
+.s-int-dok{padding:4px 24px 24px;display:grid;gap:28px;font-size:13px;color:var(--s-ink2);line-height:1.6}
+.s-int-dok section{display:grid;gap:10px;min-width:0}
+.s-int-dok h6{margin:0;font-size:15px;font-weight:600;color:var(--s-ink)}
+.s-int-dok p{margin:0;max-width:80ch}
+.s-int-dok ul{margin:0;padding-left:18px;max-width:80ch}
+.s-int-dok .s-int-tabel-dok{font-size:13px;margin:0}
+.s-int-dok .s-int-tabel-dok th{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--s-mid);background:var(--s-alt);padding:8px 12px;border-bottom:1px solid var(--s-line);white-space:nowrap}
+.s-int-dok .s-int-tabel-dok td{padding:8px 12px;border-bottom:1px solid var(--s-line2);vertical-align:top;color:var(--s-ink2)}
+.s-int-dok .s-int-tabel-dok code{font-family:var(--s-mono);font-size:12px;color:var(--s-ink2);white-space:nowrap}
+.s-int-dok .s-int-tabel-wadah{border:1px solid var(--s-line);border-radius:var(--r-ctl);overflow:auto}
+.s-int-basis{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px}
+.s-int-basis code{font-family:var(--s-mono);font-size:13px;color:var(--s-ink);background:var(--s-alt);border:1px solid var(--s-line);border-radius:var(--r-nest);padding:6px 10px;overflow-wrap:anywhere}
+.s-int-ep{border:1px solid var(--s-line);border-radius:var(--r-ctl);background:var(--s-paper)}
+.s-int-ep>summary{display:flex;align-items:center;gap:10px;padding:10px 14px;cursor:pointer;list-style:none;font-weight:500;color:var(--s-ink)}
+.s-int-ep>summary::-webkit-details-marker{display:none}
+.s-int-ep>summary::after{content:"";margin-left:auto;width:8px;height:8px;border-right:1.5px solid var(--s-mid);border-bottom:1.5px solid var(--s-mid);transform:rotate(45deg);transition:transform .15s}
+.s-int-ep[open]>summary::after{transform:rotate(225deg)}
+.s-int-ep>summary code{font-family:var(--s-mono);font-size:12.5px;color:var(--s-ink)}
+.s-int-ep>summary small{color:var(--s-mid);font-size:12px;font-weight:400}
+.s-int-ep-isi{padding:0 14px 14px;display:grid;gap:10px}
+.s-int-kode{position:relative;margin:0;padding:12px 14px;padding-right:76px;background:var(--s-alt);border:1px solid var(--s-line);border-radius:var(--r-ctl);overflow:auto;max-height:420px}
+.s-int-kode code{font-family:var(--s-mono);font-size:12px;line-height:1.55;color:var(--s-ink);white-space:pre;display:block}
+.s-int-kode-salin{position:absolute;top:8px;right:8px;display:inline-flex;align-items:center;gap:4px;font:inherit;font-size:11.5px;font-weight:500;padding:3px 8px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-paper);color:var(--s-ink2);cursor:pointer}
+.s-int-kode-salin:hover{color:var(--s-ink);border-color:var(--s-mid)}
+.s-int-label-kode{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--s-mid);margin-bottom:-4px}
+
+@media (max-width:1180px){.s-int-filter{grid-template-columns:repeat(3,minmax(0,1fr))}.s-int-filter .s-aksi{grid-column:1/-1;justify-content:flex-end}}
+
+@media (max-width:767.98px){
+  .s-int-pengantar{margin:0 0 16px}
+  .s-int-stats .s-stat{padding:14px 16px}
+  .s-int-filter{grid-template-columns:1fr}
+  .s-int-grid,.s-int-scope,.s-int-museum-daftar,.s-int-dua{grid-template-columns:1fr}
+  .s-int-museum-daftar{max-height:none}
+  .s-int-museum-daftar .form-check{min-height:44px;display:flex;align-items:center;gap:10px}
+  .s-int-scope-item{min-height:44px}
+  .s-int-aksi .s-ikon{width:44px;height:44px;font-size:18px;background:transparent}
+  .s-int-aksi{gap:0}
+  .s-int-daftar{min-width:0}
+  .s-int-potong{max-width:100%}
+  .s-int-paging{flex-direction:column;padding:12px 16px}
+  .s-int-paging .s-paging{flex-wrap:wrap;justify-content:center}
+  .s-int-paging .s-paging button{min-width:44px;height:44px}
+  .s-int-kunci-kotak{flex-direction:column}
+  .s-int-rinci{grid-template-columns:1fr;gap:2px}
+  .s-int-rinci dd{margin-bottom:10px}
+  .s-int-dok{padding:4px 16px 20px;gap:22px}
+  .s-int-kode{padding-right:14px;padding-top:40px}
+  .s-int-ep>summary{flex-wrap:wrap;min-height:44px}
+  .s-int-ep-isi{padding:0 12px 12px}
+}
+
+/* Tabel tanpa gulir bersarang: halaman yang bergulir, tabel hanya bergulir mendatar bila benar-benar perlu */
+.s-int-gulir{border-top:1px solid var(--s-line)}
+.s-int-garis{border-bottom:1px dotted var(--s-mid);cursor:help}
+.s-int-ip{display:inline-flex;align-items:center;gap:5px;min-width:0;overflow-wrap:anywhere}
+.s-int-ip i{font-size:13px;color:var(--s-mid);flex:none}
+.s-int-judul{display:flex;align-items:center;flex-wrap:wrap;gap:4px 8px}
+.s-int-judul .s-int-nama{display:inline}
+.s-int-tabel .s-int-chips{max-width:220px}
+/* Tema bawaan membuat sel tabel tidak membungkus; tabel modul ini boleh membungkus agar muat tanpa gulir mendatar */
+.s-integrasi .s-int-tabel>tbody>tr>td{white-space:normal}
+.s-integrasi .s-int-tabel .s-int-waktu,.s-integrasi .s-int-tabel td.num{white-space:nowrap}
+#s-int-klien td[data-label="Museum"]{min-width:110px;max-width:180px}
+/* Kode sebaris di teks: warna tinta, bukan merah muda bawaan Bootstrap (satu aksen) */
+.s-integrasi code{color:var(--s-ink2)}
+.s-int-dok p code,.s-int-dok li code{font-family:var(--s-mono);font-size:12px;background:var(--s-alt);border:1px solid var(--s-line2);border-radius:var(--r-sm);padding:0 5px;overflow-wrap:anywhere}
+
+@media (max-width:767.98px){
+  /* Ringkasan 2 x 2 agar tab dan daftar klien terlihat tanpa menggulir jauh */
+  .s-int-stats{grid-template-columns:1fr 1fr!important;gap:10px;margin-bottom:16px}
+  .s-int-stats .s-stat{padding:12px 14px;gap:6px}
+  .s-int-stats .s-stat .lb{font-size:10.5px;letter-spacing:.06em}
+  .s-int-stats .s-stat .vl{flex-wrap:wrap;gap:2px 6px}
+  .s-int-stats .s-stat .vl b{font-size:22px}
+  .s-int-stats .s-stat .vl span,.s-int-stats .s-stat .dl{font-size:12px}
+  /* Tab satu baris yang bisa digeser, seperti pola global .s-tabs */
+  .s-int-tablist{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;width:100%}
+  .s-int-tablist::-webkit-scrollbar{display:none}
+  .s-int-tablist button{flex:none;white-space:nowrap;min-height:44px}
+  .s-int-dua{gap:16px}
+}

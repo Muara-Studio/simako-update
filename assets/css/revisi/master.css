@@ -1,0 +1,10 @@
+/* Revisi 26 butir, modul master. Dimuat setelah custom.css. Butir 17 (List Museum) dan 22. */
+
+/* Irama 24px untuk kartu daftar dan form museum; kelas .s-pesan, .s-aksi-baris, .s-kondisi didefinisikan di storage.css */
+#datatable-museum_wrapper .dataTables_scroll{border-top:1px solid var(--s-line)}
+#datatable-museum_wrapper .dataTables_scrollHead .table{margin:0}
+#datatable-museum td b{font-weight:500;color:var(--s-ink)}
+#datatable-museum td{white-space:nowrap}
+.s-aksi-form{display:flex;gap:8px;justify-content:flex-end;padding-top:24px;margin-top:4px;border-top:1px solid var(--s-line)}
+.s-card-b .row>[class*=col-]>.form-group:last-child{margin-bottom:20px!important}
+.s-card-b .row>[class*=col-]>.form-check{margin-bottom:0}

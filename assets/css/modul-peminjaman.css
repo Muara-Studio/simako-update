@@ -1,0 +1,17 @@
+/* Modul Peminjaman: dialog pengembalian (kondisi saat kembali per koleksi), alasan penolakan, dan tautan Laporan Kondisi per koleksi. */
+.s-kk-swal{text-align:left!important;margin:8px 0 0!important}
+.s-kk-intro{font-size:13px;color:var(--s-mid);margin:0 0 12px}
+.s-kk-daftar{display:flex;flex-direction:column;gap:10px;max-height:52vh;overflow:auto;padding-right:2px}
+.s-kk-item{border:1px solid var(--s-line);border-radius:var(--r-nest);padding:10px 12px;background:var(--s-alt)}
+.s-kk-nama{display:flex;flex-direction:column;gap:2px;margin-bottom:8px}
+.s-kk-nama b{font-size:13px;color:var(--s-ink);font-weight:600}
+.s-kk-nama span{font-size:12px;color:var(--s-mid)}
+.s-kk-isian{display:grid;grid-template-columns:1fr;gap:4px}
+.s-kk-isian label{font-size:12px;font-weight:500;color:var(--s-ink);margin:4px 0 0}
+.s-kk-isian small{font-size:12px;color:var(--s-mid)}
+.s-kk-isian .form-select,.s-kk-isian .form-control{font-size:13px}
+.s-alasan-tolak{margin-top:4px;font-size:12px;color:var(--s-ink)}
+.s-pisah-tugas{font-size:12px;color:var(--s-mid);display:flex;gap:6px;align-items:flex-start}
+.s-pisah-tugas i{font-size:16px;line-height:1.2}
+.s-lk-tautan{white-space:nowrap}
+.s-lk-menu .dropdown-item{font-size:13px;white-space:normal;max-width:320px}

@@ -1,0 +1,177 @@
+/* SIMAKO demo statis: toast dan lencana dari shim.js.
+   Warna memakai token SIMAKO (custom.css) dengan nilai cadangan, jadi ikut mode terang dan gelap (html.app-skin-dark).
+   Lapisan: lencana di bawah header (1025), laci navigasi ponsel (1040), widget AI (1045), dan modal (1050). Toast di atas modal.
+   Posisi: layar lebar di kanan bawah, di kiri tombol widget AI. Layar sempit (sidebar menjadi laci) di kiri bawah. */
+
+.demo-lencana,
+.demo-toast-wadah {
+  --demo-kertas: var(--s-paper, #FFFFFF);
+  --demo-tinta: var(--s-ink, #14211F);
+  --demo-tinta2: var(--s-ink2, #24322F);
+  --demo-redup: var(--s-mid, #5B6967);
+  --demo-garis: var(--s-line, #E1E7E5);
+  --demo-hijau: var(--s-brand, #169E84);
+  --demo-hijau-tinta: var(--s-brand-ink, #0B6E5B);
+  --demo-hijau-lembut: var(--s-brand-soft, rgba(22, 158, 132, .14));
+  --demo-bayang: 0 0 0 1px rgba(23, 23, 23, .05), 0 8px 24px -6px rgba(20, 33, 31, .18);
+  font-family: inherit;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html.app-skin-dark .demo-lencana,
+html.app-skin-dark .demo-toast-wadah {
+  --demo-kertas: var(--s-paper, #151E1B);
+  --demo-tinta: var(--s-ink, #E4ECE9);
+  --demo-tinta2: var(--s-ink2, #C2CFCB);
+  --demo-redup: var(--s-mid, #98A8A4);
+  --demo-garis: var(--s-line, #25322E);
+  --demo-hijau: var(--s-brand, #35CFB0);
+  --demo-hijau-tinta: var(--s-brand-ink, #5BDCC2);
+  --demo-hijau-lembut: var(--s-brand-soft, rgba(53, 207, 176, .13));
+  --demo-bayang: 0 0 0 1px rgba(255, 255, 255, .06), 0 8px 24px -6px rgba(0, 0, 0, .6);
+}
+.demo-lencana *,
+.demo-toast-wadah * { box-sizing: border-box; }
+
+/* ---------- Lencana ---------- */
+.demo-lencana {
+  position: fixed;
+  right: 92px;
+  bottom: calc(30px + env(safe-area-inset-bottom) + var(--demo-angkat, 0px));
+  z-index: 1020;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: calc(100vw - 108px);
+  min-height: 40px;
+  padding: 4px 4px 4px 12px;
+  border: 1px solid var(--demo-garis);
+  border-radius: 999px;
+  background: var(--demo-kertas);
+  color: var(--demo-tinta2);
+  box-shadow: var(--demo-bayang);
+  font-size: 12.5px;
+  font-weight: 500;
+  line-height: 1.3;
+  letter-spacing: 0;
+  transition: bottom .2s ease;
+}
+.demo-lencana-ikon {
+  display: inline-flex;
+  flex: none;
+  color: var(--demo-hijau);
+}
+.demo-lencana-teks {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+  white-space: nowrap;
+}
+.demo-lencana-teks b {
+  font-weight: 600;
+  color: var(--demo-tinta);
+}
+.demo-titik { color: var(--demo-redup); }
+.demo-lencana-peran {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.demo-lencana .demo-lencana-ganti {
+  flex: none;
+  color: var(--demo-hijau-tinta);
+  font-weight: 600;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+.demo-lencana .demo-lencana-ganti:hover { color: var(--demo-hijau); }
+.demo-lencana-tutup {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--demo-redup);
+  cursor: pointer;
+}
+.demo-lencana-tutup:hover { background: var(--demo-hijau-lembut); color: var(--demo-tinta); }
+.demo-lencana a:focus-visible,
+.demo-lencana-tutup:focus-visible {
+  outline: 2px solid var(--demo-hijau);
+  outline-offset: 2px;
+}
+
+/* ---------- Toast ---------- */
+.demo-toast-wadah {
+  position: fixed;
+  left: 50%;
+  bottom: calc(72px + env(safe-area-inset-bottom) + var(--demo-angkat, 0px));
+  z-index: 2100;
+  width: max-content;
+  max-width: calc(100vw - 32px);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+.demo-toast {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  border: 1px solid var(--demo-garis);
+  border-left: 3px solid var(--demo-hijau);
+  border-radius: 10px;
+  background: var(--demo-kertas);
+  color: var(--demo-tinta);
+  box-shadow: var(--demo-bayang);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.45;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity .18s ease, transform .18s ease;
+}
+.demo-toast svg {
+  flex: none;
+  margin-top: 1px;
+  color: var(--demo-hijau);
+}
+.demo-toast.demo-tampil {
+  opacity: 1;
+  transform: none;
+}
+
+/* Potongan HTML pengganti dari shim (bagian tanpa rekaman) */
+.demo-kosong {
+  padding: 16px;
+  color: var(--s-mid, #5B6967);
+  font-size: 13px;
+}
+
+@media (max-width: 1024.98px) {
+  .demo-lencana {
+    left: max(12px, env(safe-area-inset-left));
+    right: auto;
+    bottom: calc(20px + env(safe-area-inset-bottom) + var(--demo-angkat, 0px));
+    max-width: calc(100vw - 88px);
+  }
+}
+@media (max-width: 575.98px) {
+  .demo-lencana { gap: 6px; padding-left: 10px; font-size: 12px; }
+  .demo-lencana-teks { gap: 4px; }
+  .demo-lencana-tutup { width: 30px; height: 30px; }
+  .demo-toast-wadah { bottom: calc(76px + env(safe-area-inset-bottom) + var(--demo-angkat, 0px)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .demo-lencana, .demo-toast { transition: none; }
+}
+@media print {
+  .demo-lencana, .demo-toast-wadah { display: none !important; }
+}

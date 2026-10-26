@@ -1,0 +1,288 @@
+/* Revisi pt.4: gaya modul peminjaman (Catat 2.4, Pelacak 2.6, Detail, Instansi Peminjam 2.12). Warna dari token custom.css. */
+
+/* ---------- Tab bergaya langkah (ul.nav.nav-tabs.s-langkah) ---------- */
+.nav-tabs.s-langkah{display:flex;padding:0!important;margin:0!important;gap:0;border:0!important;border-top:1px solid var(--s-line)!important;border-bottom:1px solid var(--s-line)!important;border-radius:0!important;box-shadow:none!important;background:var(--s-alt)!important}
+.nav-tabs.s-langkah .nav-item{margin:0!important}
+.nav-tabs.s-langkah .nav-item+.nav-item .nav-link{border-left:1px solid var(--s-line2)!important}
+.nav-tabs.s-langkah .nav-link{display:flex;align-items:center;justify-content:center;gap:10px;padding:14px 12px!important;border:0!important;border-top:3px solid transparent!important;border-radius:0!important;background:transparent!important;color:var(--s-mid)!important;font-size:13px!important;font-weight:500!important;transform:none!important;box-shadow:none!important}
+.nav-tabs.s-langkah .nav-link .n{width:26px;height:26px;border-radius:26px;border:1px solid var(--s-line);display:inline-flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:600;font-variant-numeric:tabular-nums;background:var(--s-paper);color:var(--s-mid);flex:0 0 auto}
+.nav-tabs.s-langkah .nav-link:hover{background:var(--s-paper)!important;color:var(--s-ink)!important}
+.nav-tabs.s-langkah .nav-link.active{border-top-color:var(--s-brand)!important;background:var(--s-paper)!important;color:var(--s-ink)!important}
+.nav-tabs.s-langkah .nav-link.active .n{background:var(--s-brand);border-color:var(--s-brand);color:#fff}
+.nav-tabs.s-langkah .nav-link.selesai .n{background:var(--s-ok-soft);border-color:transparent;color:var(--s-ok-ink)}
+.nav-tabs.s-langkah .nav-link.disabled{opacity:.5;cursor:not-allowed;pointer-events:none}
+
+/* ---------- Kartu pilihan radio (arah, jenis, tipe pendaftar) ---------- */
+.s-pilih-kartu{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.s-kartu-radio{position:relative;display:flex;gap:14px;align-items:flex-start;padding:16px 18px;border:1px solid var(--s-line);border-radius:var(--r-ctl);background:var(--s-paper);cursor:pointer;margin:0;transition:border-color .15s,box-shadow .15s}
+.s-kartu-radio input{position:absolute;opacity:0;pointer-events:none}
+.s-kartu-radio .ik{width:40px;height:40px;border-radius:var(--r-nest);background:var(--s-alt);border:1px solid var(--s-line);display:inline-flex;align-items:center;justify-content:center;font-size:20px;color:var(--s-mid);flex:0 0 auto}
+.s-kartu-radio .tx{display:grid;gap:2px;min-width:0}
+.s-kartu-radio .tx b{font-size:14px;font-weight:600;color:var(--s-ink)}
+.s-kartu-radio .tx em{font-style:normal;font-size:12.5px;color:var(--s-ink2)}
+.s-kartu-radio .tx small{font-size:12px;color:var(--s-mid);line-height:1.45}
+.s-kartu-radio:hover{border-color:var(--s-brand)}
+.s-kartu-radio:has(input:checked){border-color:var(--s-brand);box-shadow:0 0 0 3px var(--s-brand-soft);background:color-mix(in srgb,var(--s-brand) 4%,var(--s-paper))}
+.s-kartu-radio:has(input:checked) .ik{background:var(--s-brand);border-color:var(--s-brand);color:#fff}
+.s-kartu-radio:has(input:focus-visible){outline:2px solid var(--s-brand);outline-offset:2px}
+.s-pilih-kartu.kecil .s-kartu-radio{padding:12px 14px;align-items:center}
+.s-pilih-kartu.kecil .ik{width:34px;height:34px;font-size:17px}
+.s-pilih-kartu.empat{grid-template-columns:repeat(4,minmax(0,1fr))}
+
+/* ---------- Seksi dan grid formulir ---------- */
+.s-seksi-pinjam{padding:20px 0;border-bottom:1px solid var(--s-line2)}
+.s-seksi-pinjam:last-of-type{border-bottom:0}
+.s-seksi-judul{display:grid;gap:2px;margin-bottom:14px}
+.s-seksi-judul b{font-size:14px;font-weight:600;color:var(--s-ink)}
+.s-seksi-judul span{font-size:12.5px;color:var(--s-mid)}
+.s-mitra{margin-top:16px;max-width:600px}
+.s-fgrid-pinjam{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 20px}
+.s-fgrid-pinjam.tiga{grid-template-columns:repeat(3,minmax(0,1fr))}
+.s-fgrid-pinjam .span2{grid-column:span 2}
+.s-fgrid-pinjam .span3{grid-column:span 3}
+.s-fgrid-pinjam .form-group{margin:0}
+.s-catat .s-req,.s-instansi-form .s-req,#modalPerpanjang .s-req{color:var(--s-bad);font-style:normal;font-weight:600}
+.s-langkah-kaki{display:flex;justify-content:space-between;align-items:center;gap:12px;padding-top:18px;margin-top:4px;border-top:1px solid var(--s-line)}
+.s-langkah-kaki .btn,.s-tindakan .btn,.s-instansi-form .s-form-kaki .btn{display:inline-flex;align-items:center;gap:8px}
+.s-langkah-kaki .s-lanjut,.s-langkah-kaki #btn-simpan{margin-left:auto}
+.s-catat-ringkas{font-size:12.5px;font-weight:600;color:var(--s-brand-ink);background:var(--s-brand-soft);padding:6px 12px;border-radius:999px;white-space:nowrap;max-width:50%;overflow:hidden;text-overflow:ellipsis}
+.s-catat-ringkas:empty{display:none}
+.s-swal-ul{text-align:left;margin:0;padding-left:18px;font-size:13px}
+
+/* ---------- Langkah 3: pencarian dan pilihan koleksi ---------- */
+.s-koleksi-cari{display:flex;gap:10px;align-items:center;margin-bottom:12px}
+.s-koleksi-cari .s-cari{position:relative;flex:1}
+.s-koleksi-cari .s-cari i{position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--s-mid);font-size:16px}
+.s-koleksi-cari .s-cari input{padding-left:36px}
+.s-koleksi-cari .btn{display:inline-flex;align-items:center;gap:8px;white-space:nowrap}
+.s-koleksi-hasil{display:grid;gap:8px;max-height:380px;overflow:auto}
+.s-koleksi-item{display:flex;gap:12px;align-items:flex-start;padding:10px 12px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-paper);cursor:pointer;margin:0}
+.s-koleksi-item.dipilih{border-color:var(--s-brand);background:color-mix(in srgb,var(--s-brand) 5%,var(--s-paper))}
+/* PRD 3.9 aturan 2: koleksi di peminjaman Aktif tampil redup dan tidak dapat dipilih */
+.s-koleksi-item.s-dipinjam{cursor:not-allowed;background:var(--s-canvas)}
+.s-koleksi-item.s-dipinjam .tx{opacity:.7}
+.s-koleksi-item input{margin-top:3px;flex:0 0 auto}
+.s-koleksi-item .tx{display:grid;gap:3px;flex:1;min-width:0}
+.s-koleksi-item .tx b{font-size:13px;font-weight:600;color:var(--s-ink)}
+.s-koleksi-item .meta{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.s-koleksi-item small{font-size:12px;color:var(--s-mid)}
+.s-koleksi-item .badge{align-self:center}
+.s-ringkasan{display:grid;gap:8px;background:var(--s-alt);border:1px solid var(--s-line);border-radius:var(--r-nest);padding:14px 16px}
+.s-ringkasan div{display:grid;grid-template-columns:150px 1fr;gap:12px;font-size:13px}
+.s-ringkasan span{color:var(--s-mid)}
+.s-ringkasan b{font-weight:500;color:var(--s-ink);word-break:break-word}
+
+/* ---------- Pelacak 2.6 ---------- */
+.s-pelacak th{white-space:nowrap}
+.s-pelacak td{vertical-align:middle}
+.num{font-variant-numeric:tabular-nums}
+.s-pelacak b.num{font-weight:600}
+.s-pelacak .s-nomor-pinjam a{color:var(--s-ink);text-decoration:none}
+.s-pelacak .s-nomor-pinjam a:hover b{color:var(--s-brand-ink)}
+.s-pelacak .s-nomor-pinjam b{display:block;font-size:13px;margin-bottom:4px}
+.s-pelacak .s-nomor-pinjam .badge{font-size:10.5px;margin-right:2px}
+.s-dari-ke{display:grid;grid-template-columns:auto 1fr;gap:2px 8px;align-items:center;font-size:12.5px}
+.s-dari-ke span{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;color:var(--s-mid);font-weight:600}
+.s-dari-ke b{font-weight:500;color:var(--s-ink)}
+.s-dari-ke.besar{grid-template-columns:auto 1fr;gap:4px 14px;font-size:14px;padding:12px 14px;background:var(--s-alt);border:1px solid var(--s-line);border-radius:var(--r-nest);margin-bottom:16px}
+.s-dari-ke.besar b{font-weight:600}
+.s-dok-chip{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.s-dok-chip .badge{display:inline-flex;align-items:center;gap:4px}
+.s-tempo-awal{display:block;font-size:11.5px;color:var(--s-mid);margin-top:2px;white-space:nowrap}
+#modalPerpanjang .modal-content{background:var(--s-paper);border:1px solid var(--s-line);border-radius:var(--r-card);color:var(--s-ink)}
+#modalPerpanjang .modal-header,#modalPerpanjang .modal-footer{border-color:var(--s-line)}
+#modalPerpanjang .btn{display:inline-flex;align-items:center;gap:8px}
+
+/* ---------- Detail peminjaman ---------- */
+.s-detail-badge{display:flex;gap:6px;flex-wrap:wrap}
+.s-detail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px}
+.s-detail-grid>div{display:grid;gap:3px;min-width:0}
+.s-detail-grid>div.span2{grid-column:span 2}
+.s-detail-grid span{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--s-mid)}
+.s-detail-grid b{font-weight:500;color:var(--s-ink);font-size:13.5px;word-break:break-word}
+.s-detail-grid b small{display:block;font-size:12px;color:var(--s-mid);font-weight:400}
+.s-alur{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.s-alur li{display:flex;gap:12px;align-items:flex-start;position:relative;padding:0 0 18px 0}
+.s-alur li::before{content:"";position:absolute;left:13px;top:28px;bottom:0;width:2px;background:var(--s-line)}
+.s-alur li:last-child::before{display:none}
+.s-alur li i{width:28px;height:28px;border-radius:28px;border:1px solid var(--s-line);background:var(--s-paper);color:var(--s-mid);display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 auto;position:relative;z-index:1}
+.s-alur li div{display:grid;gap:2px;padding-top:4px}
+.s-alur li b{font-size:13px;font-weight:600;color:var(--s-ink)}
+.s-alur li span{font-size:12px;color:var(--s-mid)}
+.s-alur li.selesai i{background:var(--s-ok);border-color:var(--s-ok);color:#fff}
+.s-alur li.aktif i{background:var(--s-warn-soft);border-color:var(--s-warn);color:var(--s-warn-ink)}
+.s-alur li.aktif b{color:var(--s-warn-ink)}
+.s-alur li.gagal i{background:var(--s-bad);border-color:var(--s-bad);color:#fff}
+.s-hari{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.s-hari div{display:grid;gap:4px;text-align:center;padding:14px 10px;background:var(--s-alt);border:1px solid var(--s-line);border-radius:var(--r-nest)}
+.s-hari b{font-size:28px;font-weight:600;letter-spacing:-.6px;line-height:1;color:var(--s-ink)}
+.s-hari b.waspada{color:var(--s-warn-ink)}
+.s-hari b.buruk{color:var(--s-bad-ink)}
+.s-hari span{font-size:12px;color:var(--s-mid)}
+.s-tindakan{display:grid;gap:8px}
+.s-tindakan .btn{justify-content:center}
+
+/* ---------- Instansi Peminjam 2.12 ---------- */
+.s-badge-mcb{background:var(--s-brand-soft)!important;color:var(--s-brand-ink)!important}
+.s-instansi-tabel td{vertical-align:top}
+.s-instansi-nama b{display:block;font-size:13px;color:var(--s-ink)}
+.s-instansi-nama small{display:block;color:var(--s-mid);font-size:12px;margin-top:2px}
+.s-instansi-kontak div,.s-instansi-alamat div{display:flex;gap:6px;align-items:center;font-size:12.5px;color:var(--s-ink2)}
+.s-instansi-kontak i,.s-instansi-alamat i{color:var(--s-mid);font-size:14px;flex:0 0 auto}
+/* UAT-D-01: tabel Instansi Peminjam muat di layar 1440 px tanpa gulir mendatar (teks panjang membungkus, alamat dipotong rapi) */
+.s-instansi-tabel td{white-space:normal}
+.s-instansi-nama{min-width:160px;max-width:210px}
+.s-instansi-kontak{max-width:230px}
+.s-instansi-kontak div{flex-wrap:wrap;overflow-wrap:anywhere}
+.s-instansi-alamat{max-width:180px}
+.s-instansi-alamat .s-potong{display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s-instansi-tabel td.text-end .s-muted{display:block}
+.s-instansi-form .s-form-kaki{display:flex;justify-content:flex-end;gap:8px;padding-top:18px;border-top:1px solid var(--s-line)}
+
+@media (max-width:1100px){.s-pilih-kartu.empat{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:900px){
+  .s-pilih-kartu,.s-pilih-kartu.empat,.s-fgrid-pinjam,.s-fgrid-pinjam.tiga,.s-detail-grid{grid-template-columns:1fr}
+  .s-fgrid-pinjam .span2,.s-fgrid-pinjam .span3,.s-detail-grid>div.span2{grid-column:auto}
+  .nav-tabs.s-langkah .nav-link .t{display:none}
+  .s-catat-ringkas{display:none}
+}
+
+/* ---------- Revisi pt.7 (agen storage, butir 8): museum pencatat di langkah 1 Catat Peminjaman ---------- */
+.s-museum-pencatat{margin-top:0}
+.s-museum-pencatat .form-select,.s-museum-pencatat .choices__inner{font-weight:500}
+
+/* Pengaman bentrok kelas: tab langkah tidak boleh mewarisi gaya daftar langkah impor */
+.nav-tabs.s-langkah .nav-item{display:block!important;position:static}
+.nav-tabs.s-langkah .nav-item::before,.nav-tabs.s-langkah .nav-item::after{content:none!important;display:none!important}
+.nav-tabs.s-langkah .nav-link{width:100%;white-space:nowrap}
+.nav-tabs.s-langkah .nav-link .t{white-space:nowrap}
+@media (max-width:767.98px){.nav-tabs.s-langkah .nav-link .t{display:none}.nav-tabs.s-langkah .nav-link{padding:12px 6px!important}}
+
+/* ==========================================================================================================
+   Ponsel (agen M3, 24 Oktober 2026): Catat 2.4, Daftar 2.5, Detail, Kembalikan 2.6, Instansi Peminjam 2.12.
+   Hanya di bawah 768 px, desktop tidak berubah. Memakai pola global agen K (assets/css/ponsel.css):
+   table.s-tabel-kartu untuk tabel Detail, koleksi terpilih, dan Instansi; .s-aksi-bawah untuk kaki formulir.
+   Daftar dan pelacak memakai kartu ringkas sendiri (tanggal dalam satu baris tiga kolom) agar satu kartu
+   tidak lebih dari separuh layar. Ringkasan angka yang sama persis dengan tab saring disembunyikan.
+   ========================================================================================================== */
+@media (max-width:767.98px){
+  /* ---- Bersama ---- */
+  /* theme.min.css memberi .main-content overflow-x:hidden dan .s-card overflow:hidden; keduanya mematikan
+     .s-aksi-bawah (sticky). clip tetap memotong tanpa membuat wadah gulir. */
+  .nxl-container .nxl-content .main-content:is(:has(.s-catat),:has(.s-instansi-form)){overflow:visible;overflow-x:clip}
+  .s-card.s-catat,.s-card.s-instansi-form{overflow:clip}
+  .s-card:has(#s-pelacak)>.s-card-h,.s-card:has(#s-instansi-tabel)>.s-card-h,.s-card-h:has(>.s-dok-chip),.s-card-h:has(>.s-detail-badge){flex-direction:column;align-items:stretch;gap:10px}
+  .s-card:has(#s-pelacak)>.s-card-h .s-cari,.s-card:has(#s-instansi-tabel)>.s-card-h .s-cari{width:100%;margin:0}
+  .main-content:has(#s-pelacak)>.s-stats,.main-content:has(#s-instansi-tabel)>.s-stats{display:none}
+  .s-card:has(#s-pelacak) .table-responsive,.card-body:has(#peminjamanList) .table-responsive{overflow:visible}
+  #s-instansi-tabel>tbody>tr[hidden]{display:none!important}
+  #s-instansi-tabel>tbody>tr>td span.s-muted{display:inline}
+  /* Tautan kecil di dalam kartu: area sentuh 44 px tanpa mengubah tata letak */
+  #s-instansi-tabel .s-instansi-kontak a,.s-detail-grid a,.s-tabel-kartu td.s-kk-judul a{display:inline-block;padding:12px 0;margin:-12px 0}
+  #s-pelacak td.s-nomor-pinjam a{padding:12px 0;margin:-12px 0}
+  /* Lencana di sel kartu tetap selebar isinya (sel kartu ponsel.css berupa grid yang meregangkan anak) */
+  :is(#s-instansi-tabel,.s-tabel-kartu)>tbody>tr>td>:is(.badge,.s-tag-reg,.s-tag-kosong){justify-self:start;width:auto}
+
+  /* ---- Daftar 2.5: baris DataTables menjadi kartu yang bisa diketuk seluruhnya ---- */
+  .card-body:has(#peminjamanList){padding:0!important}
+  .page-header [data-bs-target="#collapseOne"]{border:1px solid var(--s-line)!important;background:var(--s-paper)!important}
+  .s-pinjam-kepala{padding:16px}
+  .s-pinjam-kepala .t{flex:1 1 100%}
+  .s-pinjam-kepala .s-cari{flex:1 1 100%;min-width:0;width:100%}
+  #peminjamanList_wrapper>.row:first-child{display:none!important}
+  #peminjamanList_wrapper .row{margin:0}
+  #peminjamanList{width:100%!important;display:block;padding:12px 16px 0}
+  #peminjamanList thead{display:none}
+  #peminjamanList tbody{display:grid;gap:10px}
+  #peminjamanList tbody tr{position:relative;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px 12px;padding:14px;background:var(--s-paper)!important;border:1px solid var(--s-line);border-radius:var(--r-card);box-shadow:var(--s-shadow)!important;transform:none!important}
+  #peminjamanList tbody tr:active{background:var(--s-alt)!important}
+  #peminjamanList tbody tr:focus-within{outline:2px solid var(--s-brand);outline-offset:2px}
+  #peminjamanList tbody td{display:block;padding:0!important;border:0!important;background:transparent!important;font-size:13px;color:var(--s-ink2);min-width:0}
+  #peminjamanList tbody td.dataTables_empty{grid-column:1/-1;text-align:center;padding:20px 0!important}
+  #peminjamanList tbody td:nth-child(1){grid-column:1/-1;grid-row:1;font-weight:600;font-size:14px;color:var(--s-ink);font-variant-numeric:tabular-nums;line-height:24px}
+  #peminjamanList tbody td:nth-child(6){grid-column:1/-1;grid-row:1;justify-self:end;align-self:start}
+  #peminjamanList tbody td:nth-child(6) .badge{white-space:nowrap}
+  #peminjamanList tbody td:nth-child(2),#peminjamanList tbody td:nth-child(3){grid-column:1/-1;display:grid;grid-template-columns:44px 1fr;gap:8px;color:var(--s-ink)}
+  #peminjamanList tbody td:nth-child(2)::before{content:'Dari'}
+  #peminjamanList tbody td:nth-child(3)::before{content:'Ke'}
+  #peminjamanList tbody td:nth-child(4)::before{content:'Pinjam'}
+  #peminjamanList tbody td:nth-child(5)::before{content:'Kembali'}
+  #peminjamanList tbody td:nth-child(7)::before{content:'Durasi'}
+  #peminjamanList tbody td:is(:nth-child(2),:nth-child(3),:nth-child(4),:nth-child(5),:nth-child(7))::before{font-size:12px;color:var(--s-mid);font-weight:500}
+  #peminjamanList tbody td:is(:nth-child(4),:nth-child(5),:nth-child(7)){display:grid;gap:2px;font-variant-numeric:tabular-nums;color:var(--s-ink)}
+  #peminjamanList tbody td:nth-child(7) .badge{background:transparent!important;color:var(--s-ink)!important;padding:0!important;font-size:13px!important;font-weight:400;justify-self:start}
+  #peminjamanList tbody td:nth-child(8),#peminjamanList tbody td:nth-child(8) .hstack{position:absolute;inset:0;z-index:1}
+  #peminjamanList tbody td:nth-child(8) a{position:absolute;inset:0;width:auto!important;height:auto!important;max-width:none!important;max-height:none!important;opacity:0;border-radius:var(--r-card)}
+  #peminjamanList_wrapper .dataTables_info{padding:14px 16px 4px!important}
+  #peminjamanList_wrapper .paginate_button:not(.previous):not(.next):not(.active){display:none!important}
+
+  /* ---- Kembalikan 2.6: pelacak menjadi kartu, Kembalikan selebar kartu ---- */
+  #s-saring{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px;overflow:visible}
+  #s-saring button{justify-content:space-between;white-space:normal;text-align:left;line-height:1.25}
+  #s-pelacak{display:block;width:100%;padding:12px 16px}
+  #s-pelacak thead{display:none}
+  #s-pelacak tbody{display:grid;gap:10px}
+  #s-pelacak tbody tr{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px 12px;padding:14px;background:var(--s-paper)!important;border:1px solid var(--s-line);border-radius:var(--r-card);box-shadow:var(--s-shadow)}
+  #s-pelacak tbody tr[hidden]{display:none}
+  #s-pelacak tbody tr:hover{transform:none}
+  #s-pelacak tbody td{display:block;padding:0!important;border:0!important;background:transparent!important;text-align:left!important;min-width:0;font-size:13px;white-space:normal}
+  #s-pelacak .s-dari-ke b{min-width:0;overflow-wrap:anywhere}
+  #s-pelacak tbody td.s-empty{grid-column:1/-1;text-align:center!important;padding:20px 0!important}
+  #s-pelacak td.s-nomor-pinjam{grid-column:1/-1;grid-row:1;display:flex;flex-wrap:wrap;align-items:center;gap:4px}
+  #s-pelacak td.s-nomor-pinjam a{flex:1 1 100%;display:flex;min-height:28px;align-items:center}
+  #s-pelacak td.s-nomor-pinjam b{font-size:14px;margin:0}
+  #s-pelacak td.s-nomor-pinjam .badge{font-size:11.5px}
+  #s-pelacak td:nth-child(6){grid-column:1/-1;grid-row:1;justify-self:end;align-self:start;margin-top:2px!important}
+  #s-pelacak td:nth-child(6) .badge{white-space:nowrap}
+  #s-pelacak td:nth-child(2){grid-column:1/-1}
+  #s-pelacak .s-dari-ke{grid-template-columns:44px 1fr;font-size:13px;gap:4px 8px}
+  #s-pelacak .s-dari-ke span{font-size:12px;letter-spacing:0;text-transform:none;font-weight:500}
+  #s-pelacak td:is(:nth-child(3),:nth-child(4),:nth-child(5)){font-variant-numeric:tabular-nums;white-space:nowrap}
+  #s-pelacak td:nth-child(3)::before{content:'Pinjam'}
+  #s-pelacak td:nth-child(4)::before{content:'Jatuh tempo'}
+  #s-pelacak td:nth-child(5)::before{content:'Berjalan'}
+  #s-pelacak td:is(:nth-child(3),:nth-child(4),:nth-child(5))::before{display:block;margin-bottom:2px;font-size:12px;color:var(--s-mid);font-weight:500}
+  #s-pelacak .s-tempo-awal{white-space:normal;font-size:12px}
+  #s-pelacak td:nth-child(7),#s-pelacak td:nth-child(8){grid-column:1/-1}
+  #s-pelacak .s-aksi-sejajar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr)) 44px;gap:8px;width:100%;white-space:normal}
+  #s-pelacak .s-aksi-sejajar .btn{height:44px!important;font-size:13px!important;width:100%}
+  #s-pelacak .s-aksi-sejajar .s-kembalikan{grid-column:1/3;grid-row:1}
+  #s-pelacak .s-aksi-sejajar>a[title="Detail"]{grid-column:3;grid-row:1}
+  #s-pelacak .s-aksi-sejajar .s-perpanjang{grid-column:1;grid-row:2}
+  #s-pelacak .s-aksi-sejajar>.s-lk-tautan,#s-pelacak .s-aksi-sejajar>.dropdown{grid-column:2/4;grid-row:2;min-width:0}
+  #s-pelacak .s-aksi-sejajar>.dropdown .btn{width:100%}
+  #s-pelacak .s-aksi-sejajar:not(:has(.s-kembalikan))>a[title="Detail"]{grid-column:1/-1}
+  #s-pelacak .s-lk-menu .dropdown-item{min-height:44px;display:flex;align-items:center}
+
+  /* ---- Detail: tindakan menempel di bawah layar, angka hari ringkas ---- */
+  .s-hari b{font-size:24px}
+  .s-tabel-kartu .s-lk-tautan{white-space:nowrap}
+  .s-card:has(>.s-tindakan .btn){position:fixed;left:0;right:0;bottom:0;z-index:1030;margin:0!important;border-radius:var(--r-card) var(--r-card) 0 0;border-bottom:0;box-shadow:0 -8px 24px rgba(15,23,20,.12)}
+  .s-card:has(>.s-tindakan .btn)>.s-card-h{display:none}
+  .s-card>.s-tindakan:has(.btn){display:flex;flex-wrap:wrap;gap:8px;padding:12px 16px calc(12px + env(safe-area-inset-bottom))!important}
+  .s-tindakan:has(.btn) .btn{flex:1 1 0;min-width:0;min-height:48px;justify-content:center;white-space:normal;line-height:1.2;text-align:center}
+  .s-tindakan:has(.btn) .s-pisah-tugas{flex:1 1 100%}
+  .nxl-content:has(.s-tindakan .btn){padding-bottom:112px!important}
+  html.app-skin-dark .s-card:has(>.s-tindakan .btn){box-shadow:0 -8px 24px rgba(0,0,0,.45)}
+
+  /* ---- Catat 2.4: langkah aktif menampilkan namanya, kaki langkah memakai .s-aksi-bawah ---- */
+  .nav-tabs.s-langkah .nav-item.flex-fill{flex:1 1 0!important;min-width:0}
+  .nav-tabs.s-langkah .nav-item.flex-fill:has(>.nav-link.active){flex:2.6 1 0!important}
+  .nav-tabs.s-langkah .nav-link{min-height:52px;padding:10px 6px!important;gap:8px}
+  .nav-tabs.s-langkah .nav-link.active .t{display:inline!important;font-weight:600}
+  .s-catat .s-seksi-pinjam{padding:18px 0}
+  .s-catat .s-mitra .s-muted a{display:inline-block;padding:13px 0;margin:-13px 0}
+  .s-langkah-kaki{flex-wrap:wrap}
+  .s-langkah-kaki>.s-muted{flex:1 1 100%;font-size:12.5px;line-height:1.35;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .s-langkah-kaki .s-lanjut,.s-langkah-kaki #btn-simpan{margin-left:0}
+  .s-koleksi-cari{flex-direction:column;align-items:stretch}
+  .s-koleksi-cari .s-cari{width:100%}
+  .s-koleksi-cari .btn{justify-content:center}
+  .s-koleksi-hasil{max-height:60vh}
+  .s-koleksi-item{padding:12px;min-height:56px}
+  .s-koleksi-item input{width:20px;height:20px;margin-top:1px}
+  .s-ringkasan div{grid-template-columns:1fr;gap:2px}
+}
+
+/* Desktop: nama instansi membungkus, tidak menimpa kolom Tipe (aturan nowrap tema menang atas kelas; id dipakai agar spesifisitas cukup). */
+#s-instansi-tabel td{white-space:normal}

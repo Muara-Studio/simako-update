@@ -1,66 +1,204 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow, noarchive">
-<title>SIMAKO</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap">
-<style>
-  :root { --bg: #F4F7F6; --surface: #FFFFFF; --ink: #13201D; --muted: #55635F; --line: #D6E1DE; --accent: #127F6B; --accent-ink: #FFFFFF; }
-  @media (prefers-color-scheme: dark) {
-    :root { --bg: #0B1412; --surface: #121D1A; --ink: #E7F0ED; --muted: #9AABA6; --line: #22312D; --accent: #3CC4A5; --accent-ink: #062019; }
-  }
-  * { box-sizing: border-box; }
-  html, body { margin: 0; height: 100%; }
-  body { background: var(--bg); color: var(--ink); font: 15px/1.6 "Plus Jakarta Sans", system-ui, sans-serif; display: grid; place-items: center; padding: 24px 16px; }
-  main { width: 100%; max-width: 420px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 32px 28px; }
-  .merek { font-weight: 700; letter-spacing: .08em; font-size: 12px; color: var(--accent); text-transform: uppercase; margin: 0 0 12px; }
-  h1 { font-size: 22px; line-height: 1.3; margin: 0 0 8px; }
-  p { margin: 0 0 16px; color: var(--muted); }
-  .bar { height: 3px; background: var(--line); border-radius: 3px; overflow: hidden; margin: 20px 0 4px; }
-  .bar span { display: block; height: 100%; width: 40%; background: var(--accent); border-radius: 3px; animation: geser 1.2s ease-in-out infinite; }
-  @keyframes geser { from { transform: translateX(-100%); } to { transform: translateX(260%); } }
-  @media (prefers-reduced-motion: reduce) { .bar span { animation: none; width: 100%; } }
-  a.tombol { display: inline-block; background: var(--accent); color: var(--accent-ink); text-decoration: none; font-weight: 600; padding: 10px 18px; border-radius: 10px; }
-  [hidden] { display: none !important; }
-  .kecil { font-size: 13px; margin: 16px 0 0; }
-</style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <meta name="description" content="Demo SIMAKO dengan data contoh. Perubahan tidak disimpan.">
+    <title>SIMAKO</title>
+    <link rel="icon" type="image/x-icon" href="/simako-update/assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        /* Mode gelap mengikuti pilihan di SIMAKO (theme customizer menyimpan localStorage "app-skin"). */
+        try { if (localStorage.getItem('app-skin') === 'app-skin-dark') document.documentElement.classList.add('app-skin-dark'); } catch (e) {}
+    </script>
+    <style>
+        /* Tampilan halaman masuk SIMAKO (custom.css bagian 14 dan 15f), ditulis ulang di sini agar halaman tetap utuh tanpa berkas lain. */
+        :root {
+            --s-canvas: #F4F7F6; --s-paper: #FFFFFF; --s-alt: #FAFCFB;
+            --s-ink: #14211F; --s-ink2: #24322F; --s-mid: #5B6967;
+            --s-line: #E1E7E5; --s-brand: #169E84; --s-brand-h: #127F6B; --s-brand-ink: #0B6E5B;
+            --s-brand-soft: rgba(22, 158, 132, .14);
+            --s-shadow: 0 0 0 1px rgba(23, 23, 23, .05), 0 1px 3px rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+            --kartu: rgba(255, 255, 255, .78); --kartu-garis: rgba(255, 255, 255, .9);
+            --r-card: 10px; --r-ctl: 8px;
+            color-scheme: light;
+        }
+        html.app-skin-dark {
+            --s-canvas: #0E1614; --s-paper: #151E1B; --s-alt: #1A2421;
+            --s-ink: #E4ECE9; --s-ink2: #C2CFCB; --s-mid: #98A8A4;
+            --s-line: #25322E; --s-brand: #35CFB0; --s-brand-h: #5BDCC2; --s-brand-ink: #5BDCC2;
+            --s-brand-soft: rgba(53, 207, 176, .13);
+            --s-shadow: 0 0 0 1px rgba(255, 255, 255, .04), 0 1px 3px rgba(0, 0, 0, .5);
+            --kartu: rgba(21, 30, 27, .78); --kartu-garis: rgba(255, 255, 255, .08);
+            color-scheme: dark;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin: 0; background: var(--s-canvas); }
+        body {
+            min-height: 100vh;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            font-size: 13px; line-height: 1.5; color: var(--s-ink2);
+            font-variant-numeric: tabular-nums; -webkit-font-smoothing: antialiased;
+        }
+        #s-blob { position: fixed; inset: 0; width: 100%; height: 100%; z-index: 0; pointer-events: none; }
+        .bungkus {
+            position: relative; overflow: hidden; min-height: 100vh;
+            display: flex; align-items: center; justify-content: center; padding: 40px 16px;
+            background: linear-gradient(118deg, rgba(47, 111, 143, .28), rgba(74, 93, 138, .2) 45%, rgba(62, 140, 126, .26));
+        }
+        .bentuk { position: absolute; border-radius: 50%; filter: blur(90px); pointer-events: none; }
+        .bentuk.b1 { width: 300px; height: 300px; left: 8%; top: 10%; background: rgba(47, 111, 143, .30); }
+        .bentuk.b2 { width: 340px; height: 340px; right: 6%; bottom: 8%; background: rgba(62, 140, 126, .28); }
+        .bentuk.b3 { width: 220px; height: 220px; left: 50%; top: 6%; background: rgba(74, 93, 138, .22); }
+        .kartu {
+            position: relative; z-index: 1; width: 100%; max-width: 460px;
+            border-radius: var(--r-card); background: var(--kartu); border: 1px solid var(--kartu-garis);
+            -webkit-backdrop-filter: blur(28px); backdrop-filter: blur(28px);
+            box-shadow: 0 8px 24px -6px rgba(0, 0, 0, .06), var(--s-shadow);
+        }
+        .isi { padding: 36px; }
+        .logo {
+            width: 72px; height: 72px; margin: 0 auto 18px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; overflow: hidden;
+            background: var(--s-paper); border: 1px solid var(--s-line); box-shadow: var(--s-shadow);
+        }
+        html.app-skin-dark .logo { background: var(--s-ink); }
+        .logo img { width: 44px; height: 44px; }
+        .logo span { font-size: 22px; font-weight: 600; color: var(--s-brand); }
+        h1 {
+            margin: 0 0 8px; text-align: center; color: var(--s-ink);
+            font-size: 26px; font-weight: 600; letter-spacing: -.5px; line-height: 1.15;
+        }
+        h1 .merek { color: var(--s-brand); }
+        h1 small { display: block; margin-top: 6px; font-size: 13px; font-weight: 400; letter-spacing: 0; line-height: 1.5; color: var(--s-mid); }
+        .catatan {
+            display: flex; gap: 10px; align-items: flex-start; margin: 20px 0 18px; padding: 12px 14px;
+            border-radius: var(--r-ctl); background: var(--s-brand-soft); color: var(--s-ink2);
+        }
+        .catatan svg { flex: none; margin-top: 1px; color: var(--s-brand-ink); }
+        .catatan p { margin: 0; }
+        .judul-daftar { margin: 0 0 10px; font-size: 13px; font-weight: 600; color: var(--s-ink); }
+        .daftar { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+        .peran {
+            display: flex; align-items: center; gap: 12px; min-height: 48px; padding: 10px 12px 10px 14px;
+            border: 1px solid var(--s-line); border-radius: var(--r-ctl);
+            background: var(--s-paper); color: var(--s-ink); text-decoration: none;
+            transition: border-color .15s ease, background-color .15s ease;
+        }
+        .peran:hover { border-color: var(--s-brand); background: var(--s-alt); }
+        .peran:focus-visible { outline: 2px solid var(--s-brand); outline-offset: 2px; }
+        .peran-teks { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+        .peran-nama { font-size: 13px; font-weight: 600; color: var(--s-ink); }
+        .peran-museum { font-size: 12px; color: var(--s-mid); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+        .peran svg { flex: none; color: var(--s-mid); }
+        .peran:hover svg { color: var(--s-brand); }
+        .kaki {
+            display: flex; justify-content: space-between; gap: 12px; padding: 14px 36px 18px;
+            border-top: 1px solid var(--s-line); font-size: 12px; color: var(--s-mid);
+        }
+        @media (max-width: 575.98px) {
+            .isi { padding: 28px 20px; }
+            .kaki { padding: 12px 20px 16px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
 </head>
 <body>
-<main>
-  <p class="merek">SIMAKO</p>
-  <section id="buka">
-    <h1>Membuka SIMAKO versi baru</h1>
-    <p>Sistem Informasi Manajemen Koleksi Museum dan Cagar Budaya.</p>
-    <div class="bar" aria-hidden="true"><span></span></div>
-  </section>
-  <section id="mati" hidden>
-    <h1>SIMAKO sedang tidak menyala</h1>
-    <p>Server uji SIMAKO versi baru sedang dimatikan atau berganti alamat. Coba lagi beberapa menit lagi, atau hubungi Muara Studio.</p>
-    <a class="tombol" href="./">Coba lagi</a>
-  </section>
-  <p class="kecil" id="manual" hidden>Bila halaman tidak berpindah, <a id="tautan" href="#">buka SIMAKO di sini</a>.</p>
+<canvas id="s-blob" aria-hidden="true"></canvas>
+<main class="bungkus">
+    <div class="bentuk b1"></div><div class="bentuk b2"></div><div class="bentuk b3"></div>
+    <div class="kartu">
+        <div class="isi">
+            <div class="logo"><img src="/simako-update/assets/images/logo-abbr.svg" alt="Logo SIMAKO" onerror="this.parentNode.innerHTML='<span>S</span>'"></div>
+            <h1>Selamat Datang di <span class="merek">SIMAKO</span>
+                <small>(Sistem Informasi Manajemen Koleksi) MCB</small></h1>
+            <div class="catatan" role="note">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 9h.01"/><path d="M11 12h1v4h1"/></svg>
+                <p>Ini adalah demo SIMAKO dengan data contoh. Perubahan tidak disimpan.</p>
+            </div>
+            <h2 class="judul-daftar" id="judul-peran">Pilih peran untuk masuk</h2>
+            <ul class="daftar" id="daftar-peran" aria-labelledby="judul-peran">
+                <li><a class="peran" href="/simako-update/super-admin/dashboard/"><span class="peran-teks"><span class="peran-nama">Super Administrator</span></span></a></li>
+                <li><a class="peran" href="/simako-update/head-of-iha/dashboard/"><span class="peran-teks"><span class="peran-nama">Head of IHA</span></span></a></li>
+                <li><a class="peran" href="/simako-update/admin-museum/dashboard/"><span class="peran-teks"><span class="peran-nama">Admin Museum</span></span></a></li>
+                <li><a class="peran" href="/simako-update/kurator/dashboard/"><span class="peran-teks"><span class="peran-nama">Kurator</span></span></a></li>
+                <li><a class="peran" href="/simako-update/registrar/dashboard/"><span class="peran-teks"><span class="peran-nama">Registrar</span></span></a></li>
+                <li><a class="peran" href="/simako-update/konservator/dashboard/"><span class="peran-teks"><span class="peran-nama">Konservator</span></span></a></li>
+                <li><a class="peran" href="/simako-update/tim-pengolah-data/dashboard/"><span class="peran-teks"><span class="peran-nama">Tim Pengolah Data SIMAKO</span></span></a></li>
+            </ul>
+        </div>
+        <div class="kaki"><span>Versi demo</span><span>Tanpa kata sandi</span></div>
+    </div>
 </main>
 <script>
-(async function () {
-  var tampil = function (id) { document.getElementById('buka').hidden = id !== 'buka'; document.getElementById('mati').hidden = id !== 'mati'; };
-  try {
-    var r = await fetch('alamat.json?t=' + Date.now(), { cache: 'no-store' });
-    var d = await r.json();
-    if (!d.aktif || !/^https:\/\/[a-z0-9-]+\.trycloudflare\.com$/.test(d.url)) { tampil('mati'); return; }
-    var tujuan = d.url + '/login';
-    document.getElementById('tautan').href = tujuan;
-    var batas = new AbortController();
-    setTimeout(function () { batas.abort(); }, 8000);
-    await fetch(d.url + '/assets/images/favicon.ico?t=' + Date.now(), { mode: 'no-cors', cache: 'no-store', signal: batas.signal });
-    location.replace(tujuan);
-    setTimeout(function () { document.getElementById('manual').hidden = false; }, 3000);
-  } catch (e) {
-    tampil('mati');
-  }
+(function () {
+    'use strict';
+    var DASAR = '/simako-update/';
+    var PANAH = '<svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6l-6 6"/></svg>';
+    var daftar = document.getElementById('daftar-peran');
+
+    function tambahPanah() {
+        Array.prototype.forEach.call(daftar.querySelectorAll('.peran'), function (a) {
+            if (!a.querySelector('svg')) a.insertAdjacentHTML('beforeend', PANAH);
+        });
+    }
+    function namaMuseum(m) {
+        if (!m) return '';
+        if (typeof m === 'string') return m;
+        if (typeof m === 'object') return m.nama || m.name || m.label || '';
+        return '';
+    }
+    function isiDaftar(peran) {
+        daftar.textContent = '';
+        peran.forEach(function (p) {
+            if (!p || !p.slug) return;
+            var li = document.createElement('li'), a = document.createElement('a'), teks = document.createElement('span'), nama = document.createElement('span');
+            a.className = 'peran';
+            a.href = DASAR + encodeURIComponent(p.slug) + '/dashboard/';
+            teks.className = 'peran-teks';
+            nama.className = 'peran-nama';
+            nama.textContent = p.label || p.slug;
+            teks.appendChild(nama);
+            var mus = namaMuseum(p.museum);
+            if (mus) { var m = document.createElement('span'); m.className = 'peran-museum'; m.textContent = mus; teks.appendChild(m); }
+            a.appendChild(teks);
+            li.appendChild(a);
+            daftar.appendChild(li);
+        });
+        tambahPanah();
+    }
+    tambahPanah();
+    /* peran.json dari perekam: [{slug, label, user_id, museum}]. Tanpa berkas itu, daftar bawaan tetap dipakai. */
+    if (window.fetch) {
+        fetch(DASAR + 'peran.json', { cache: 'no-cache' })
+            .then(function (r) { return r.ok ? r.json() : null; })
+            .then(function (j) { if (Array.isArray(j) && j.length) isiDaftar(j); })
+            .catch(function () {});
+    }
+
+    /* Gumpalan warna yang mengikuti penunjuk, sama dengan halaman masuk SIMAKO. */
+    var c = document.getElementById('s-blob'), x = c.getContext && c.getContext('2d');
+    if (!x) return;
+    var W, H, tx, ty, bx, by, t = 0;
+    function rs() { W = c.width = innerWidth; H = c.height = innerHeight; if (tx === undefined) { tx = bx = W * .6; ty = by = H * .4; } }
+    rs(); addEventListener('resize', rs);
+    addEventListener('pointermove', function (e) { tx = e.clientX; ty = e.clientY; }, { passive: true });
+    var gerak = !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    function fr() {
+        bx += (tx - bx) * .045; by += (ty - by) * .045; t += .008; x.clearRect(0, 0, W, H);
+        var r = Math.min(W, H) * .22;
+        x.beginPath();
+        for (var a = 0; a <= Math.PI * 2 + .01; a += .08) { var rr = r * (1 + .16 * Math.sin(a * 3 + t * 2) + .1 * Math.cos(a * 5 - t * 3)); x.lineTo(bx + Math.cos(a) * rr, by + Math.sin(a) * rr); }
+        x.closePath();
+        var g = x.createRadialGradient(bx, by, r * .2, bx, by, r * 1.3);
+        g.addColorStop(0, 'rgba(22,158,132,.30)'); g.addColorStop(1, 'rgba(22,158,132,0)');
+        x.fillStyle = g; x.filter = 'blur(28px)'; x.fill(); x.filter = 'none';
+        if (gerak) requestAnimationFrame(fr);
+    }
+    fr();
 })();
 </script>
 </body>

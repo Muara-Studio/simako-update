@@ -1,0 +1,1 @@
+{"success":true,"total":0,"hal":1,"per":10,"jalur":"A \/ Lantai 1 \/ Kertarajasa","rantai":[{"tingkat":"gedung","id":1,"nama":"A","kolom":"gedung_id"},{"tingkat":"lantai","id":1,"nama":"Lantai 1","kolom":"lantai_id"},{"tingkat":"ruang","id":16,"nama":"Kertarajasa","kolom":"ruang_id"}],"data":[]}

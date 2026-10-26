@@ -1,0 +1,46 @@
+/* Revisi pt.4: gaya modul persetujuan */
+
+/* ==========================================================================================================
+   Ponsel (agen M3, 24 Oktober 2026): Persetujuan 5.31, dialog keputusan sebagai lembar bawah, daftar notifikasi.
+   Semua aturan hanya di bawah 768 px, desktop tidak berubah. Lembar bawah s-lembar-hp dipakai juga oleh dialog
+   Peminjaman (Detail: setujui/tolak; Kembalikan: kondisi saat kembali) lewat customClass SweetAlert2.
+   ========================================================================================================== */
+@media (max-width:767.98px){
+  /* ---- Persetujuan: angka ringkas sudah ada di tab, tab jadi tiga kolom setara, tombol keputusan 48 px ---- */
+  .s-stats[data-tour="setuju-stats"]{display:none}
+  #s-setuju-tab{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;padding:10px 12px!important}
+  #s-setuju-tab button{flex-direction:column;justify-content:center;gap:4px;min-height:60px;padding:8px 6px;text-align:center;line-height:1.2;font-size:12.5px;white-space:normal;min-width:0}
+  #s-setuju-tab button i{display:none}
+  .s-setuju-daftar.s-card-b{padding:12px!important;gap:12px}
+  .s-setuju{padding:14px;gap:10px}
+  .s-setuju-h{gap:6px}
+  .s-setuju-h em,.s-setuju-h i{font-size:12px;font-family:inherit}
+  .s-setuju>b{font-size:14.5px;line-height:1.4}
+  .s-setuju-alasan{width:auto;font-size:12.5px;align-items:flex-start}
+  .s-setuju-ubah{display:block;overflow-x:auto;max-width:100%}
+  .s-setuju-meta{flex-direction:column;gap:6px;font-size:12.5px}
+  .s-setuju-meta a{min-height:44px;margin:-6px 0;align-self:flex-start}
+  .s-setuju-aksi{gap:8px;padding-top:12px}
+  .s-setuju-aksi .btn{flex:1 1 0;min-height:48px;justify-content:center;font-size:14px!important}
+
+  /* ---- Dialog keputusan (kelas s-lembar-hp): lembar bawah selebar layar, tombol besar di jangkauan ibu jari ---- */
+  .swal2-container.s-lembar-wadah{padding:0!important;display:flex!important;flex-direction:column;justify-content:flex-end;align-items:stretch!important}
+  .swal2-popup.s-lembar-hp{width:100%!important;max-width:100%!important;margin:0!important;border-radius:16px 16px 0 0!important;border-bottom:0;padding:20px 16px calc(16px + env(safe-area-inset-bottom))!important;max-height:92vh;max-height:92dvh;overflow-y:auto}
+  .s-lembar-hp .swal2-icon{display:none!important}
+  .s-lembar-hp .swal2-title{text-align:left!important;font-size:18px!important;padding:0!important;margin:0!important}
+  .s-lembar-hp .swal2-html-container{text-align:left!important;font-size:14px!important;color:var(--s-ink2)!important;margin:8px 0 0!important;padding:0!important}
+  .s-lembar-hp .swal2-input,.s-lembar-hp .swal2-textarea{width:100%!important;max-width:100%;margin:14px 0 0!important;font-size:16px!important;min-height:48px;box-sizing:border-box}
+  .s-lembar-hp .swal2-textarea{min-height:104px;padding:12px!important;resize:vertical}
+  .s-lembar-hp .swal2-input-label{justify-content:flex-start;margin:14px 0 0!important;font-size:13px;font-weight:600;color:var(--s-ink)}
+  .s-lembar-hp .swal2-validation-message{margin:10px 0 0!important;font-size:13px!important;justify-content:flex-start}
+  .s-lembar-hp .swal2-actions{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));width:100%;gap:10px;margin:18px 0 0!important}
+  .s-lembar-hp .swal2-actions>button{width:100%;min-height:48px;margin:0!important;font-size:14px!important;justify-content:center}
+  .s-lembar-hp.s-lembar-tolak .swal2-confirm{background:var(--s-bad)!important;border-color:var(--s-bad)!important;color:#fff!important}
+  .s-lembar-hp .s-kk-daftar{max-height:none;overflow:visible}
+  .s-lembar-hp .s-kk-isian .form-select,.s-lembar-hp .s-kk-isian .form-control{min-height:44px;font-size:16px}
+
+  /* ---- Daftar notifikasi lonceng: panel dan ukuran dari ponsel.css (agen K); di sini judul boleh dua baris
+     supaya inti notifikasi (jenis permintaan dan nomornya) tidak terpotong ---- */
+  .s-notif-item b{white-space:normal;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;line-height:1.35}
+  .s-notif-item span{line-height:1.4}
+}

@@ -1,0 +1,47 @@
+/* Modul museum: List Museum 3.10 di ponsel (agen M2, 24/10/2026).
+   Dimuat dari application/modules/master/views/listMuseum.php. Semua aturan berlaku di bawah 768 px saja,
+   jadi tabel desktop tidak berubah. Di ponsel tiap museum menjadi kartu: nama, kode, sosial media, kota, dan status
+   selalu tampil; alamat lengkap, kontak, dan deskripsi dibuka lewat tombol Rincian. */
+@media (max-width:767.98px){
+  .s-museum-kartu>.s-card-h{flex-direction:column;align-items:stretch;gap:12px;padding:16px 16px 12px}
+  .s-museum-kartu>.s-card-h .s-cari{width:100%;margin-left:0}
+  .s-museum-kartu>.s-card-h .s-cari input{min-height:44px}
+  .s-museum-kartu>.table-responsive{border-top:1px solid var(--s-line)}
+  #s-museum-tabel{display:block;width:100%;min-width:0!important;table-layout:auto!important}
+  #s-museum-tabel thead{display:none}
+  #s-museum-tabel tbody{display:block}
+  #s-museum-tabel tbody tr{display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"nama st" "alamat alamat" "kontak kontak" "desk desk" "aksi aksi";gap:0 12px;padding:14px 16px;border-top:1px solid var(--s-line2);background:var(--s-paper)}
+  #s-museum-tabel tbody tr:first-child{border-top:0}
+  #s-museum-tabel tbody td{display:block;padding:0!important;border:0!important;background:transparent!important;box-shadow:none!important;width:auto!important;min-width:0!important;max-width:none!important;text-align:left!important}
+  #s-museum-tabel tbody td[colspan]{grid-column:1/-1;text-align:center!important;padding:20px 0!important}
+  #s-museum-tabel td:nth-child(1){display:none}
+  #s-museum-tabel td:nth-child(2){grid-area:nama}
+  #s-museum-tabel td:nth-child(3){grid-area:alamat;margin-top:8px}
+  #s-museum-tabel td:nth-child(4){grid-area:kontak;margin-top:8px}
+  #s-museum-tabel td:nth-child(5){grid-area:desk;margin-top:10px}
+  #s-museum-tabel td:nth-child(6){grid-area:st;justify-self:end;align-self:start;margin-top:2px}
+  #s-museum-tabel td:nth-child(7){grid-area:aksi;margin-top:12px}
+  #s-museum-tabel .s-museum-nama b{white-space:normal;overflow:visible;font-size:15px;font-weight:600;line-height:1.35;margin-bottom:6px;overflow-wrap:anywhere}
+  #s-museum-tabel .s-museum-meta{gap:4px}
+  #s-museum-tabel .s-museum-kode{margin-right:4px}
+  #s-museum-tabel .s-sos{width:40px;height:40px;font-size:18px}
+  #s-museum-tabel .s-museum-kota{white-space:normal;font-size:12.5px;margin-top:0}
+  #s-museum-tabel .s-museum-alamat .s-potong{white-space:normal;overflow:visible;font-size:13px;color:var(--s-ink2);margin-bottom:2px}
+  #s-museum-tabel .s-peta{min-height:44px;margin-top:0;font-size:13px}
+  #s-museum-tabel .s-museum-kontak{display:grid!important;gap:2px;padding:10px 0!important;border-top:1px solid var(--s-line2)!important;border-bottom:1px solid var(--s-line2)!important}
+  #s-museum-tabel .s-museum-kontak div{min-height:36px;font-size:13px;white-space:normal}
+  #s-museum-tabel .s-museum-kontak a{max-width:none;white-space:normal;overflow-wrap:anywhere}
+  #s-museum-tabel .s-museum-desk .s-museum-fakta{font-size:12.5px;padding:2px 0}
+  #s-museum-tabel .s-museum-desk .s-museum-fakta em,#s-museum-tabel .s-museum-desk p.s-potong{white-space:normal;overflow:visible}
+  #s-museum-tabel .s-museum-desk p{font-size:13px;line-height:1.5}
+  /* ringkas: alamat lengkap, kontak, dan deskripsi muncul setelah Rincian diketuk */
+  #s-museum-tabel tr:not(.s-buka) .s-museum-alamat .s-potong,#s-museum-tabel tr:not(.s-buka) .s-museum-alamat .s-peta,
+  #s-museum-tabel tr:not(.s-buka) td.s-museum-kontak,#s-museum-tabel tr:not(.s-buka) td.s-museum-desk{display:none!important}
+  #s-museum-tabel .s-aksi-sejajar{display:flex;width:100%;gap:8px}
+  #s-museum-tabel .s-aksi-sejajar .btn{height:44px!important;min-height:44px}
+  #s-museum-tabel .s-aksi-sejajar .s-museum-rinci{flex:1 1 auto;justify-content:center}
+  #s-museum-tabel .s-aksi-sejajar .s-museum-rinci i{font-size:16px;transition:transform .15s}
+  #s-museum-tabel tr.s-buka .s-museum-rinci i{transform:rotate(180deg)}
+  #s-museum-tabel .s-aksi-sejajar .s-hapus{flex:0 0 44px;padding:0!important}
+}
+@media (min-width:768px){.s-museum-rinci{display:none!important}}

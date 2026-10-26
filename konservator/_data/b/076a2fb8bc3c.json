@@ -1,0 +1,1 @@
+{"success":true,"total":0,"hal":1,"per":10,"jalur":"A \/ Lantai 2 \/ Ruang 04 \/ Rak A10","rantai":[{"tingkat":"gedung","id":1,"nama":"A","kolom":"gedung_id"},{"tingkat":"lantai","id":2,"nama":"Lantai 2","kolom":"lantai_id"},{"tingkat":"ruang","id":1,"nama":"Ruang 04","kolom":"ruang_id"},{"tingkat":"rak","id":156,"nama":"Rak A10","kolom":"posisi_rak_id"}],"data":[]}

@@ -1,0 +1,821 @@
+{
+ "versi": 1,
+ "peran": "tim-pengolah-data",
+ "entri": {
+  "GET /persetujuan/notifikasi": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/70e16ef57799.json"
+  },
+  "GET /dashboard/spotlight?cat=&q=": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/337495baa13e.json"
+  },
+  "GET /dashboard/spotlight": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/337495baa13e.json"
+  },
+  "GET /dashboard/spotlight?cat=menu&q=": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/6c7410c9f58f.json"
+  },
+  "GET /dashboard/spotlight?cat=koleksi&q=": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/73476a83bb35.json"
+  },
+  "GET /dashboard/spotlight?cat=museum&q=": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/9d1a43304a24.json"
+  },
+  "GET /dashboard/spotlight?cat=dashboard&q=": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/d4dc16f1ae22.json"
+  },
+  "GET /dashboard/spotlight?cat=&q=arca": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/c14be11bb23b.json"
+  },
+  "GET /dashboard/spotlight?cat=&q=keris": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/3d98e116e900.json"
+  },
+  "GET /dashboard/spotlight?cat=&q=batik": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/31ce727f0f32.json"
+  },
+  "GET /dashboard/spotlight?cat=&q=museum": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/6f38f3179887.json"
+  },
+  "GET /dashboard/spotlight?cat=&q=pameran": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/036b5e9d3150.json"
+  },
+  "GET /dashboard/spotlight?cat=&q=naskah": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/d45ff2b2ae10.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=25&search[regex]=false&search[value]=&start=0&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/537120cf9e47.json"
+  },
+  "GET /koleksi/list/ajax/1.1": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/537120cf9e47.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/537120cf9e47.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=25&search[regex]=false&search[value]=a&start=0&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/8c298c1eea4b.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=25&search[regex]=false&search[value]=arca&start=0&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/07a10f181903.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/46b9233fd930.json"
+  },
+  "GET /koleksi/pencarian/search/1.2": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/46b9233fd930.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&no_inventaris=arca&page=1&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/bb51c88ed09f.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&search=arca&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/6dce0c86fce3.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&search=keris&urut=terbaru": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/7fb871543638.json"
+  },
+  "GET /koleksi/klasifikasi/data/1.3": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/24b0779f2b09.json"
+  },
+  "GET /koleksi/klasifikasi/bahan/1.3": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/e070f5e980d6.json"
+  },
+  "GET /storage/gedung/pohon/3.7": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/2812eee61bbb.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=1&tingkat=gedung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/825c86416295.json"
+  },
+  "GET /storage/gedung/isi/3.7": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/825c86416295.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=1&tingkat=lantai": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/8098d1b4654c.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=16&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/63c209d51bfc.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=23&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/e36895d308a3.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=2&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/10c444f6e70c.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=3&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/400d1e4d49ec.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=5&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/0ede34a92b43.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=7&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/435445bea861.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=9&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/43f70ca50e4e.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=4&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/5307f3210a84.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=6&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/63ce4e2d85f5.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=8&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/59fc8053efc2.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=10&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/c295a36747d6.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=21&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/cf26a35d427f.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=15&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/f435de8170dd.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=20&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/92beec441322.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=22&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/1fc587088e86.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=15&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/ee0515b16f37.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=17&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/35c44d56a886.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=16&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/a6e401894b1e.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=17&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/a49dd7d19ba9.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=18&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/2b2103e77bb1.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=19&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/b43a38618fb6.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=2&tingkat=lantai": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/a0d80cf028fb.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=1&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/f028984f04f3.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=154&tingkat=cluster": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/5621edf2c601.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=155&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/4b0a7a315814.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=156&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/076a2fb8bc3c.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=2&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/e88bc336c878.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=3&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/3fb43b636849.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=5&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/1c8763a3ba1d.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=7&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/99c2d8ac7bce.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=4&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/b8e38cdb8407.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=6&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/f05186061bb2.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=8&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/ce740616e089.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=1&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/f42f9f7ae65a.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=1&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/a4d4451f248a.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=1&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/d867c909ce9e.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=1&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/f2557e5f7327.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=2&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/83df9abe3749.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=2&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/d240360b5497.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=3&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/b686d400d151.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=4&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/f376c2a8a453.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=2&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/eeb6754a1347.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=3&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/92386d160ded.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=5&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/309bb3b1a55d.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=4&tingkat=box": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/b088ef969c29.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=6&tingkat=kantung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/622fd7cbb156.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=24&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/56b6d21ed785.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=25&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/fdec73bd8964.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=2&tingkat=gedung": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/d5abd85048a3.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=5&tingkat=lantai": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/fa8a9abe2009.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=28&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/3f536c5690c2.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=29&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/2d19cd1ad0ca.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=5&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/c97d2749fa43.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=7&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/48ab425ea02c.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=9&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/9240333486de.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=26&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/3d8d3de4be6e.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=27&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/5b9c148fe0cf.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=6&tingkat=lantai": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/9686cdff833e.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=31&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/870bf7efcd48.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=6&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/7d82147f8328.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=8&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/897f603ead0b.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=10&tingkat=shelving": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/b0cc910c4c23.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=30&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/193adfc64389.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=18&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/a1203179dc97.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=19&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/b06b88c6ecd3.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=20&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/b09fbd62e807.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=16&tingkat=lantai": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/f649d2cc7479.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=32&tingkat=ruang": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/08f485ee9e91.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=21&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/d99c0b1207b2.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=22&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/9e3c86f488db.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=23&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/9ec97a51ce18.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=24&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/e1e1aa191abc.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=25&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/22559731683b.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=26&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/a930cc714ab0.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=27&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/89b9ecf1bb2d.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=28&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/ee07a0a5de17.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=29&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/e5de46163065.json"
+  },
+  "GET /storage/gedung/isi/3.7?hal=1&id=30&tingkat=rak": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/1893a3989307.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&length=5&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/5fa2138c546d.json"
+  },
+  "GET /storage/mutasi/ajax/3.8": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/5fa2138c546d.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/e23d5b03045e.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&length=5&search[regex]=false&search[value]=&start=5": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/efec5c5e9f08.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&length=5&search[regex]=false&search[value]=&start=10": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/cc1aea3672a6.json"
+  },
+  "GET /storage/koleksiTanpaLokasi/ajax/3.9?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=8&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=3&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=4&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=5&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=6&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&length=10&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/32677fabfd01.json"
+  },
+  "GET /storage/koleksiTanpaLokasi/ajax/3.9": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/32677fabfd01.json"
+  },
+  "GET /storage/koleksiTanpaLokasi/ajax/3.9?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=8&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=3&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=4&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=5&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=6&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/32677fabfd01.json"
+  },
+  "GET /storage/koleksiTanpaLokasi/ajax/3.9?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=8&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=3&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=4&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=5&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=6&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&length=10&search[regex]=false&search[value]=a&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/09efdbe0b35f.json"
+  },
+  "GET /storage/koleksiTanpaLokasi/ajax/3.9?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=8&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=3&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=4&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=5&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=6&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&length=10&search[regex]=false&search[value]=arca&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/74a279dcb889.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=10&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/7d07ea3029e0.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/7d07ea3029e0.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/7d07ea3029e0.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=out&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=10&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/7e6d6deff41f.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=out&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/7e6d6deff41f.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=in&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=10&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/688b23ccf0a8.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=in&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/688b23ccf0a8.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=in&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=10&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=a&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/67494c42fed5.json"
+  },
+  "GET /peminjaman/daftar/ajax/2.5?arah=in&columns[0][data]=0&columns[0][name]=&columns[0][orderable]=true&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=true&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=true&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=true&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=true&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=true&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=true&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=true&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=true&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=true&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=10&order[0][column]=0&order[0][dir]=asc&search[regex]=false&search[value]=arca&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/82a0546f3306.json"
+  },
+  "GET /master/kustomisasiKolom/ajax/5.14?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&length=25&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/aaa4fd9020c1.json"
+  },
+  "GET /master/kustomisasiKolom/ajax/5.14": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/aaa4fd9020c1.json"
+  },
+  "GET /master/kustomisasiKolom/ajax/5.14?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/aaa4fd9020c1.json"
+  },
+  "GET /master/kustomisasiKolom/ajax/5.14?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&length=25&search[regex]=false&search[value]=a&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/3dfb6670bb8c.json"
+  },
+  "GET /kinerja/data?menit=60": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/5936708180f5.json"
+  },
+  "GET /kinerja/data": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/5936708180f5.json"
+  },
+  "GET /master/kustomisasiKolom/ajaxListGroupKolom.1/5.14?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&length=10&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/d6b7e25b49c5.json"
+  },
+  "GET /master/kustomisasiKolom/ajaxListGroupKolom.1/5.14": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/d6b7e25b49c5.json"
+  },
+  "GET /master/kustomisasiKolom/ajaxListGroupKolom.1/5.14?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/d6b7e25b49c5.json"
+  },
+  "GET /master/kustomisasiKolom/ajaxListGroupKolom.1/5.14?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&length=10&search[regex]=false&search[value]=a&start=0": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "f": "b/783278343c0d.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0&urut=terlama": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/f34c0ad8e528.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0&urut=nama_az": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/61ce009cda55.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0&urut=nama_za": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/b15412640fff.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0&urut=dilihat": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/0af885544837.json"
+  },
+  "GET /koleksi/list/ajax/1.1?columns[0][data]=0&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[10][data]=10&columns[10][name]=&columns[10][orderable]=false&columns[10][search][regex]=false&columns[10][search][value]=&columns[10][searchable]=true&columns[11][data]=11&columns[11][name]=&columns[11][orderable]=false&columns[11][search][regex]=false&columns[11][search][value]=&columns[11][searchable]=true&columns[12][data]=12&columns[12][name]=&columns[12][orderable]=false&columns[12][search][regex]=false&columns[12][search][value]=&columns[12][searchable]=true&columns[13][data]=13&columns[13][name]=&columns[13][orderable]=false&columns[13][search][regex]=false&columns[13][search][value]=&columns[13][searchable]=true&columns[14][data]=14&columns[14][name]=&columns[14][orderable]=false&columns[14][search][regex]=false&columns[14][search][value]=&columns[14][searchable]=true&columns[15][data]=15&columns[15][name]=&columns[15][orderable]=false&columns[15][search][regex]=false&columns[15][search][value]=&columns[15][searchable]=true&columns[16][data]=16&columns[16][name]=&columns[16][orderable]=false&columns[16][search][regex]=false&columns[16][search][value]=&columns[16][searchable]=true&columns[17][data]=17&columns[17][name]=&columns[17][orderable]=false&columns[17][search][regex]=false&columns[17][search][value]=&columns[17][searchable]=true&columns[18][data]=18&columns[18][name]=&columns[18][orderable]=false&columns[18][search][regex]=false&columns[18][search][value]=&columns[18][searchable]=true&columns[19][data]=19&columns[19][name]=&columns[19][orderable]=false&columns[19][search][regex]=false&columns[19][search][value]=&columns[19][searchable]=true&columns[1][data]=1&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[20][data]=20&columns[20][name]=&columns[20][orderable]=false&columns[20][search][regex]=false&columns[20][search][value]=&columns[20][searchable]=true&columns[21][data]=21&columns[21][name]=&columns[21][orderable]=false&columns[21][search][regex]=false&columns[21][search][value]=&columns[21][searchable]=true&columns[22][data]=22&columns[22][name]=&columns[22][orderable]=false&columns[22][search][regex]=false&columns[22][search][value]=&columns[22][searchable]=true&columns[23][data]=23&columns[23][name]=&columns[23][orderable]=false&columns[23][search][regex]=false&columns[23][search][value]=&columns[23][searchable]=true&columns[2][data]=2&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=3&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=4&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&columns[7][data]=7&columns[7][name]=&columns[7][orderable]=false&columns[7][search][regex]=false&columns[7][search][value]=&columns[7][searchable]=true&columns[8][data]=8&columns[8][name]=&columns[8][orderable]=false&columns[8][search][regex]=false&columns[8][search][value]=&columns[8][searchable]=true&columns[9][data]=9&columns[9][name]=&columns[9][orderable]=false&columns[9][search][regex]=false&columns[9][search][value]=&columns[9][searchable]=true&length=-1&search[regex]=false&search[value]=&start=0&urut=diubah": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/9fef24dcbdcd.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&end_date=&length=-1&petugas=&q=&search[regex]=false&search[value]=&start=0&start_date=&status=": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/e0be63feeb6b.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&end_date=&length=-1&petugas=&q=&search[regex]=false&search[value]=&start=0&start_date=&status=WAIT": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/c7961953e1e6.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&end_date=&length=-1&petugas=&q=&search[regex]=false&search[value]=&start=0&start_date=&status=APPROVED": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/d7145a110604.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&end_date=&length=-1&petugas=&q=&search[regex]=false&search[value]=&start=0&start_date=&status=REJECTED": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/d7145a110604.json"
+  },
+  "GET /storage/mutasi/ajax/3.8?columns[0][data]=1&columns[0][name]=&columns[0][orderable]=false&columns[0][search][regex]=false&columns[0][search][value]=&columns[0][searchable]=true&columns[1][data]=8&columns[1][name]=&columns[1][orderable]=false&columns[1][search][regex]=false&columns[1][search][value]=&columns[1][searchable]=true&columns[2][data]=10&columns[2][name]=&columns[2][orderable]=false&columns[2][search][regex]=false&columns[2][search][value]=&columns[2][searchable]=true&columns[3][data]=11&columns[3][name]=&columns[3][orderable]=false&columns[3][search][regex]=false&columns[3][search][value]=&columns[3][searchable]=true&columns[4][data]=2&columns[4][name]=&columns[4][orderable]=false&columns[4][search][regex]=false&columns[4][search][value]=&columns[4][searchable]=true&columns[5][data]=5&columns[5][name]=&columns[5][orderable]=false&columns[5][search][regex]=false&columns[5][search][value]=&columns[5][searchable]=true&columns[6][data]=6&columns[6][name]=&columns[6][orderable]=false&columns[6][search][regex]=false&columns[6][search][value]=&columns[6][searchable]=true&end_date=&length=-1&petugas=&q=&search[regex]=false&search[value]=&start=0&start_date=&status=DONE": {
+   "s": 200,
+   "t": "application/json",
+   "dt": true,
+   "semua": true,
+   "f": "b/739c3f5ac7f4.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&urut=terlama": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/222724021203.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&urut=nama_az": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/25c3f905041e.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&urut=nama_za": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/8498fd239221.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&urut=dilihat": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/ce59b2d1a819.json"
+  },
+  "GET /koleksi/pencarian/search/1.2?limit=24&page=1&urut=diubah": {
+   "s": 200,
+   "t": "application/json",
+   "f": "b/46b9233fd930.json"
+  }
+ }
+}

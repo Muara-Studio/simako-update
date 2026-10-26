@@ -1,0 +1,82 @@
+/* Kinerja Sistem (Master > Kinerja Sistem). Dimuat setelah custom.css dan revisi/dashboard.css. */
+
+/* Segmen rentang waktu dan tombol live di page header */
+.s-kin-seg{display:inline-flex;align-items:center;background:var(--s-alt);border:1px solid var(--s-line);border-radius:10px;padding:3px;gap:2px}
+.s-kin-seg button{appearance:none;border:0;background:transparent;color:var(--s-mid);font:inherit;font-size:12.5px;font-weight:500;padding:6px 12px;border-radius:7px;cursor:pointer;white-space:nowrap;transition:background .15s,color .15s}
+.s-kin-seg button:hover{color:var(--s-ink)}
+.s-kin-seg button.aktif{background:var(--s-paper);color:var(--s-ink);font-weight:600;box-shadow:0 1px 2px rgba(0,0,0,.08)}
+.s-kin-seg-kecil{padding:2px}
+.s-kin-seg-kecil button{font-size:11.5px;padding:4px 9px}
+.s-kin-live{display:inline-flex;align-items:center;gap:7px}
+.s-kin-live .s-kin-dot{width:8px;height:8px;border-radius:8px;background:var(--s-mid);display:inline-block;transition:background .15s}
+.s-kin-live.aktif .s-kin-dot{background:var(--s-brand);box-shadow:0 0 0 0 var(--s-brand-soft);animation:s-kin-denyut 2s infinite}
+@keyframes s-kin-denyut{0%{box-shadow:0 0 0 0 var(--s-brand-soft)}70%{box-shadow:0 0 0 6px transparent}100%{box-shadow:0 0 0 0 transparent}}
+.s-kin-memuat #s-kin-muat i{display:inline-block;animation:s-kin-putar 1s linear infinite}
+@keyframes s-kin-putar{to{transform:rotate(360deg)}}
+
+/* Catatan sumber data di bawah header */
+.s-kin-catatan{display:flex;gap:12px;align-items:flex-start;background:var(--s-paper);border:1px solid var(--s-line);border-radius:var(--r-card);padding:14px 18px;margin-bottom:24px;font-size:12.5px;color:var(--s-ink2);line-height:1.55}
+.s-kin-catatan > i{font-size:18px;color:var(--s-brand);margin-top:1px}
+.s-kin-catatan b{font-weight:600;color:var(--s-ink)}
+.s-kin-host{display:inline-flex;align-items:center;gap:5px;margin-left:10px;padding:2px 8px;border-radius:6px;background:var(--s-alt);color:var(--s-mid);font-size:12px;white-space:nowrap}
+.s-kin-host i{font-size:13px}
+
+/* Judul seksi */
+.s-kin-judul{display:flex;align-items:baseline;gap:12px;margin:4px 0 16px}
+.s-kin-judul b{font-size:15px;font-weight:600;color:var(--s-ink)}
+.s-kin-judul span{font-size:12.5px;color:var(--s-mid)}
+
+/* Ubin statistik: angka pakai tabular-nums, ubin hijau untuk p95 (mengikuti referensi) */
+.s-kin-stats .s-stat .vl b{font-variant-numeric:tabular-nums}
+.s-kin-stats .s-stat.s-kin-hijau{background:linear-gradient(160deg,var(--s-brand) 0%,var(--s-brand-h) 100%);border-color:transparent;color:#fff}
+.s-kin-stats .s-stat.s-kin-hijau .lb,.s-kin-stats .s-stat.s-kin-hijau .vl span,.s-kin-stats .s-stat.s-kin-hijau .dl{color:rgba(255,255,255,.82)}
+.s-kin-stats .s-stat.s-kin-hijau .vl b{color:#fff;font-size:34px}
+
+/* Grid tiga kolom sama lebar untuk grafik */
+.s-kin-grid3,.s-kin-grid3b{grid-template-columns:repeat(3,minmax(0,1fr))}
+.s-kin .s-grafik{min-height:260px}
+.s-kin .s-grafik-kecil{min-height:220px}
+.s-kin .s-grafik .s-empty{display:flex;align-items:center;justify-content:center;min-height:inherit}
+.s-kin .s-card-b{padding:6px 16px 14px}
+
+/* Tabel endpoint dan proses */
+.s-kin-gulir{max-height:300px;overflow:auto}
+.s-kin-tabel td.num,.s-kin-tabel th.num{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.s-kin-tabel td.uri{max-width:260px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--s-ink)}
+.s-kin-tabel td.s-empty{padding:32px 12px!important;text-align:center}
+
+/* Chip koneksi per state di bawah grafik swap */
+.s-kin-koneksi{display:flex;flex-wrap:wrap;gap:6px;align-items:center;padding:10px 6px 2px;border-top:1px solid var(--s-line2)}
+.s-kin-chip-lb{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--s-mid);margin-right:4px}
+.s-kin-chip{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--s-ink2);background:var(--s-alt);border:1px solid var(--s-line);border-radius:6px;padding:3px 8px}
+.s-kin-chip b{font-weight:600;color:var(--s-ink);font-variant-numeric:tabular-nums}
+.s-kin-chip.kosong{color:var(--s-mid)}
+
+@media (max-width:1180px){.s-kin-grid3,.s-kin-grid3b{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:760px){.s-kin-grid3,.s-kin-grid3b{grid-template-columns:1fr}.s-kin-host{margin-left:0;margin-top:6px}.s-kin-catatan{flex-direction:column}
+  /* Ponsel 390 px (UAT-A-45): nama host panjang dibungkus, kepala kartu bersegmen turun ke baris kedua. */
+  .s-kin-catatan>div{min-width:0;max-width:100%}.s-kin-host{white-space:normal;max-width:100%;overflow-wrap:anywhere}
+  .s-kin-grid3 .s-card-h,.s-kin-grid3b .s-card-h{flex-wrap:wrap;gap:8px}}
+@media print{.s-kin-seg,.s-kin-live,#s-kin-muat{display:none}}
+
+/* ==== Ponsel M4 (Oktober 2026): Kinerja Sistem 5.30 di 390 dan 360 px. Grid satu kolom ada di revisi/dashboard.css (.nxl-content .s-grid3). ==== */
+@media (max-width:767.98px){
+  .s-kin .page-header-right-items-wrapper{gap:8px!important}
+  .s-kin .page-header-right-items-wrapper>.s-kin-seg{flex:1 1 100%;display:flex}
+  .s-kin .s-kin-seg>button{flex:1}
+  .s-kin .page-header-right-items-wrapper>#s-kin-muat{flex:0 0 44px}
+  .s-kin .s-kin-seg button{min-height:40px;padding:0 12px;font-size:13px}
+  .s-kin #s-kin-live,.s-kin #s-kin-muat{min-height:44px;min-width:44px;justify-content:center}
+  .s-kin .s-kin-catatan{padding:12px 14px;margin-bottom:16px;gap:8px}
+  .s-kin .s-kin-judul{flex-wrap:wrap;gap:2px 10px;margin:4px 0 12px}
+  .s-kin .s-kin-stats .s-stat.s-kin-hijau .vl b{font-size:26px}
+  .s-kin .s-grafik{min-height:220px}
+  .s-kin .s-card-b{padding:6px 12px 12px}
+  .s-kin .s-card-h{flex-wrap:wrap}
+  .s-kin .s-card-h .s-kin-seg-kecil{flex:none}
+  .s-kin .s-kin-seg-kecil button{min-height:40px;padding:0 14px;font-size:12.5px}
+  .s-kin .s-kin-tabel td.uri{max-width:180px}
+  .s-kin .s-tabel-gulir{overflow:auto}
+  .s-kin .s-kin-tabel th:first-child,.s-kin .s-kin-tabel td:first-child{position:sticky;left:0;z-index:1;background:var(--s-paper)}
+  .s-kin .s-kin-tabel thead th:first-child{background:var(--s-alt);z-index:2}
+}

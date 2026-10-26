@@ -1,0 +1,2403 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head><meta name="robots" content="noindex, nofollow, noarchive">
+<script src="/simako-update/demo/shim.js" data-peran="head-of-iha" data-dasar="/simako-update/"></script>
+<link rel="stylesheet" href="/simako-update/demo/demo.css">
+<meta name="csrf-nama" content="simako_csrf"><meta name="csrf-token" content="demo"><script src="/simako-update/assets/js/simako-csrf.js?v=1792711434"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="" />
+    <meta name="keyword" content="" />
+    <meta name="author" content="flexilecode" />
+    <!--! The above 6 meta tags *must* come first in the head; any other head content must come *after* these tags !-->
+    <!--! BEGIN: Apps Title-->
+    <title>SIMAKO · Sistem Informasi Manajemen Koleksi</title>
+    <!--! END:  Apps Title-->
+    <!--! BEGIN: Favicon-->
+    <link rel="shortcut icon" type="image/x-icon" href="/simako-update/assets/images/favicon.ico">
+    <!--! END: Favicon-->
+    <!--! BEGIN: Bootstrap CSS-->
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/bootstrap.min.css" />
+    <!--! END: Bootstrap CSS-->
+    <!--! BEGIN: Vendors CSS-->
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/vendors/css/vendors.min.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/vendors/css/dataTables.bs5.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"/>
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/vendors/css/daterangepicker.min.css" />
+    <!--! END: Vendors CSS-->
+    <!--! BEGIN: Tabler Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+    <!--! END: Tabler Icons -->
+    <!--! BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/custom.css?v=1792865674" />
+    <!-- Pola ponsel global (<= 767.98 px), sebelum CSS modul agar modul tetap bisa menimpa. Daftar kelas: simako-uat/perbaikan/mobile-pola.md -->
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/ponsel.css?v=1792865299" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/koleksi.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/storage.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/master.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/audit.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/dashboard.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/kinerja.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/impor.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/pencarian.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/peminjaman.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/pameran.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/settings.css?v=1792866002" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/persetujuan.css" />
+    <link rel="stylesheet" type="text/css" href="/simako-update/assets/css/revisi/kondisi.css" />
+    <!--! END: Custom CSS-->
+    <!--! HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries !-->
+    <!--! WARNING: Respond.js doesn"t work if you view the page via file: !-->
+    <!--[if lt IE 9]>
+			<script src="https:oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https:oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+     <!--! BEGIN: Vendors JS !-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="/simako-update/assets/vendors/js/vendors.min.js"></script>
+    <!--! BEGIN: Huruf Inter, pengganti Geist pada sistem desain Alt 2026 !-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!--! END: Huruf Inter !-->
+</head><script>
+    window.SIMAKO = { base: '/simako-update/head-of-iha/', role: 10, roleName: "Head of IHA", mac: /Mac|iPhone|iPad/.test(navigator.platform),
+        akses: {"1.1":"1,2,4","1.2":"1,2,4","1.28":"1,2,4","1.3":"1,2,4","2.5":"1,2,4","2.4":"1,2,4","2.6":"1,2,4","2.12":"1,2,4","3.10":"1,2,4","3.7":"1,2,4","3.8":"1,2,4","3.9":"1,2,4","4.15":"1,2,4","4.16":"1,2,4","4.17":"1,2,4","5.31":"1,2,4","5.14":"1,2,4","5.22":"1,2,4","5.29":"1,2,4","5.30":"1,2,4","6.23":"1,2,4","6.24":"1,2,4","6.25":"1,2,4","6.26":"1,2,4","7.13":"1,2,4","7.18":"1,2,4","7.20":"1,2,4","8.27":"1,2,4"}, menu: [4,1,3,2,7,5,6,8] };
+    /* Skeleton: menutup kartu dan tabel dengan batang berkilau selama data dimuat ulang. */
+    window.simakoSkeleton = function(){
+        document.querySelectorAll('.s-stat, .s-card, .nxl-content .card').forEach(function(el){
+            if (el.querySelector(':scope > .s-skel-ov')) return;
+            el.classList.add('s-skel');
+            var ov = document.createElement('div'); ov.className = 's-skel-ov' + (el.offsetHeight < 160 ? ' pendek' : '');
+            ov.innerHTML = '<i></i><i></i><i></i><i></i><i></i><i></i><i></i>'; el.appendChild(ov);
+        });
+    };
+    /* Progress bar tipis di atas halaman (butir 2 pt.4): otomatis untuk fetch, jQuery ajax, dan pindah halaman;
+       simakoProgres.set(n, m) menampilkan teks "Memproses n dari m" untuk proses bertahap. */
+    (function(){
+        var bar, teks, aktif = 0, tunda;
+        function siap(){ if (bar) return; bar = document.createElement('div'); bar.id = 's-progres'; teks = document.createElement('div'); teks.id = 's-progres-teks'; teks.hidden = true; document.body.appendChild(bar); document.body.appendChild(teks); }
+        window.simakoProgres = {
+            mulai: function(){ siap(); aktif++; clearTimeout(tunda); if (bar.className !== 'manual') bar.className = 'jalan'; },
+            selesai: function(){ if (aktif > 0) aktif--; if (aktif) return; siap(); bar.className = 'selesai'; tunda = setTimeout(function(){ if (!aktif) { bar.className = ''; bar.style.width = ''; teks.hidden = true; } }, 450); },
+            set: function(n, m){ siap(); teks.hidden = false; teks.textContent = 'Memproses ' + n + ' dari ' + m; bar.className = 'manual'; bar.style.width = Math.max(4, Math.round(n / Math.max(1, m) * 100)) + '%'; if (n >= m) { aktif = 0; window.simakoProgres.selesai(); } }
+        };
+        var fetchAsli = window.fetch;
+        window.fetch = function(){ window.simakoProgres.mulai(); return fetchAsli.apply(this, arguments).then(function(r){ window.simakoProgres.selesai(); return r; }, function(e){ window.simakoProgres.selesai(); throw e; }); };
+        if (window.jQuery) jQuery(document).ajaxSend(function(){ window.simakoProgres.mulai(); }).ajaxComplete(function(){ window.simakoProgres.selesai(); });
+        window.addEventListener('beforeunload', function(){ window.simakoProgres.mulai(); });
+        document.addEventListener('DOMContentLoaded', siap);
+    })();
+    /* Cadangan pemindah tab: bila Bootstrap tidak memindahkan panel (mis. tema mencegat klik), panel dipindah manual. */
+    document.addEventListener('click', function(e){
+        var l = e.target.closest('[data-bs-toggle="tab"]'); if (!l) return;
+        setTimeout(function(){
+            var sel = l.getAttribute('data-bs-target') || l.getAttribute('href'); var pane = sel && sel.charAt(0) === '#' ? document.querySelector(sel) : null;
+            if (!pane || pane.classList.contains('active')) return;
+            var nav = l.closest('.nav, [role="tablist"]'); if (nav) nav.querySelectorAll('[data-bs-toggle="tab"]').forEach(function(x){ x.classList.remove('active'); x.setAttribute('aria-selected','false'); });
+            l.classList.add('active'); l.setAttribute('aria-selected','true');
+            Array.prototype.forEach.call(pane.parentElement.children, function(pn){ if (pn.classList.contains('tab-pane')) pn.classList.remove('active','show'); });
+            pane.classList.add('active','show');
+            if (window.jQuery) jQuery(l).trigger('shown.bs.tab');
+        }, 60);
+    });
+    /* Saran desktop pada halaman padat data di layar kecil (butir 104 Part 4). Ditutup sekali per sesi peramban. */
+    document.addEventListener('DOMContentLoaded', function(){
+        if (window.innerWidth >= 768) return;
+        /* Halaman yang sudah dibuat nyaman di ponsel (perbaikan ponsel Okt 2026: koleksi 1.2 dan 1.28, laporan 4.15 s.d. 4.17,
+           audit, peran 6.24, pameran) dikeluarkan dari daftar; tinggal halaman yang belum dirapikan. */
+        /* Tempat Penyimpanan 3.7 dan Mutasi 3.8 juga sudah dirapikan untuk ponsel (daftar bertingkat), jadi saran ini tidak lagi ditampilkan. */
+        var berat = null;
+        if (!berat || !berat.test(location.pathname)) return;
+        try { if (sessionStorage.getItem('simako_saran_desktop') === '1') return; } catch(e) {}
+        var wadah = document.querySelector('.nxl-content'); if (!wadah) return;
+        var b = document.createElement('div'); b.className = 's-desktop-saran';
+        b.innerHTML = '<i class="ti ti-device-desktop"></i><span>Halaman ini padat data dan grafik. Di ponsel hanya bagian utama yang nyaman dibaca, gunakan desktop untuk mengelola data secara penuh.</span><button type="button" aria-label="Tutup"><i class="ti ti-x"></i></button>';
+        b.querySelector('button').addEventListener('click', function(){ b.remove(); try { sessionStorage.setItem('simako_saran_desktop', '1'); } catch(e) {} });
+        wadah.insertBefore(b, wadah.firstChild);
+    });
+    /* Layar penuh dan lonceng notifikasi (butir 25 pt.4). Daftar dimuat saat dibuka dan disegarkan tiap 90 detik. */
+    document.addEventListener('DOMContentLoaded', function(){
+        var lp = document.getElementById('s-layar-penuh');
+        if (lp) {
+            lp.addEventListener('click', function(){
+                var el = document.documentElement;
+                if (!document.fullscreenElement) { (el.requestFullscreen || el.webkitRequestFullscreen || function(){}).call(el); }
+                else { (document.exitFullscreen || document.webkitExitFullscreen || function(){}).call(document); }
+            });
+            document.addEventListener('fullscreenchange', function(){ var i = lp.querySelector('i'); i.className = document.fullscreenElement ? 'ti ti-arrows-minimize' : 'ti ti-arrows-maximize'; lp.title = document.fullscreenElement ? 'Keluar layar penuh' : 'Layar penuh'; });
+        }
+        var lonceng = document.getElementById('s-lonceng'), nEl = document.getElementById('s-lonceng-n'), daftar = document.getElementById('s-notif-daftar'), ket = document.getElementById('s-notif-ket');
+        if (!lonceng) return;
+        var IKON = { persetujuan: 'ti-gavel', pengingat: 'ti-alarm', konfirmasi: 'ti-checklist', info: 'ti-info-circle' };
+        function esc(s){ return String(s == null ? '' : s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+        function muatNotif(){
+            fetch(SIMAKO.base + 'persetujuan/notifikasi', { credentials: 'same-origin' }).then(function(r){ return r.json(); }).then(function(d){
+                if (!d.ok) return;
+                var total = (d.belum || 0);
+                nEl.textContent = total > 99 ? '99+' : total; nEl.hidden = total === 0;
+                var sn = document.getElementById('s-notif-setuju-n'); sn.textContent = d.persetujuan; sn.hidden = !d.persetujuan;
+                /* Revisi 25/10/2026: jumlah belum dibaca tampil sebagai lencana kecil di samping judul; teks lengkap di title */
+                ket.textContent = total ? (total > 999 ? '999+' : String(total)) : 'Semua sudah dibaca';
+                ket.classList.toggle('kosong', !total);
+                if (total) ket.title = total + ' belum dibaca'; else ket.removeAttribute('title');
+                document.getElementById('s-notif-baca-semua').disabled = !total;
+                if (!d.daftar.length) { daftar.innerHTML = '<div class="s-empty">Belum ada notifikasi</div>'; return; }
+                daftar.innerHTML = d.daftar.map(function(n){
+                    /* lewat dashboard/buka: alamat server saat ini dan museum aktif ikut sasaran bila pengguna berhak (UAT-A-19) */
+                    return '<a class="s-notif-item' + (n.dibaca ? '' : ' baru') + '" href="' + (n.tautan ? SIMAKO.base + 'dashboard/buka/' + Number(n.id) : '#') + '" data-id="' + n.id + '"><i class="ti ' + (IKON[n.jenis] || IKON.info) + '"></i><div><b>' + esc(n.judul) + '</b><span>' + esc(n.teks) + '</span><em>' + esc(n.waktu) + '</em></div></a>';
+                }).join('');
+            }).catch(function(){});
+        }
+        daftar.addEventListener('click', function(e){
+            var a = e.target.closest('.s-notif-item'); if (!a) return;
+            navigator.sendBeacon ? navigator.sendBeacon(SIMAKO.base + 'persetujuan/baca/' + a.dataset.id) : fetch(SIMAKO.base + 'persetujuan/baca/' + a.dataset.id, { credentials: 'same-origin' });
+            a.classList.remove('baru');
+        });
+        document.getElementById('s-notif-baca-semua').addEventListener('click', function(){
+            fetch(SIMAKO.base + 'persetujuan/bacaSemua', { credentials: 'same-origin' }).then(function(){ muatNotif(); });
+        });
+        /* dimuat ulang setiap kali menu dibuka, baik lewat klik, papan ketik, maupun pratinjau melintas */
+        lonceng.addEventListener('show.bs.dropdown', muatNotif);
+        muatNotif(); setInterval(muatNotif, 90000);
+    });
+    /* Menu kepala (lonceng dan akun), UAT-D-35 permintaan G4: dibuka dengan klik atau papan ketik lewat Bootstrap.
+       Pembuka-saat-melintas bawaan tema (common-init.min.js) menambah kelas show tanpa memberi tahu Bootstrap, sehingga klik
+       berikutnya menutup menu lagi; kode itu sudah dihapus. Melintas kini hanya pratinjau di desktop: menu dibuka lewat API
+       Bootstrap tanpa memindahkan fokus, klik saat pratinjau menyematkan menu (tidak menutupnya), dan pratinjau tertutup
+       saat kursor pergi. Spasi pada tautan berperan tombol ikut membuka menu, seperti Enter dan panah bawah. */
+    document.addEventListener('DOMContentLoaded', function(){
+        if (!window.bootstrap || !bootstrap.Dropdown) return;
+        var bisaMelintas = !!(window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches);
+        document.querySelectorAll('.nxl-header .header-wrapper .dropdown').forEach(function(wadah){
+            var t = wadah.querySelector('[data-bs-toggle="dropdown"]'); if (!t) return;
+            var dd = bootstrap.Dropdown.getOrCreateInstance(t), pratinjau = false, tunda = null;
+            var terbuka = function(){ return t.classList.contains('show'); };
+            t.addEventListener('keydown', function(e){ if (e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); dd.toggle(); } });
+            t.addEventListener('hidden.bs.dropdown', function(){ pratinjau = false; });
+            if (!bisaMelintas) return;
+            /* klik saat pratinjau terbuka: sematkan menu dan hentikan klik agar Bootstrap tidak menutupnya */
+            t.addEventListener('click', function(e){
+                if (!pratinjau || !terbuka()) return;
+                pratinjau = false; clearTimeout(tunda);
+                e.preventDefault(); e.stopImmediatePropagation(); e.stopPropagation();
+            }, true);
+            wadah.addEventListener('mouseenter', function(){
+                clearTimeout(tunda);
+                if (window.innerWidth <= 992 || terbuka() || document.querySelector('.nxl-header .header-wrapper .dropdown-menu.show')) return;
+                /* Bootstrap 5.0 memfokuskan tombol saat show(); pratinjau tidak boleh mengambil fokus dari isian yang sedang diketik */
+                t.focus = function(){};
+                try { dd.show(); } finally { delete t.focus; }
+                pratinjau = terbuka();
+            });
+            wadah.addEventListener('mouseleave', function(){
+                if (!pratinjau) return;
+                clearTimeout(tunda);
+                tunda = setTimeout(function(){ if (pratinjau && terbuka()) dd.hide(); pratinjau = false; }, 250);
+            });
+        });
+    });
+    /* Cetak grafik (revisi 13/9/2026): setiap ApexCharts diubah sementara menjadi gambar PNG agar seluruh grafik ikut tercetak
+       apa pun ukuran kertasnya. Gambar dihapus lagi setelah dialog cetak ditutup. */
+    window.simakoCetakGrafik = function(lanjut){
+        /* SVG tiap grafik diserialkan menjadi gambar data URI (ApexCharts menyisipkan gaya di dalam SVG, jadi hasilnya utuh). */
+        /* Grafik ECharts (pembungkus di dalam .s-echart, dirender SVG) ikut diserialkan dengan cara yang sama. */
+        document.querySelectorAll('.apexcharts-canvas, .s-echart > div').forEach(function(kanvas){
+            var svg = kanvas.querySelector('svg'), wadah = kanvas.parentElement; if (!svg || !wadah) return;
+            try {
+                var salin = svg.cloneNode(true);
+                salin.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+                salin.querySelectorAll('foreignObject').forEach(function(f){ f.remove(); });
+                var w = svg.getAttribute('width') || svg.getBoundingClientRect().width, h = svg.getAttribute('height') || svg.getBoundingClientRect().height;
+                salin.setAttribute('width', w); salin.setAttribute('height', h);
+                var teks = new XMLSerializer().serializeToString(salin);
+                var img = document.createElement('img'); img.className = 's-cetak-img'; img.alt = 'Grafik';
+                img.src = 'data:image/svg+xml;charset=utf-8,' + encodeURIComponent(teks);
+                wadah.insertBefore(img, kanvas.nextSibling); kanvas.classList.add('s-cetak-asli');
+            } catch (e) {}
+        });
+        window.addEventListener('afterprint', function(){
+            document.querySelectorAll('.s-cetak-img').forEach(function(i){ i.remove(); });
+            document.querySelectorAll('.s-cetak-asli').forEach(function(e){ e.classList.remove('s-cetak-asli'); });
+        }, { once: true });
+        setTimeout(lanjut, 150);
+    };
+    /* Wadah bergulir (tabel lebar, matriks) harus bisa dijangkau papan ketik (WCAG 2.1.1, axe scrollable-region-focusable).
+       Wadah yang benar-benar bergulir dan tidak berisi elemen fokus diberi tabindex 0, peran region, dan nama dari judul kartunya.
+       Diulang setelah AJAX karena isi tabel sering dimuat belakangan. */
+    (function(){
+        var FOKUS = 'a[href],button,input,select,textarea,[tabindex]:not([tabindex="-1"]),summary,iframe';
+        var tunda = null;
+        function namaWadah(el){
+            var k = el.closest('.s-card, .card'); var t = k && k.querySelector('.s-card-h b, .card-header h5, .card-header h6, .card-title');
+            var n = t ? (t.textContent || '').replace(/\s+/g, ' ').trim() : '';
+            return n ? 'Tabel bergulir: ' + n : 'Tabel bergulir';
+        }
+        function tandai(){
+            document.querySelectorAll('.nxl-content div, .nxl-content section, .nxl-content ul').forEach(function(el){
+                if (el.hasAttribute('tabindex') || el.hasAttribute('data-gulir-cek')) return;
+                var cs = getComputedStyle(el); var x = /(auto|scroll)/.test(cs.overflowX), y = /(auto|scroll)/.test(cs.overflowY);
+                if (!x && !y) return;
+                if (!((x && el.scrollWidth > el.clientWidth + 1) || (y && el.scrollHeight > el.clientHeight + 1))) return;
+                if (el.querySelector(FOKUS)) return;
+                el.setAttribute('tabindex', '0'); el.setAttribute('data-gulir-cek', '1');
+                if (!el.getAttribute('role')) { el.setAttribute('role', 'region'); if (!el.getAttribute('aria-label')) el.setAttribute('aria-label', namaWadah(el)); }
+            });
+        }
+        function jadwal(){ clearTimeout(tunda); tunda = setTimeout(tandai, 250); }
+        document.addEventListener('DOMContentLoaded', jadwal);
+        window.addEventListener('load', function(){ jadwal(); setTimeout(tandai, 1500); });
+        window.addEventListener('resize', jadwal);
+        if (window.jQuery) jQuery(document).ajaxComplete(jadwal);
+        /* Data yang dimuat lewat fetch: simakoProgres.selesai dipanggil pembungkus fetch di atas. */
+        if (window.simakoProgres) { var selesaiAsli = window.simakoProgres.selesai; window.simakoProgres.selesai = function(){ selesaiAsli.apply(this, arguments); jadwal(); }; }
+        window.simakoTandaiGulir = tandai;
+    })();
+    window.simakoGantiMuseum = function(id){
+        simakoSkeleton();
+        fetch(SIMAKO.base + 'dashboard/change_museum?id=' + encodeURIComponent(id), {credentials:'same-origin'})
+            .then(function(){ location.reload(); }, function(){ location.reload(); });
+    };
+    $(document).ready(function(){
+        $('#museum, [data-museum-switch]').on('change', function(){ simakoGantiMuseum($(this).val()); });
+    });
+</script>
+<body data-menu="beranda" data-bagian="beranda" data-role="10">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="s-goo"><feGaussianBlur in="SourceGraphic" stdDeviation="6" result="b"/><feColorMatrix in="b" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -10" result="g"/><feBlend in="SourceGraphic" in2="g"/></filter></svg>
+
+    <nav class="nxl-navigation">
+        <div class="navbar-wrapper">
+            <div class="m-header" data-tour="brand">
+                <a href="/simako-update/head-of-iha/" class="b-brand">
+                    <img src="/simako-update/assets/images/logo-abbr.svg" alt="" class="logo logo-lg" aria-hidden="true" />
+                    <span class="s-brand-text"><b>SIMAKO</b><span>Museum dan Cagar Budaya</span></span>
+                </a>
+                <button type="button" class="s-nav-tutup s-hanya-ponsel" aria-label="Tutup menu"><i class="ti ti-x" aria-hidden="true"></i></button>
+            </div>
+            <div class="navbar-content">
+                <div class="s-side-search" id="s-spot-trigger" data-tour="search" role="button" tabindex="0">
+                    <i class="ti ti-search"></i><span>Cari</span><kbd class="s-kbd-os">Ctrl K</kbd>
+                </div>
+                <ul class="nxl-navbar">
+                    <li class="nxl-item active" data-tour="nav-beranda">
+                        <a href="/simako-update/head-of-iha/dashboard" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-home"></i></span>
+                            <span class="nxl-mtext">Beranda</span>
+                        </a>
+                    </li>
+                                        <li class="nxl-item nxl-hasmenu " data-tour="nav-dash">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-layout-dashboard"></i></span>
+                            <span class="nxl-mtext">Dashboard Laporan</span>
+                            <span class="nxl-arrow"><i class="ti ti-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/dashboard/menu/4.15">Laporan Semua Museum</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/dashboard/menu/4.16">Laporan Koleksi per Museum</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/dashboard/menu/4.17">Koleksi per Jenis/Gedung</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                                        <li class="nxl-item nxl-hasmenu " data-tour="nav-koleksi">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-box"></i></span>
+                            <span class="nxl-mtext">Koleksi</span>
+                            <span class="nxl-arrow"><i class="ti ti-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/koleksi/menu/1.1">List Koleksi</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/koleksi/menu/1.2">Pencarian Koleksi</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/koleksi/menu/1.28">Tambah Koleksi</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/koleksi/menu/1.3">Klasifikasi</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                                        <li class="nxl-item nxl-hasmenu " data-tour="nav-storage">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-archive"></i></span>
+                            <span class="nxl-mtext">Management Storage</span>
+                            <span class="nxl-arrow"><i class="ti ti-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/master/menu/3.10">List Museum</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/storage/menu/3.7">Tempat Penyimpanan</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/storage/menu/3.8">Mutasi Koleksi</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/storage/menu/3.9">Koleksi Tanpa Lokasi Aktif</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                                        <li class="nxl-item nxl-hasmenu " data-tour="nav-pinjam">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-share"></i></span>
+                            <span class="nxl-mtext">Peminjaman</span>
+                            <span class="nxl-arrow"><i class="ti ti-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/peminjaman/menu/2.5">Daftar Peminjaman</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/peminjaman/menu/2.4">Catat Peminjaman</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/peminjaman/menu/2.6">Kembalikan Pinjaman</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/master/menu/2.12">Instansi Peminjam</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                                        <li class="nxl-item nxl-hasmenu " data-tour="nav-pameran">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-photo"></i></span>
+                            <span class="nxl-mtext">Pameran</span>
+                            <span class="nxl-arrow"><i class="ti ti-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/master/menu/7.13">List Pameran</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/pameran/menu/7.18">Koleksi untuk Pameran</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/pameran/menu/7.20">Website Pameran</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                                        <li class="nxl-item nxl-hasmenu " data-tour="nav-master">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-layout-grid"></i></span>
+                            <span class="nxl-mtext">Master</span>
+                            <span class="nxl-arrow"><i class="ti ti-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/persetujuan/menu/5.31">Persetujuan</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/master/menu/5.14">Kustomisasi Kolom</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/settings/menu/5.22">Access Token AI</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/audit/menu/5.29">Audit Log</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/kinerja/menu/5.30">Kinerja Sistem</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                                        <li class="nxl-item nxl-hasmenu " data-tour="nav-atur">
+                        <a href="javascript:void(0);" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-settings"></i></span>
+                            <span class="nxl-mtext">Pengaturan</span>
+                            <span class="nxl-arrow"><i class="ti ti-chevron-right"></i></span>
+                        </a>
+                        <ul class="nxl-submenu">
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/settings/menu/6.23">User Management</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/settings/menu/6.24">Role Management</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/settings/menu/6.25">Menu Management</a>
+                            </li>
+                                                        <li class="nxl-item ">
+                                <a class="nxl-link" href="/simako-update/head-of-iha/settings/menu/6.26">Web Settings</a>
+                            </li>
+                                                    </ul>
+                    </li>
+                    <li class="s-sep" aria-hidden="true"></li>                    <li class="nxl-item " data-tour="nav-panduan">
+                        <a href="/simako-update/head-of-iha/settings/menu/8.27" class="nxl-link">
+                            <span class="nxl-micon"><i class="ti ti-help-circle"></i></span>
+                            <span class="nxl-mtext">Panduan</span>
+                        </a>
+                    </li>
+                                        </ul>
+                <div class="s-side-user" data-tour="user">
+                    <span class="s-ava">CL</span>
+                    <span class="s-who"><b>Citra Lestari</b><span>Head of IHA</span></span>
+                    <a href="/simako-update/head-of-iha/settings/logout" title="Keluar" aria-label="Keluar"><i class="ti ti-logout" aria-hidden="true"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="nxl-header">
+        <div class="header-wrapper">
+            <div class="header-left d-flex align-items-center gap-3">
+                <a href="javascript:void(0);" class="nxl-head-mobile-toggler" id="mobile-collapse" role="button" aria-label="Buka menu">
+                    <div class="hamburger hamburger--arrowturn"><div class="hamburger-box"><div class="hamburger-inner"></div></div></div>
+                </a>
+                <div class="nxl-navigation-toggle">
+                    <a href="javascript:void(0);" id="menu-mini-button" role="button" aria-label="Ciutkan menu" title="Ciutkan menu"><i class="ti ti-layout-sidebar-left-collapse" aria-hidden="true"></i></a>
+                    <a href="javascript:void(0);" id="menu-expend-button" style="display: none" role="button" aria-label="Bentangkan menu" title="Bentangkan menu"><i class="ti ti-layout-sidebar-left-expand" aria-hidden="true"></i></a>
+                </div>
+                <div class="s-crumb">
+                    <span>Museum Nasional Indonesia</span>
+                                    </div>
+            </div>
+            <div class="header-right ms-auto">
+                <div class="d-flex align-items-center gap-2">
+                                        <div class="nxl-h-item d-flex s-h-museum" data-tour="museum">
+                        <span class="s-h-museum-teks s-hanya-ponsel" aria-hidden="true"><i class="ti ti-building-bank"></i><b>Museum Nasional Indonesia</b><i class="ti ti-chevron-down"></i></span>
+                        <select class="form-select" id="museum" aria-label="Pilih museum">
+                            <option value="all" >Semua museum</option>                                                            <option value="2" >Galeri Nasional Indonesia</option>
+                                                            <option value="3" >Museum Basoeki Abdullah</option>
+                                                            <option value="11" >Museum Batik Indonesia</option>
+                                                            <option value="7" >Museum Benteng Vredeburg - Museum Perjuangan Yogyakarta</option>
+                                                            <option value="13" >Museum Islam Indonesia KH Hasyim Asy&#039;ari</option>
+                                                            <option value="5" >Museum Kebangkitan Nasional</option>
+                                                            <option value="12" >Museum Kepresidenan Republik Indonesia Balai Kirti</option>
+                                                            <option value="10" >Museum Majapahit</option>
+                                                            <option value="9" >Museum Manusia Purba Sangiran</option>
+                                                            <option value="1" selected>Museum Nasional Indonesia</option>
+                                                            <option value="6" >Museum Perumusan Naskah Proklamasi</option>
+                                                            <option value="14" >Museum Semedo</option>
+                                                            <option value="15" >Museum Song Terus</option>
+                                                            <option value="17" >Museum Sriwijaya Dharmakirti</option>
+                                                            <option value="4" >Museum Sumpah Pemuda</option>
+                                                            <option value="16" >Unit Borobudur</option>
+                                                    </select>
+                    </div>
+                    <div class="nxl-h-item s-hanya-ponsel">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0" id="s-cari-ponsel" role="button" title="Cari" aria-label="Cari menu, koleksi, atau museum"><i class="ti ti-search" aria-hidden="true"></i></a>
+                    </div>
+                    <div class="nxl-h-item s-sembunyi-ponsel" data-tour="layar-penuh">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0" id="s-layar-penuh" role="button" title="Layar penuh" aria-label="Layar penuh"><i class="ti ti-arrows-maximize"></i></a>
+                    </div>
+                    <div class="dropdown nxl-h-item" data-tour="notifikasi">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 s-lonceng" id="s-lonceng" data-bs-toggle="dropdown" data-bs-auto-close="outside" role="button" title="Notifikasi" aria-label="Notifikasi">
+                            <i class="ti ti-bell"></i><span class="s-lonceng-n" id="s-lonceng-n" hidden>0</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown s-notif">
+                            <div class="s-notif-h"><b>Notifikasi</b><span class="s-notif-n kosong" id="s-notif-ket">Memuat</span><button type="button" class="btn btn-link btn-sm s-notif-baca" id="s-notif-baca-semua">Tandai semua dibaca</button></div>
+                            <div class="s-notif-daftar" id="s-notif-daftar"><div class="s-empty">Memuat notifikasi</div></div>
+                            <a class="s-notif-f" href="/simako-update/head-of-iha/persetujuan/menu/5.31" id="s-notif-persetujuan"><i class="ti ti-gavel"></i><span>Buka halaman Persetujuan</span><em id="s-notif-setuju-n" hidden>0</em></a>
+                        </div>
+                    </div>
+                    <div class="nxl-h-item dark-light-theme s-sembunyi-ponsel" data-tour="dark">
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 dark-button" role="button" title="Mode gelap" aria-label="Mode gelap"><i class="ti ti-moon"></i></a>
+                        <a href="javascript:void(0);" class="nxl-head-link me-0 light-button" style="display: none" role="button" title="Mode terang" aria-label="Mode terang"><i class="ti ti-sun"></i></a>
+                    </div>
+                    <div class="dropdown nxl-h-item" data-tour="profile">
+                        <a href="javascript:void(0);" data-bs-toggle="dropdown" role="button" data-bs-auto-close="outside" aria-label="Menu akun" title="Menu akun">
+                            <img src="/simako-update/assets/images/profile/default.png" alt="" class="img-fluid user-avtar me-0" />
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-end nxl-h-dropdown nxl-user-dropdown">
+                            <div class="dropdown-header">
+                                <div class="d-flex align-items-center gap-3">
+                                    <img src="/simako-update/assets/images/profile/default.png" alt="" class="img-fluid user-avtar" />
+                                    <div>
+                                        <h6 class="text-dark mb-0">Citra Lestari</h6>
+                                        <span class="fs-12 fw-medium text-muted">Head of IHA · citra.lestari@contoh.id</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="/simako-update/head-of-iha/dashboard/profile/3" class="dropdown-item"><i class="ti ti-user me-2"></i><span>Profil</span></a>
+                            <a href="javascript:void(0);" class="dropdown-item" onclick="window.simakoTour && simakoTour.start()"><i class="ti ti-help-circle me-2"></i><span>Panduan</span></a>
+                            <a href="javascript:void(0);" class="dropdown-item s-hanya-ponsel" id="s-tema-ponsel" role="button"><i class="ti ti-moon me-2"></i><span>Mode gelap</span></a>
+                            <div class="dropdown-divider"></div>
+                            <a href="/simako-update/head-of-iha/settings/logout" class="dropdown-item"><i class="ti ti-logout me-2"></i><span>Keluar</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Spotlight -->
+    <div class="s-spot-bd" id="s-spot" aria-hidden="true">
+        <div class="s-spot">
+            <div class="s-spot-main" role="dialog" aria-label="Pencarian">
+                <div class="s-spot-in">
+                    <i class="ti ti-search"></i>
+                    <span class="s-spot-ph" id="s-spot-ph">Cari</span>
+                    <input type="text" id="s-spot-input" autocomplete="off" spellcheck="false" aria-label="Cari">
+                    <button type="button" class="s-spot-tutup s-hanya-ponsel" aria-label="Tutup pencarian"><i class="ti ti-x" aria-hidden="true"></i></button>
+                </div>
+                <div class="s-spot-cat" id="s-spot-cat">
+                    <button type="button" data-cat="" class="on">Semua</button>
+                    <button type="button" data-cat="menu">Menu</button>
+                    <button type="button" data-cat="koleksi">Koleksi</button>
+                    <button type="button" data-cat="museum">Museum</button>
+                    <button type="button" data-cat="dashboard">Dashboard</button>
+                </div>
+                <div class="s-spot-res" id="s-spot-res" hidden></div>
+                <div class="s-spot-foot"><span><kbd>↑</kbd> <kbd>↓</kbd> pilih</span><span><kbd>Enter</kbd> buka</span><span><kbd>Esc</kbd> tutup</span></div>
+            </div>
+            <div class="s-spot-sc" id="s-spot-sc">
+                <button type="button" data-cat="menu" title="Menu"><i class="ti ti-layout-grid"></i><span>Menu</span></button>
+                <button type="button" data-cat="koleksi" title="Koleksi"><i class="ti ti-box"></i><span>Koleksi</span></button>
+                <button type="button" data-cat="museum" title="Museum"><i class="ti ti-building-bank"></i><span>Museum</span></button>
+                <button type="button" data-cat="dashboard" title="Dashboard"><i class="ti ti-chart-bar"></i><span>Dashboard</span></button>
+            </div>
+        </div>
+    </div>
+
+    <main class="nxl-container">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.css">
+    <script src="https://cdn.jsdelivr.net/npm/driver.js@1.3.1/dist/driver.js.iife.js"></script>
+    <script>
+    /* ---------- lencana bagian pada kepala halaman ---------- */
+    document.addEventListener('DOMContentLoaded', function(){
+        var nama = {beranda:'Beranda', koleksi:'Koleksi', pinjam:'Peminjaman', storage:'Management Storage', dash:'Dashboard Laporan', master:'Master', atur:'Pengaturan', pameran:'Pameran', panduan:'Panduan'};
+        var k = document.body.getAttribute('data-bagian') || document.body.getAttribute('data-menu') || 'beranda';
+        document.querySelectorAll('.page-header-title').forEach(function(el){ el.setAttribute('data-badge', nama[k] || ''); });
+        document.querySelectorAll('.s-kbd-os').forEach(function(el){ el.textContent = SIMAKO.mac ? '⌘ K' : 'Ctrl K'; });
+    });
+
+    /* ---------- Spotlight ---------- */
+    (function(){
+        var bd = document.getElementById('s-spot'), inp = document.getElementById('s-spot-input'), res = document.getElementById('s-spot-res'),
+            ph = document.getElementById('s-spot-ph'), catBar = document.getElementById('s-spot-cat'), sc = document.getElementById('s-spot-sc');
+        var cat = '', items = [], idx = -1, timer = null, lastQ = null;
+        var ikonCat = {menu:'Menu', koleksi:'Koleksi', museum:'Museum', dashboard:'Dashboard'};
+        function open(c){ if (c !== undefined) setCat(c); bd.classList.add('open'); bd.setAttribute('aria-hidden','false'); setTimeout(function(){ inp.focus(); }, 30); cari(true); }
+        function close(){ bd.classList.remove('open'); bd.setAttribute('aria-hidden','true'); inp.value=''; res.hidden=true; res.innerHTML=''; items=[]; idx=-1; ph.classList.remove('hide'); ph.textContent='Cari'; }
+        function setCat(c){ cat = c || ''; catBar.querySelectorAll('button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-cat') === cat); });
+            sc.querySelectorAll('button').forEach(function(b){ b.classList.toggle('on', b.getAttribute('data-cat') === cat && cat !== ''); });
+            ph.textContent = cat ? 'Cari di ' + ikonCat[cat] : 'Cari'; }
+        function cari(segera){ clearTimeout(timer); timer = setTimeout(function(){
+            var q = inp.value.trim(); var key = cat + '|' + q; if (key === lastQ) return; lastQ = key;
+            fetch(SIMAKO.base + 'dashboard/spotlight?q=' + encodeURIComponent(q) + '&cat=' + encodeURIComponent(cat), {credentials:'same-origin'})
+              .then(function(r){ return r.json(); }).then(function(j){ items = (j && j.items) || []; render(q); })
+              .catch(function(){ items = []; render(q); });
+        }, segera ? 0 : 160); }
+        function render(q){ idx = -1; res.hidden = false;
+            if (!items.length) { res.innerHTML = '<div class="s-spot-empty">' + (q ? 'Tidak ada hasil untuk "' + esc(q) + '"' : 'Ketik untuk mencari, atau pilih kategori di kanan.') + '</div>'; return; }
+            res.innerHTML = items.map(function(it, i){ return '<a class="s-spot-item" href="' + esc(it.link) + '" data-i="' + i + '" style="animation-delay:' + (i*40) + 'ms"><i class="ti ' + esc(it.icon) + ' tl"></i><div class="tx"><b>' + esc(it.label) + '</b><span>' + esc(it.desc || '') + '</span></div><i class="ti ti-chevron-right ar"></i></a>'; }).join('');
+            res.querySelectorAll('.s-spot-item').forEach(function(a){
+                a.addEventListener('mouseenter', function(){ setIdx(+a.getAttribute('data-i')); ph.classList.remove('hide'); ph.textContent = items[idx].label; });
+                a.addEventListener('mouseleave', function(){ ph.textContent = inp.value ? '' : (cat ? 'Cari di ' + ikonCat[cat] : 'Cari'); ph.classList.toggle('hide', !!inp.value); });
+                a.addEventListener('click', function(e){ e.preventDefault(); buka(items[+a.getAttribute('data-i')]); });
+            }); }
+        function setIdx(i){ idx = i; res.querySelectorAll('.s-spot-item').forEach(function(a, k){ a.classList.toggle('on', k === idx); }); }
+        function buka(it){ if (!it) return;
+            if (it.link.indexOf('#museum:') === 0) { var id = it.link.split(':')[1];
+                window.simakoGantiMuseum(id); return; }
+            location.href = it.link; }
+        function esc(s){ return String(s).replace(/[&<>"']/g, function(c){ return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]; }); }
+        inp.addEventListener('input', function(){ ph.classList.toggle('hide', !!inp.value); cari(false); });
+        inp.addEventListener('keydown', function(e){
+            if (e.key === 'ArrowDown') { e.preventDefault(); if (items.length) { setIdx((idx + 1) % items.length); ph.classList.remove('hide'); ph.textContent = items[idx].label; } }
+            else if (e.key === 'ArrowUp') { e.preventDefault(); if (items.length) { setIdx((idx - 1 + items.length) % items.length); ph.textContent = items[idx].label; } }
+            else if (e.key === 'Enter') { e.preventDefault(); buka(items[idx >= 0 ? idx : 0]); }
+            else if (e.key === 'Escape') { close(); }
+        });
+        catBar.addEventListener('click', function(e){ var b = e.target.closest('button'); if (!b) return; setCat(b.getAttribute('data-cat')); lastQ = null; cari(true); inp.focus(); });
+        sc.addEventListener('click', function(e){ var b = e.target.closest('button'); if (!b) return; var c = b.getAttribute('data-cat'); setCat(cat === c ? '' : c); lastQ = null; cari(true); inp.focus(); });
+        sc.querySelectorAll('button').forEach(function(b){ b.addEventListener('mouseenter', function(){ if (!inp.value) ph.textContent = ikonCat[b.getAttribute('data-cat')]; });
+            b.addEventListener('mouseleave', function(){ if (!inp.value) ph.textContent = cat ? 'Cari di ' + ikonCat[cat] : 'Cari'; }); });
+        bd.addEventListener('click', function(e){ if (e.target === bd) close(); });
+        document.getElementById('s-spot-trigger').addEventListener('click', function(){ open(); });
+        document.getElementById('s-spot-trigger').addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(); } });
+        document.addEventListener('keydown', function(e){
+            if ((e.key === 'k' || e.key === 'K') && (SIMAKO.mac ? e.metaKey : e.ctrlKey) && !e.altKey) { e.preventDefault(); bd.classList.contains('open') ? close() : open(); }
+            else if (e.key === 'Escape' && bd.classList.contains('open')) close();
+        });
+        window.simakoSpotlight = { open: open, close: close };
+    })();
+
+    /* ---------- Tur terpandu, driver.js, sesuai peran, lintas halaman ---------- */
+    (function(){
+        var B = SIMAKO.base, R = SIMAKO.role;
+        /* Semua peran aktif, termasuk Head of IHA (10). Langkah juga disaring menurut hak akses nyata (boleh()), jadi
+           langkah menu dan halaman yang tidak dimiliki pengguna tidak masuk ke daftar (UAT-A-26). */
+        var SEMUA = [1,2,3,4,5,6,7,8,9,10];
+        var d = function(path){ return B + path; };
+        var LANGKAH = [
+            {el:'[data-tour="brand"]',       page:'dashboard', peran:SEMUA, title:'Selamat datang di SIMAKO', desc:'Sistem Informasi Manajemen Koleksi Museum dan Cagar Budaya. Tur ini menyorot bagian yang relevan dengan peran Anda dan bisa dihentikan kapan saja dengan Esc.'},
+            {el:'[data-tour="search"]',      page:'dashboard', peran:SEMUA, title:'Pencarian Spotlight', desc:'Cari menu, koleksi, museum, atau laporan dari mana saja. Tekan Ctrl K, atau ⌘ K di Mac.'},
+            {el:'[data-tour="museum"]',      page:'dashboard', peran:SEMUA, title:'Museum aktif', desc:'Seluruh data yang tampil mengikuti museum yang dipilih di sini. Akun dengan akses lintas museum bisa memilih Semua Museum di dasbor.'},
+            {el:'[data-tour="notifikasi"]',  page:'dashboard', peran:SEMUA, title:'Notifikasi', desc:'Lonceng ini menampung permintaan persetujuan, pengingat peminjaman, dan konfirmasi isian yang ditujukan ke Anda. Angka merah adalah jumlah yang belum dibaca.'},
+            {el:'[data-tour="layar-penuh"]', page:'dashboard', peran:SEMUA, title:'Layar penuh', desc:'Sembunyikan bingkai peramban saat memeriksa laporan atau tabel lebar. Tekan lagi untuk kembali.'},
+            {el:'[data-tour="stat-total"]',  page:'dashboard', peran:SEMUA, title:'Ringkasan angka', desc:'Empat kartu ini menampilkan total koleksi, peminjaman aktif, koleksi tanpa lokasi, dan permintaan yang menunggu persetujuan.'},
+            {el:'[data-tour="chart"]',       page:'dashboard', peran:SEMUA, title:'Pertambahan koleksi', desc:'Grafik dua belas bulan terakhir. Arahkan kursor ke titik untuk melihat jumlah benda baru per bulan.'},
+            {el:'[data-tour="reminders"]',   page:'dashboard', peran:SEMUA, title:'Perlu ditindaklanjuti', desc:'Daftar tugas yang menunggu Anda, disaring menurut peran. Klik salah satunya untuk langsung ke halamannya.'},
+            {el:'[data-tour="condition"]',   page:'dashboard', peran:SEMUA, title:'Kondisi koleksi', desc:'Sebaran kondisi Baik, Perlu Perawatan, Rusak Ringan, dan Rusak Berat. Konservator memantau bagian ini.'},
+            {el:'[data-tour="activity"]',    page:'dashboard', peran:SEMUA, title:'Aktivitas terakhir', desc:'Jejak perubahan terbaru, yaitu penambahan koleksi, persetujuan peminjaman, pengembalian, dan mutasi.'},
+            {el:'[data-tour="nav-dash"]',    page:'dashboard', peran:SEMUA, title:'Dashboard Laporan', desc:'Laporan Koleksi Museum, Laporan per Museum, dan Koleksi per Jenis/Gedung. Ketersediaannya mengikuti peran.'},
+            {el:'[data-tour="nav-koleksi"]', page:'dashboard', peran:SEMUA, title:'Koleksi', desc:'List, Pencarian, Tambah Koleksi, dan Klasifikasi. Daftar disaring menurut museum yang Anda akses.'},
+            {el:'[data-tour="btn-tambah"]',  page:'koleksi/menu/1.1', peran:SEMUA, butuh:'1.28', hak:'2', title:'Tambah koleksi', desc:'Formulir bertahap untuk mencatat benda baru. Ada pilihan impor massal dari lembar kerja.'},
+            {el:'[data-tour="tabel"]',       page:'koleksi/menu/1.1', peran:SEMUA, title:'Daftar koleksi', desc:'Cari, saring, dan buka rincian tiap benda. Ikon mata membuka detail, titik tiga membuka tindakan lain.'},
+            {el:'[data-tour="nav-storage"]', page:'koleksi/menu/1.1', peran:SEMUA, title:'Management Storage', desc:'List Museum, hierarki tempat penyimpanan tujuh tingkat, mutasi koleksi, dan koleksi tanpa lokasi aktif.'},
+            {el:'[data-tour="nav-pinjam"]',  page:'koleksi/menu/1.1', peran:SEMUA, title:'Peminjaman', desc:'Daftar peminjaman keluar dan masuk, pencatatan, pengembalian, dan data instansi peminjam.'},
+            {el:'[data-tour="nav-pameran"]', page:'koleksi/menu/1.1', peran:SEMUA, title:'Pameran', desc:'Daftar pameran, koleksi yang dipamerkan, ketentuan, dan alamat website pameran daring.'},
+            {el:'[data-tour="nav-master"]',  page:'koleksi/menu/1.1', peran:SEMUA, title:'Master', desc:'Kustomisasi kolom per museum dan Access Token AI untuk mengaktifkan asisten.'},
+            {el:'[data-tour="nav-atur"]',    page:'koleksi/menu/1.1', peran:SEMUA, title:'Pengaturan', desc:'Pengguna, peran, susunan menu, dan pengaturan situs. Hak akses ditetapkan per pengguna per submenu.'},
+            {el:'[data-tour="dark"]',        page:'koleksi/menu/1.1', peran:SEMUA, title:'Mode gelap', desc:'Seluruh tampilan punya pasangan warna gelap yang tetap terbaca.'},
+            {el:'[data-tour="user"]',        page:'koleksi/menu/1.1', peran:SEMUA, title:'Akun Anda', desc:'Nama, peran, dan tombol keluar. Tur ini bisa diulang kapan saja lewat menu Panduan.'},
+            /* Langkah 23 sampai 40 (revisi 13/9/2026): masuk ke submenu yang paling sering dipakai */
+            {el:'.s-cari-grup[data-grup="identitas"]', page:'koleksi/menu/1.2', peran:[1,2,3,4,5,6,8,9,10], title:'Pencarian koleksi', desc:'Saring koleksi menurut identitas, klasifikasi, lokasi, dimensi, dan status verifikasi. Setiap grup filter bisa dilipat, jumlah filter aktif tampil di judul grup.'},
+            {el:'[data-tour="tambah-mode"]', page:'koleksi/menu/1.28', peran:[1,2,3,4,5,6,8,10], title:'Tambah koleksi', desc:'Formulir bertahap: Informasi Dasar, Lokasi, Gambar, dan Atribut Dinamis. Kolom wajib mengikuti peran Anda dan diberi tanda.'},
+            {el:'.s-tab-form',               page:'koleksi/menu/1.28', peran:[1,2,3,4,5,6,8,10], title:'Tab formulir', desc:'Ikon di tiap tab berubah menjadi centang hijau bila kolom wajib pada tab itu sudah terisi. Tombol Menu Selanjutnya membawa Anda ke tab berikutnya.'},
+            {el:'.s-verif-kotak',            page:'koleksi/menu/1.28', peran:[1,2,3,4,5,6,8,10], title:'Status verifikasi', desc:'Kode A sampai H beserta artinya. Kurator memakai status ini untuk menandai kelengkapan dan keabsahan data.'},
+            {el:'.s-jelajah-kiri',           page:'storage/menu/3.7', peran:[1,2,3,4,5,6,8,10], title:'Pohon tempat penyimpanan', desc:'Struktur gedung, lantai, ruang, rak, shelving, box, sampai kantung. Klik panah untuk membuka, ikon tambah untuk membuat simpul di bawahnya.'},
+            {el:'#kartu-isi',                page:'storage/menu/3.7', peran:[1,2,3,4,5,6,8,10], title:'Isi lokasi', desc:'Koleksi yang tersimpan pada simpul yang dipilih, lengkap dengan kondisi dan sub lokasinya. Ruang yang sedang dipakai pameran diberi tanda.'},
+            {el:'[data-tour="pinjam-tabs"]', page:'peminjaman/menu/2.5', peran:[1,2,3,5,6,8,10], title:'Loan In dan Loan Out', desc:'Loan Out berarti koleksi keluar dari museum, Loan In berarti koleksi masuk ke museum. Kolom Dari dan Ke menunjukkan arah pinjaman.'},
+            {el:'[data-tour="pinjam-cari"]', page:'peminjaman/menu/2.5', peran:[1,2,3,5,6,8,10], title:'Cari peminjaman', desc:'Ketik nomor peminjaman, nama museum, atau instansi. Daftar hanya memuat museum yang boleh Anda akses.'},
+            {el:'#s-langkah',                page:'peminjaman/menu/2.4', peran:[1,2,5,6,8,10], title:'Catat peminjaman', desc:'Empat langkah: jenis pinjaman, data peminjam, koleksi, lalu dokumen. Langkah berikutnya terbuka setelah langkah sebelumnya lengkap.'},
+            {el:'#s-cari-pameran',           page:'master/menu/7.13', peran:[1,2,3,4,5,6,8,10], title:'List pameran', desc:'Pameran tetap dan sementara. Pengajuan dari Registrar atau Kurator menunggu persetujuan, Super Administrator langsung disetujui.'},
+            {el:'[data-tour="lap-filter"]',  page:'dashboard/menu/4.15', peran:[1,2,6,8,10], title:'Filter laporan', desc:'Pilih satu atau beberapa museum dan rentang bulan. Semua grafik dan tabel di bawahnya mengikuti filter ini.'},
+            {el:'[data-tour="lap-museum"]',  page:'dashboard/menu/4.15', peran:[1,2,6,8,10], title:'Koleksi per museum', desc:'Batang dengan warna unik per museum, label memakai kode museum. Arahkan kursor untuk nama lengkap dan jumlah.'},
+            {el:'[data-tour="lap-aktivitas"]', page:'dashboard/menu/4.15', peran:[1,2,6,8,10], title:'Aktivitas museum', desc:'Museum paling aktif memperbarui data, pengguna teraktifnya, dan pengguna yang paling jarang masuk. Tombol Cetak PDF memuat checklist bagian yang ingin dicetak.'},
+            {el:'[data-tour="setuju-daftar"]', page:'persetujuan/menu/5.31', peran:[1,2,3,4,5,6,8,10], title:'Persetujuan', desc:'Permintaan hapus koleksi, klasifikasi baru, pameran, dan konfirmasi isian berkumpul di sini. Penyetuju menekan Setujui atau Tolak dengan alasan.'},
+            {el:'[data-tour="audit-tabel"]', page:'audit/menu/5.29', peran:[1,2,6,8,10], title:'Audit Log', desc:'Jejak setiap perubahan: siapa, kapan, apa. Tab Peringkat pengguna menampilkan jumlah masuk dan aktivitas tiap akun.'},
+            {el:'[data-tour="peran-matriks"]', page:'settings/menu/6.24', peran:[1,8,10], title:'Matriks hak akses', desc:'Centang Lihat, Tambah atau Ubah, dan Hapus per submenu untuk satu peran, lalu terapkan ke semua pengguna berperan itu.'},
+            {el:'[data-tour="peran-khusus"]', page:'settings/menu/6.24', peran:[1,8,10], title:'Pengecualian pengguna', desc:'Beri hak tambahan kepada satu akun tanpa mengubah templat perannya. Pengecualian tidak tertimpa saat templat diterapkan ulang.'},
+            {el:'#s-list-cari',              page:'settings/menu/6.23', peran:[1,8,10], title:'Manajemen pengguna', desc:'Cari akun, lihat rinciannya, ubah peran dan museum, atau reset kata sandi ke standar. Akun Anda sendiri punya panel ganti kata sandi.'},
+            {el:'[data-tour="nav-panduan"]', page:'dashboard', peran:SEMUA, title:'Panduan', desc:'Selesai, Anda kembali di Beranda. Buka menu ini untuk mengulang tur atau melihat pintasan papan ketik.'}
+        ];
+        /* Langkah dipakai bila peran tercantum, halaman tujuannya (atau submenu pada butuh) diizinkan untuk pengguna,
+           hak tambahan pada hak terpenuhi, dan menu sidebar yang disorot memang tampil. */
+        var MENU_NAV = {koleksi:1, pinjam:2, storage:3, dash:4, master:5, atur:6, pameran:7, panduan:8};
+        var AKSES = SIMAKO.akses || {}, MENU = SIMAKO.menu || [];
+        function boleh(s){
+            if (s.peran.indexOf(R) < 0) return false;
+            var kode = (/menu\/(\d+\.\d+)/.exec(s.page) || [])[1], ada = function(k){ return Object.prototype.hasOwnProperty.call(AKSES, k); };
+            if (kode && !ada(kode)) return false;
+            if (s.butuh && !ada(s.butuh)) return false;
+            if (s.butuh && s.hak && String(AKSES[s.butuh]).split(',').indexOf(s.hak) < 0) return false;
+            var nav = /data-tour="nav-([a-z]+)"/.exec(s.el);
+            if (nav && MENU_NAV[nav[1]] && MENU.indexOf(MENU_NAV[nav[1]]) < 0) return false;
+            return true;
+        }
+        function langkahPeran(){ return LANGKAH.filter(boleh); }
+        function halamanKini(){ var p = location.href.replace(B, '').replace(/^\/+/, '').split('?')[0]; return p === '' ? 'dashboard' : p; }
+        var KEY = 'simako_tour_idx';
+        function jalankanDari(mulai){
+            if (!window.driver || !driver.js) return;
+            var steps = langkahPeran(); var i = mulai || 0;
+            if (i >= steps.length) { localStorage.removeItem(KEY); return; }
+            var s = steps[i];
+            if (s.page !== halamanKini()) { localStorage.setItem(KEY, String(i)); location.href = d(s.page); return; }
+            var tersedia = []; for (var k = i; k < steps.length; k++) { if (steps[k].page !== s.page) break; var elT = document.querySelector(steps[k].el); if (elT && elT.getClientRects().length) tersedia.push(steps[k]); }   /* elemen tersembunyi (mis. layar penuh di ponsel) dilewati */
+            if (!tersedia.length) { jalankanDari(i + 1); return; }
+            var ke = i + tersedia.length;
+            var dv = driver.js.driver({
+                showProgress: true, animate: true, allowClose: true, overlayOpacity: .55, popoverClass: 's-drv',
+                nextBtnText: 'Lanjut', prevBtnText: 'Kembali', doneBtnText: ke >= steps.length ? 'Selesai' : 'Lanjut ke halaman berikutnya',
+                progressText: 'Langkah {{current}} dari ' + steps.length,
+                steps: tersedia.map(function(t){ return { element: t.el, popover: { title: t.title, description: t.desc, side: 'bottom', align: 'center' } }; }),
+                onPopoverRender: function(pop, o){ if (pop.progress) pop.progress.textContent = 'Langkah ' + (i + o.state.activeIndex + 1) + ' dari ' + steps.length; },
+                onNextClick: function(){ if (dv.hasNextStep()) dv.moveNext(); else { dv.__selesai = true; dv.destroy(); } },
+                onPrevClick: function(){ if (dv.hasPreviousStep()) dv.movePrevious(); },
+                onCloseClick: function(){ dv.__selesai = false; dv.destroy(); },
+                onDestroyed: function(){
+                    /* Bersihkan sisa driver.js agar tata letak kembali normal setelah tur (revisi 13/9/2026) */
+                    document.body.classList.remove('driver-active', 'driver-fade', 'driver-simple');
+                    document.querySelectorAll('.driver-active-element').forEach(function(el){ el.classList.remove('driver-active-element'); el.style.removeProperty('position'); el.style.removeProperty('z-index'); });
+                    document.querySelectorAll('.driver-overlay, .driver-popover').forEach(function(el){ el.remove(); });
+                    document.body.style.removeProperty('overflow'); document.documentElement.style.removeProperty('overflow');
+                    if (dv.__selesai && ke < steps.length) { localStorage.setItem(KEY, String(ke)); location.href = d(steps[ke].page); }
+                    else localStorage.removeItem(KEY);
+                }
+            });
+            dv.__selesai = false; window.__simakoDv = dv;
+            window.__simakoSelesai = function(){ if (ke < steps.length) { localStorage.setItem(KEY, String(ke)); location.href = d(steps[ke].page); } else localStorage.removeItem(KEY); };
+            dv.drive();
+        }
+        /* Tombol popover ditangani sendiri pada fase tangkap (pointerdown di window, lalu klik di dokumen):
+           beberapa halaman punya penangan klik global yang menelan klik driver.js. */
+        function tanganiTombolTur(t){
+            var dv = window.__simakoDv; if (!dv || !dv.isActive()) return false;
+            if (t.closest('.driver-popover-next-btn')) { if (dv.hasNextStep()) dv.moveNext(); else { dv.__selesai = true; dv.destroy(); if (window.__simakoSelesai) window.__simakoSelesai(); } return true; }
+            if (t.closest('.driver-popover-prev-btn')) { if (dv.hasPreviousStep()) dv.movePrevious(); return true; }
+            if (t.closest('.driver-popover-close-btn')) { dv.__selesai = false; dv.destroy(); localStorage.removeItem(KEY); return true; }
+            if (t.closest('.driver-overlay')) { localStorage.removeItem(KEY); }
+            return false;
+        }
+        window.addEventListener('pointerdown', function(e){ if (e.button !== 0) return; if (tanganiTombolTur(e.target)) { window.__simTurKlik = Date.now(); e.stopImmediatePropagation(); e.preventDefault(); } }, true);
+        document.addEventListener('click', function(e){
+            if (!e.target.closest('.driver-popover-next-btn, .driver-popover-prev-btn, .driver-popover-close-btn')) return;
+            e.stopImmediatePropagation(); e.preventDefault();
+            if (Date.now() - (window.__simTurKlik || 0) < 800) return;
+            tanganiTombolTur(e.target);
+        }, true);
+        window.simakoTour = {
+            steps: function(){ return langkahPeran().map(function(s){ return {popover:{title:s.title, description:s.desc}, page:s.page}; }); },
+            start: function(){ localStorage.setItem(KEY, '0'); jalankanDari(0); },
+            stop: function(){ localStorage.removeItem(KEY); }
+        };
+        document.addEventListener('DOMContentLoaded', function(){
+            var lanjut = localStorage.getItem(KEY);
+            if (lanjut !== null) setTimeout(function(){ jalankanDari(parseInt(lanjut, 10) || 0); }, 400);
+        });
+    })();
+    </script>
+<div class="nxl-content">
+    <div class="page-header">
+        <div class="page-header-left d-flex align-items-center">
+            <div class="page-header-title"><h5 class="m-b-10">Selamat pagi, Citra</h5></div>
+        </div>
+        <div class="page-header-right ms-auto">
+            <div class="page-header-right-items">
+                <div class="d-flex align-items-center gap-2 page-header-right-items-wrapper">
+                    <button type="button" class="btn btn-secondary" id="s-info-terbaru" title="Lihat informasi terbaru SIMAKO"><i class="ti ti-sparkles"></i><span>Info terbaru</span></button>
+                                        <a class="btn btn-secondary" href="/simako-update/head-of-iha/dashboard/menu/4.15"><i class="ti ti-download"></i><span>Laporan</span></a>
+                    <a class="btn btn-primary" href="/simako-update/head-of-iha/koleksi/menu/1.28" data-tour="btn-tambah-beranda"><i class="ti ti-plus"></i><span>Tambah koleksi</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="s-stats">
+        <div class="s-stat" data-tour="stat-total"><div class="lb">Total koleksi</div><div class="vl"><b class="s-warna-koleksi">14</b><span>benda</span></div><div class="dl"><i class="dot s-bg-koleksi"></i>+0 bulan ini</div></div>
+        <div class="s-stat" data-tour="stat-pinjam"><div class="lb">Peminjaman aktif</div><div class="vl"><b class="s-warna-pinjam">3</b><span>berkas</span></div><div class="dl"><i class="dot s-bg-pinjam"></i>2 mendekati tempo</div></div>
+        <div class="s-stat" data-tour="stat-lokasi"><div class="lb">Tanpa lokasi</div><div class="vl"><b class="s-warna-storage">12</b><span>benda</span></div><div class="dl"><i class="dot s-bg-storage"></i>terlama 52 hari</div></div>
+        <div class="s-stat" data-tour="stat-tunggu"><div class="lb">Menunggu persetujuan</div><div class="vl"><b class="s-warna-dash">5</b><span>permintaan</span></div><div class="dl"><i class="dot s-bg-dash"></i>3 peminjaman, 2 mutasi</div></div>
+    </div>
+
+    <div class="s-grid">
+        <div>
+            <div class="s-card" data-tour="chart">
+                <div class="s-card-h"><div class="t"><b>Pertambahan koleksi</b><span>Dua belas bulan terakhir</span></div><span class="badge bg-light">12 bulan</span></div>
+                <div class="s-card-b"><div id="s-chart" style="min-height:250px"></div></div>
+            </div>
+            <div class="s-card" data-tour="activity">
+                <div class="s-card-h"><div class="t"><b>Aktivitas terakhir / Audit Log</b><span>Delapan catatan terakhir dari jejak audit</span></div>
+                    <a class="btn btn-secondary btn-sm" href="/simako-update/head-of-iha/audit/menu/5.29"><i class="ti ti-arrow-right"></i><span>Lihat semua</span></a></div>
+                <div class="s-card-b s-act s-act-audit">
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DL</span>
+                        <div class="tx">
+                            <b>Dewi Lestari <em>(Tim Pengolah Data SIMAKO)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 8458</span> <span class="s-tag-reg">Reg 000202</span></b>
+                            <span>Melihat detail koleksi Arca Durga</span>                        </div>
+                        <span class="wk">10 menit lalu</span>
+                    </div>
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DL</span>
+                        <div class="tx">
+                            <b>Dewi Lestari <em>(Tim Pengolah Data SIMAKO)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 7713</span> <span class="s-tag-reg">Reg 000212</span></b>
+                            <span>Melihat detail koleksi Pecahan Keramik Celadon</span>                        </div>
+                        <span class="wk">10 menit lalu</span>
+                    </div>
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DL</span>
+                        <div class="tx">
+                            <b>Dewi Lestari <em>(Tim Pengolah Data SIMAKO)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 8459</span> <span class="s-tag-reg">Reg 000211</span></b>
+                            <span>Melihat detail koleksi Fragmen Relief Candi</span>                        </div>
+                        <span class="wk">10 menit lalu</span>
+                    </div>
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DL</span>
+                        <div class="tx">
+                            <b>Dewi Lestari <em>(Tim Pengolah Data SIMAKO)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 8456</span> <span class="s-tag-reg">Reg 000142</span></b>
+                            <span>Melihat detail koleksi Arca Chandra</span>                        </div>
+                        <span class="wk">10 menit lalu</span>
+                    </div>
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DL</span>
+                        <div class="tx">
+                            <b>Dewi Lestari <em>(Tim Pengolah Data SIMAKO)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 12398</span> <span class="s-tag-reg">Reg 01238</span></b>
+                            <span>Melihat detail koleksi Pisau Dapur _Test</span>                        </div>
+                        <span class="wk">10 menit lalu</span>
+                    </div>
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DP</span>
+                        <div class="tx">
+                            <b>Dimas Pratama <em>(Konservator)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 8459</span> <span class="s-tag-reg">Reg 000211</span></b>
+                            <span>Melihat detail koleksi Fragmen Relief Candi</span>                        </div>
+                        <span class="wk">16 menit lalu</span>
+                    </div>
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DP</span>
+                        <div class="tx">
+                            <b>Dimas Pratama <em>(Konservator)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 7713</span> <span class="s-tag-reg">Reg 000212</span></b>
+                            <span>Melihat detail koleksi Pecahan Keramik Celadon</span>                        </div>
+                        <span class="wk">16 menit lalu</span>
+                    </div>
+                                        <div class="s-act-row">
+                        <span class="av s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)">DP</span>
+                        <div class="tx">
+                            <b>Dimas Pratama <em>(Konservator)</em> <i class="sep">&mdash;</i> <em class="aksi">Lihat</em> <i class="sep">&mdash;</i> <span class="s-tag-inv">Inv 18549 d</span> <span class="s-tag-reg">Reg 000213</span></b>
+                            <span>Melihat detail koleksi Topeng Panji Cirebon</span>                        </div>
+                        <span class="wk">16 menit lalu</span>
+                    </div>
+                                    </div>
+            </div>
+        </div>
+        <div>
+            <div class="s-card" data-tour="condition">
+                <div class="s-card-h"><div class="t"><b>Kondisi koleksi</b><span>14 benda tercatat</span></div></div>
+                <div class="s-card-b">
+                                        <div class="s-cond-bar"><i class="s-bg-baik" style="flex:10"></i><i class="s-bg-ringan" style="flex:2"></i><i class="s-bg-berat" style="flex:2"></i></div>
+                                        <div class="s-cond-row"><i class="dot s-bg-baik"></i><span>Baik</span><b>10</b><em>71%</em></div>
+                                        <div class="s-cond-row"><i class="dot s-bg-rawat"></i><span>Perlu Perawatan</span><b>0</b><em>0%</em></div>
+                                        <div class="s-cond-row"><i class="dot s-bg-ringan"></i><span>Rusak Ringan</span><b>2</b><em>14%</em></div>
+                                        <div class="s-cond-row"><i class="dot s-bg-berat"></i><span>Rusak Berat</span><b>2</b><em>14%</em></div>
+                                    </div>
+            </div>
+            <div class="s-card" data-tour="reminders">
+                <div class="s-card-h"><div class="t"><b>Perlu ditindaklanjuti</b><span>3 hal menunggu Anda</span></div></div>
+                <div class="s-card-b s-remind">
+                                        <a href="/simako-update/head-of-iha/persetujuan/menu/5.31"><span class="bar s-bg-dash"></span><div class="tx"><b>Permintaan menunggu keputusan Anda</b><span>2 pengajuan (hapus koleksi, klasifikasi, pameran, isian kolom)</span></div><i class="ti ti-chevron-right ar"></i></a>
+                                        <a href="/simako-update/head-of-iha/dashboard/buka/3336"><span class="bar s-bg-koleksi"></span><div class="tx"><b>Disetujui: peminjaman PJM/2026/0226 aktif</b><span>Tahap 2 disetujui oleh Administrator Lokal. Pantau jatuh tempo 22-10-2026 di Kembalikan Pi</span></div><i class="ti ti-chevron-right ar"></i></a>
+                                        <a href="/simako-update/head-of-iha/dashboard/buka/3329"><span class="bar s-bg-koleksi"></span><div class="tx"><b>Disetujui tahap 1: peminjaman PJM/2026/0226</b><span>Disetujui oleh Dewi Lestari. Peminjaman menunggu persetujuan tahap 2 dari pengguna lain.</span></div><i class="ti ti-chevron-right ar"></i></a>
+                                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Jendela sambutan -->
+<div class="modal fade s-welcome" id="s-welcome" tabindex="-1" aria-labelledby="s-welcome-judul" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header"><button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button></div>
+            <div class="modal-body">
+                <div class="s-hero-tengah">
+                    <span class="s-hero-sapa">Selamat datang, Citra</span>
+                    <h1 class="hero-title" id="s-welcome-judul">Kelola Koleksi Museum <span class="text-primary d-block">Dengan Mudah &amp; Efisien</span></h1>
+                    <p class="hero-subtitle">Platform digital terdepan untuk mengelola, melacak, dan memamerkan koleksi museum Anda. Dari inventaris hingga peminjaman, semuanya dalam satu tempat.</p>
+                    <button type="button" class="btn btn-primary btn-lg" id="s-mulai-jelajahi"><span>Mulai Jelajahi</span><i class="ti ti-arrow-right"></i></button>
+                </div>
+                <div class="feature-slider-wrapper">
+                    <div class="swiper feature-swiper"><div class="swiper-wrapper">
+                                                <div class="swiper-slide"><div class="card feature-card h-100"><div class="card-body">
+                            <div class="feature-icon-wrapper"><div class="avatar-text avatar-xl s-warna-koleksi" style="background:color-mix(in srgb,var(--a-koleksi) 12%,transparent)"><i class="ti ti-archive"></i></div></div>
+                            <h4>Manajemen Koleksi Digital</h4><p class="text-muted">Kelola ribuan koleksi dengan inventaris yang komprehensif: detail lengkap, foto, dimensi, dan metadata dalam satu platform.</p>
+                            <ul class="list-unstyled feature-list mb-0"><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Inventaris terpusat</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Metadata lengkap</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Manajemen gambar</span></li></ul>
+                        </div></div></div>
+                                                <div class="swiper-slide"><div class="card feature-card h-100"><div class="card-body">
+                            <div class="feature-icon-wrapper"><div class="avatar-text avatar-xl s-warna-storage" style="background:color-mix(in srgb,var(--a-storage) 12%,transparent)"><i class="ti ti-search"></i></div></div>
+                            <h4>Pencarian Cerdas</h4><p class="text-muted">Temukan koleksi dalam hitungan detik dengan pencarian bertingkat, filter klasifikasi, dan Spotlight yang bisa dibuka dari mana saja.</p>
+                            <ul class="list-unstyled feature-list mb-0"><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Pencarian real time</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Filter multi kriteria</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Pintasan Ctrl K</span></li></ul>
+                        </div></div></div>
+                                                <div class="swiper-slide"><div class="card feature-card h-100"><div class="card-body">
+                            <div class="feature-icon-wrapper"><div class="avatar-text avatar-xl s-warna-pinjam" style="background:color-mix(in srgb,var(--a-pinjam) 12%,transparent)"><i class="ti ti-share"></i></div></div>
+                            <h4>Manajemen Peminjaman</h4><p class="text-muted">Kelola peminjaman keluar dan masuk dengan alur persetujuan berjenjang, dokumen, dan pengingat jatuh tempo.</p>
+                            <ul class="list-unstyled feature-list mb-0"><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Persetujuan berjenjang</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Dokumen tersimpan</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Pengingat otomatis</span></li></ul>
+                        </div></div></div>
+                                                <div class="swiper-slide"><div class="card feature-card h-100"><div class="card-body">
+                            <div class="feature-icon-wrapper"><div class="avatar-text avatar-xl s-warna-dash" style="background:color-mix(in srgb,var(--a-dash) 12%,transparent)"><i class="ti ti-building"></i></div></div>
+                            <h4>Hierarki Penyimpanan</h4><p class="text-muted">Lokasi tujuh tingkat dari gedung sampai kantung, dengan mutasi tercatat dan koleksi tanpa lokasi yang terpantau.</p>
+                            <ul class="list-unstyled feature-list mb-0"><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Tujuh tingkat lokasi</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Riwayat mutasi</span></li><li class="mb-2"><i class="ti ti-circle-check text-success me-2"></i><span>Pemindaian QR</span></li></ul>
+                        </div></div></div>
+                                            </div><div class="swiper-pagination feature-pagination"></div></div>
+                </div>
+                <div class="s-extra-kartu">
+                <div class="s-extra-judul"><i class="ti ti-star"></i>Fitur Tambahan yang Menakjubkan</div>
+                <div class="s-extra">
+                    <div><i class="ti ti-users" style="background:#0E9C8A"></i><div><b>Multi-Museum</b><span>Kelola beberapa museum dalam satu platform</span></div></div>
+                    <div><i class="ti ti-shield-check" style="background:#3BA52D"></i><div><b>Keamanan Tinggi</b><span>Role-based access control dan enkripsi data</span></div></div>
+                    <div><i class="ti ti-cloud" style="background:#F0A020"></i><div><b>Cloud Ready</b><span>Backup otomatis dan akses dari mana saja</span></div></div>
+                    <div><i class="ti ti-device-mobile" style="background:#1F5FCC"></i><div><b>Responsive</b><span>Akses optimal di desktop, tablet, dan mobile</span></div></div>
+                    <div><i class="ti ti-history" style="background:#B3261E"></i><div><b>Riwayat Lengkap</b><span>Audit trail untuk setiap perubahan data</span></div></div>
+                    <div><i class="ti ti-tag" style="background:#6A5AE0"></i><div><b>Dynamic Attributes</b><span>Tambahkan atribut custom sesuai kebutuhan</span></div></div>
+                    <div><i class="ti ti-photo" style="background:#0F9F80"></i><div><b>Multi-Image</b><span>Upload beberapa foto per koleksi</span></div></div>
+                    <div><i class="ti ti-sun-moon" style="background:#F26A1B"></i><div><b>Display Mode</b><span>Dukungan mode malam dan siang</span></div></div>
+                    <div><i class="ti ti-chart-bar" style="background:#2F6F8F"></i><div><b>Dashboard Laporan</b><span>Ringkasan lintas museum, per museum, dan per jenis atau gedung</span></div></div>
+                    <div><i class="ti ti-photo-star" style="background:#9A6B14"></i><div><b>Pameran</b><span>Daftar pameran, koleksi dipamerkan, ketentuan, dan website</span></div></div>
+                    <div><i class="ti ti-sparkles" style="background:#5C7A2E"></i><div><b>Asisten AI</b><span>Bantuan deskripsi koleksi dan asisten percakapan bila kunci API aktif</span></div></div>
+                    <div><i class="ti ti-help-circle" style="background:#3C4B49"></i><div><b>Panduan</b><span>Tur terpandu sesuai peran, bisa diulang lewat menu Panduan</span></div></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/simako-update/assets/vendors/js/apexcharts.min.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+    /* grafik pertambahan */
+    var seri = [0,0,0,0,0,0,0,0,0,0,14,0];
+    var label = ["Nov","Des","Jan","Feb","Mar","Apr","Mei","Jun","Jul","Ags","Sep","Okt"];
+    var aksen = getComputedStyle(document.body).getPropertyValue('--a-koleksi').trim() || '#2F6F8F';
+    var mid = getComputedStyle(document.body).getPropertyValue('--s-mid').trim() || '#6B7A78';
+    if (window.ApexCharts) {
+        /* Ponsel (M1): dua belas label bulan tidak muat di 360 px dan terpotong menjadi "...", jadi tampilkan selang satu bulan */
+        var hp = window.matchMedia('(max-width: 767.98px)').matches;
+        new ApexCharts(document.querySelector('#s-chart'), {
+            chart: { type: 'area', height: hp ? 210 : 250, toolbar: { show: false }, fontFamily: 'Inter, sans-serif', animations: { speed: 500 } },
+            series: [{ name: 'Benda baru', data: seri }],
+            colors: [aksen], stroke: { curve: 'straight', width: 2 },
+            fill: { type: 'gradient', gradient: { shadeIntensity: 1, opacityFrom: .22, opacityTo: 0, stops: [0, 100] } },
+            dataLabels: { enabled: false }, markers: { size: 0, hover: { size: 5 } },
+            grid: { borderColor: getComputedStyle(document.body).getPropertyValue('--s-line2').trim() || '#EDF1F0', strokeDashArray: 0, xaxis: { lines: { show: false } } },
+            xaxis: hp
+                ? { categories: label.map(function(l, i){ return (label.length - 1 - i) % 2 === 0 ? l : ''; }), axisBorder: { show: false }, axisTicks: { show: false }, labels: { rotate: 0, hideOverlappingLabels: false, trim: false, style: { colors: mid, fontSize: '12px' } } }
+                : { categories: label, axisBorder: { show: false }, axisTicks: { show: false }, labels: { style: { colors: mid, fontSize: '12px' } } },
+            yaxis: { labels: { style: { colors: mid, fontSize: '12px' }, formatter: function(v){ return Math.round(v); } }, min: 0, forceNiceScale: true },
+            tooltip: hp
+                ? { theme: 'light', x: { formatter: function(v, o){ return o && label[o.dataPointIndex] !== undefined ? label[o.dataPointIndex] : v; } }, y: { formatter: function(v){ return v + ' benda baru'; } } }
+                : { theme: 'light', y: { formatter: function(v){ return v + ' benda baru'; } } }
+        }).render();
+    }
+    /* jendela sambutan */
+    var tampil = false;
+    try { if (!tampil && !localStorage.getItem('simako_welcome_seen')) tampil = true; } catch(e) {}
+    var modalEl = document.getElementById('s-welcome');
+    if (tampil && !localStorage.getItem('simako_tour_idx') && window.bootstrap && modalEl) {
+        var m = new bootstrap.Modal(modalEl); m.show();
+        modalEl.addEventListener('shown.bs.modal', function(){ if (window.Swiper) modalEl.__sw = modalEl.__sw || new Swiper('.feature-swiper', { slidesPerView: 1, spaceBetween: 16, loop: true, autoplay: { delay: 3500, disableOnInteraction: false }, pagination: { el: '.feature-pagination', clickable: true }, breakpoints: { 640: { slidesPerView: 2 }, 992: { slidesPerView: 3 } } }); }, { once: true });
+        modalEl.addEventListener('hidden.bs.modal', function(){ try { localStorage.setItem('simako_welcome_seen', '1'); } catch(e) {} });
+        document.getElementById('s-mulai-jelajahi').addEventListener('click', function(){
+            try { localStorage.setItem('simako_welcome_seen', '1'); } catch(e) {}
+            modalEl.addEventListener('hidden.bs.modal', function(){ if (window.simakoTour) simakoTour.start(); }, { once: true });
+            m.hide();
+        });
+    }
+});
+</script>
+
+<!-- AI Chat Assistant Widget -->
+<div class="ai-chat-widget" id="aiChatWidget">
+    <!-- Chat Toggle Button -->
+    <button class="ai-chat-toggle-btn" id="aiChatToggle" title="Tanya AI tentang aplikasi">
+        <i class="feather-message-circle"></i>
+        <span class="ai-chat-badge">AI</span>
+    </button>
+    
+    <!-- Chat Window -->
+    <div class="ai-chat-window" id="aiChatWindow">
+        <div class="ai-chat-header">
+            <div class="d-flex align-items-center gap-2">
+                <div class="ai-chat-avatar">
+                    <i class="feather-zap"></i>
+                </div>
+                <div>
+                    <h6 class="mb-0 fw-bold">AI Assistant</h6>
+                    <small class="text-muted">Tanya tentang fitur aplikasi</small>
+                </div>
+            </div>
+            <button class="ai-chat-close-btn" id="aiChatClose">
+                <i class="feather-x"></i>
+            </button>
+        </div>
+        
+        <!-- Beta Notice Banner -->
+        <div class="ai-chat-beta-notice" id="aiChatBetaNotice">
+            <div class="d-flex align-items-center gap-2">
+                <i class="feather-alert-circle"></i>
+                <div class="flex-grow-1">
+                    <strong>Beta Version</strong>
+                    <p class="mb-0 small">Fitur ini masih dalam pengembangan. Mohon maaf jika ada ketidaknyamanan.</p>
+                </div>
+                <button class="ai-chat-beta-close" id="aiChatBetaClose" title="Tutup">
+                    <i class="feather-x"></i>
+                </button>
+            </div>
+        </div>
+        
+        <div class="ai-chat-messages" id="aiChatMessages">
+            <div class="ai-chat-message ai-message">
+                <div class="ai-chat-avatar-small">
+                    <i class="feather-zap"></i>
+                </div>
+                <div class="ai-chat-bubble">
+                    <p class="mb-0">Halo! Saya AI Assistant untuk SIMAKO. Saya dapat membantu Anda memahami fitur dan fungsi aplikasi ini. Ada yang ingin Anda tanyakan?</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="ai-chat-input-wrapper">
+            <div class="ai-chat-input-container">
+                <textarea 
+                    class="ai-chat-input" 
+                    id="aiChatInput" 
+                    placeholder="Tulis pertanyaan Anda di sini..."
+                    rows="1"></textarea>
+                <button class="ai-chat-send-btn" id="aiChatSend" disabled>
+                    <i class="feather-send"></i>
+                </button>
+            </div>
+            <small class="text-muted d-block mt-2 px-3">
+                <i class="feather-info"></i> AI dapat membantu menjelaskan fitur aplikasi
+            </small>
+        </div>
+    </div>
+</div>
+
+<!-- Chat Widget Styles -->
+<style>
+/* AI Chat Widget */
+.ai-chat-widget {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 9999;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Toggle Button */
+.ai-chat-toggle-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #15847A 0%, #0d6b63 100%);
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(21, 132, 122, 0.4);
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-chat-toggle-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 30px rgba(21, 132, 122, 0.6);
+}
+
+.ai-chat-toggle-btn i {
+    display: inline-block;
+    visibility: visible;
+}
+
+.ai-chat-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background: #ff6b6b;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 10px;
+    border: 2px solid white;
+}
+
+/* Chat Window */
+.ai-chat-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+    width: 380px;
+    height: 600px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    display: none;
+    flex-direction: column;
+    overflow: hidden;
+    animation: slideUp 0.3s ease;
+}
+
+.ai-chat-window.active {
+    display: flex;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chat Header */
+.ai-chat-header {
+    background: linear-gradient(135deg, #15847A 0%, #0d6b63 100%);
+    color: white;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ai-chat-header h6 {
+    color: white;
+    margin: 0;
+}
+
+.ai-chat-header small {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.ai-chat-avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.ai-chat-close-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.ai-chat-close-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Beta Notice Banner */
+.ai-chat-beta-notice {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border-bottom: 1px solid #ffc107;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    animation: slideDown 0.3s ease;
+}
+
+.ai-chat-beta-notice.hidden {
+    display: none;
+}
+
+.ai-chat-beta-notice i {
+    color: #856404;
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.ai-chat-beta-notice strong {
+    color: #856404;
+    font-size: 13px;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.ai-chat-beta-notice p {
+    color: #856404;
+    font-size: 11px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.ai-chat-beta-close {
+    background: transparent;
+    border: none;
+    color: #856404;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 4px;
+    border-radius: 4px;
+    transition: background 0.2s;
+    flex-shrink: 0;
+    opacity: 0.7;
+}
+
+.ai-chat-beta-close:hover {
+    background: rgba(133, 100, 4, 0.1);
+    opacity: 1;
+}
+
+.ai-chat-beta-close i {
+    display: inline-block;
+    visibility: visible;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Dark mode for beta notice */
+html.app-skin-dark .ai-chat-beta-notice {
+    background: linear-gradient(135deg, #3d2e0f 0%, #4a3a1a 100%);
+    border-bottom-color: #ffc107;
+}
+
+html.app-skin-dark .ai-chat-beta-notice i,
+html.app-skin-dark .ai-chat-beta-notice strong,
+html.app-skin-dark .ai-chat-beta-notice p {
+    color: #ffc107;
+}
+
+html.app-skin-dark .ai-chat-beta-close {
+    color: #ffc107;
+}
+
+html.app-skin-dark .ai-chat-beta-close:hover {
+    background: rgba(255, 193, 7, 0.2);
+}
+
+/* Messages Container */
+.ai-chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.ai-chat-message {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 16px;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ai-chat-message.user-message {
+    flex-direction: row-reverse;
+}
+
+.ai-chat-avatar-small {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.ai-message .ai-chat-avatar-small {
+    background: linear-gradient(135deg, #15847A 0%, #0d6b63 100%);
+    color: white;
+}
+
+.user-message .ai-chat-avatar-small {
+    background: #e9ecef;
+    color: #15847A;
+}
+
+.ai-chat-bubble {
+    max-width: 75%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    word-wrap: break-word;
+}
+
+.ai-message .ai-chat-bubble {
+    background: white;
+    border: 1px solid #e9ecef;
+    border-top-left-radius: 4px;
+}
+
+.user-message .ai-chat-bubble {
+    background: linear-gradient(135deg, #15847A 0%, #0d6b63 100%);
+    color: white;
+    border-top-right-radius: 4px;
+}
+
+.ai-chat-bubble p {
+    margin: 0;
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+.ai-chat-bubble p + p {
+    margin-top: 8px;
+}
+
+.user-message .ai-chat-bubble p {
+    color: white;
+}
+
+/* Markdown Styles */
+.ai-chat-bubble h1,
+.ai-chat-bubble h2,
+.ai-chat-bubble h3 {
+    margin: 12px 0 8px 0;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.ai-chat-bubble h1 {
+    font-size: 18px;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 6px;
+}
+
+.ai-chat-bubble h2 {
+    font-size: 16px;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 4px;
+}
+
+.ai-chat-bubble h3 {
+    font-size: 15px;
+}
+
+.ai-chat-bubble ul,
+.ai-chat-bubble ol {
+    margin: 8px 0;
+    padding-left: 24px;
+}
+
+.ai-chat-bubble li {
+    margin: 4px 0;
+    line-height: 1.5;
+}
+
+.ai-chat-bubble code {
+    background: #f1f3f5;
+    color: #e83e8c;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 13px;
+    font-family: 'Courier New', monospace;
+}
+
+.ai-chat-bubble pre {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 6px;
+    padding: 12px;
+    margin: 8px 0;
+    overflow-x: auto;
+}
+
+.ai-chat-bubble pre code {
+    background: transparent;
+    color: #212529;
+    padding: 0;
+    font-size: 12px;
+    display: block;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.ai-chat-bubble a {
+    color: #15847A;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s;
+}
+
+.ai-chat-bubble a:hover {
+    color: #0d6b63;
+    border-bottom-color: #0d6b63;
+}
+
+.ai-chat-bubble strong {
+    font-weight: 600;
+    color: #212529;
+}
+
+.ai-chat-bubble em {
+    font-style: italic;
+}
+
+.ai-chat-bubble br {
+    line-height: 1.8;
+}
+
+/* Dark mode markdown styles */
+html.app-skin-dark .ai-chat-bubble h1,
+html.app-skin-dark .ai-chat-bubble h2 {
+    border-bottom-color: #2d3748;
+}
+
+html.app-skin-dark .ai-chat-bubble code {
+    background: #1b2436;
+    color: #ff6b9d;
+}
+
+html.app-skin-dark .ai-chat-bubble pre {
+    background: #1b2436;
+    border-color: #2d3748;
+}
+
+html.app-skin-dark .ai-chat-bubble pre code {
+    color: #e5e7eb;
+}
+
+html.app-skin-dark .ai-chat-bubble a {
+    color: #4fd1c7;
+}
+
+html.app-skin-dark .ai-chat-bubble a:hover {
+    color: #38b2ac;
+}
+
+html.app-skin-dark .ai-chat-bubble strong {
+    color: #ffffff;
+}
+
+/* Input Container */
+.ai-chat-input-wrapper {
+    background: white;
+    border-top: 1px solid #e9ecef;
+    padding: 12px;
+}
+
+.ai-chat-input-container {
+    display: flex;
+    gap: 8px;
+    align-items: flex-end;
+}
+
+.ai-chat-input {
+    flex: 1;
+    border: 1px solid #e9ecef;
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 14px;
+    resize: none;
+    max-height: 120px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+.ai-chat-input:focus {
+    outline: none;
+    border-color: #15847A;
+}
+
+.ai-chat-send-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #15847A 0%, #0d6b63 100%);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+}
+
+.ai-chat-send-btn:hover:not(:disabled) {
+    transform: scale(1.1);
+    box-shadow: 0 4px 12px rgba(21, 132, 122, 0.4);
+}
+
+.ai-chat-send-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.ai-chat-send-btn i {
+    display: inline-block;
+    visibility: visible;
+}
+
+/* Loading Indicator */
+.ai-chat-loading {
+    display: flex;
+    gap: 4px;
+    padding: 12px 16px;
+}
+
+.ai-chat-loading span {
+    width: 8px;
+    height: 8px;
+    background: #15847A;
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out;
+}
+
+.ai-chat-loading span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.ai-chat-loading span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes bounce {
+    0%, 80%, 100% {
+        transform: scale(0);
+    }
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Scrollbar Styling */
+.ai-chat-messages::-webkit-scrollbar {
+    width: 6px;
+}
+
+.ai-chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ai-chat-messages::-webkit-scrollbar-thumb {
+    background: #dee2e6;
+    border-radius: 3px;
+}
+
+.ai-chat-messages::-webkit-scrollbar-thumb:hover {
+    background: #adb5bd;
+}
+
+/* Dark Mode Support */
+html.app-skin-dark .ai-chat-window {
+    background: #0f172a;
+    border: 1px solid #1b2436;
+}
+
+html.app-skin-dark .ai-chat-messages {
+    background: #0f172a;
+}
+
+html.app-skin-dark .ai-message .ai-chat-bubble {
+    background: #1b2436;
+    border-color: #2d3748;
+    color: #e5e7eb;
+}
+
+html.app-skin-dark .ai-chat-input-wrapper {
+    background: #0f172a;
+    border-top-color: #1b2436;
+}
+
+html.app-skin-dark .ai-chat-input {
+    background: #1b2436;
+    border-color: #2d3748;
+    color: #e5e7eb;
+}
+
+html.app-skin-dark .ai-chat-input:focus {
+    border-color: #15847A;
+}
+
+html.app-skin-dark .ai-chat-input-wrapper small {
+    color: #9ca3af;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .ai-chat-widget {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .ai-chat-window {
+        width: calc(100vw - 40px);
+        height: calc(100vh - 100px);
+        right: -20px;
+    }
+    
+    .ai-chat-toggle-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+}
+</style>
+
+<!-- Chat Widget JavaScript -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chatWidget = document.getElementById('aiChatWidget');
+    const chatToggle = document.getElementById('aiChatToggle');
+    const chatWindow = document.getElementById('aiChatWindow');
+    const chatClose = document.getElementById('aiChatClose');
+    const chatInput = document.getElementById('aiChatInput');
+    const chatSend = document.getElementById('aiChatSend');
+    const chatMessages = document.getElementById('aiChatMessages');
+    const betaNotice = document.getElementById('aiChatBetaNotice');
+    const betaClose = document.getElementById('aiChatBetaClose');
+    
+    let conversationHistory = [];
+    let isProcessing = false;
+    const MAX_USER_MESSAGES = 10;
+    const MAX_AI_MESSAGES = 10;
+    const STORAGE_KEY = 'aiChatHistory';
+    
+    // Load chat history from localStorage
+    function loadChatHistory() {
+        try {
+            const savedHistory = localStorage.getItem(STORAGE_KEY);
+            if (savedHistory) {
+                const parsed = JSON.parse(savedHistory);
+                if (Array.isArray(parsed) && parsed.length > 0) {
+                    conversationHistory = parsed;
+                    // Render saved messages
+                    renderChatHistory();
+                }
+            }
+        } catch (e) {
+            console.error('Error loading chat history:', e);
+            conversationHistory = [];
+        }
+    }
+    
+    // Save chat history to localStorage
+    function saveChatHistory() {
+        try {
+            // Limit to max 10 user messages and 10 AI messages
+            const limitedHistory = limitConversationHistory(conversationHistory);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(limitedHistory));
+            conversationHistory = limitedHistory;
+        } catch (e) {
+            console.error('Error saving chat history:', e);
+        }
+    }
+    
+    // Limit conversation history to max 10 user and 10 AI messages
+    function limitConversationHistory(history) {
+        if (!Array.isArray(history) || history.length === 0) return [];
+        
+        // Filter out system messages
+        const filteredHistory = history.filter(msg => msg.role !== 'system');
+        
+        // Count user and assistant messages
+        let userCount = 0;
+        let aiCount = 0;
+        const limitedHistory = [];
+        
+        // Go through history from the end (most recent) and keep up to MAX_USER_MESSAGES and MAX_AI_MESSAGES
+        for (let i = filteredHistory.length - 1; i >= 0; i--) {
+            const msg = filteredHistory[i];
+            
+            if (msg.role === 'user' && userCount < MAX_USER_MESSAGES) {
+                limitedHistory.unshift(msg); // Add to beginning to maintain order
+                userCount++;
+            } else if (msg.role === 'assistant' && aiCount < MAX_AI_MESSAGES) {
+                limitedHistory.unshift(msg); // Add to beginning to maintain order
+                aiCount++;
+            }
+            
+            // Stop if we've reached both limits
+            if (userCount >= MAX_USER_MESSAGES && aiCount >= MAX_AI_MESSAGES) {
+                break;
+            }
+        }
+        
+        return limitedHistory;
+    }
+    
+    // Render chat history to UI
+    function renderChatHistory() {
+        // Clear existing messages (except welcome message)
+        const existingMessages = chatMessages.querySelectorAll('.ai-chat-message');
+        existingMessages.forEach(msg => {
+            // Keep only the welcome message
+            const isWelcome = msg.querySelector('.ai-chat-bubble p')?.textContent.includes('Halo! Saya AI Assistant');
+            if (!isWelcome) {
+                msg.remove();
+            }
+        });
+        
+        // Render history
+        conversationHistory.forEach(msg => {
+            if (msg.role !== 'system') {
+                addMessageToUI(msg.content, msg.role === 'user');
+            }
+        });
+    }
+    
+    // Simple markdown parser for chat messages
+    function parseMarkdown(text) {
+        if (!text) return '';
+        
+        let html = text;
+        
+        // Escape HTML first (but preserve code blocks)
+        const codeBlocks = [];
+        html = html.replace(/```[\s\S]*?```/g, (match) => {
+            const id = `CODEBLOCK_${codeBlocks.length}`;
+            codeBlocks.push(match);
+            return id;
+        });
+        
+        const inlineCodes = [];
+        html = html.replace(/`[^`]+`/g, (match) => {
+            const id = `INLINECODE_${inlineCodes.length}`;
+            inlineCodes.push(match);
+            return id;
+        });
+        
+        // Escape HTML
+        html = html.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+        
+        // Restore code blocks and inline codes
+        codeBlocks.forEach((code, i) => {
+            html = html.replace(`CODEBLOCK_${i}`, code);
+        });
+        inlineCodes.forEach((code, i) => {
+            html = html.replace(`INLINECODE_${i}`, code);
+        });
+        
+        // Code blocks (```code```) - process first
+        html = html.replace(/```([\s\S]*?)```/g, (match, code) => {
+            // Escape HTML in code
+            code = code.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+            return `<pre><code>${code.trim()}</code></pre>`;
+        });
+        
+        // Headers (must be on new line)
+        html = html.replace(/^### (.*$)/gim, '<h3>$1</h3>');
+        html = html.replace(/^## (.*$)/gim, '<h2>$1</h2>');
+        html = html.replace(/^# (.*$)/gim, '<h1>$1</h1>');
+        
+        // Inline code (`code`) - process before bold/italic
+        html = html.replace(/`([^`\n]+)`/g, '<code>$1</code>');
+        
+        // Bold (avoid matching inside code)
+        html = html.replace(/\*\*([^*\n]+?)\*\*/g, '<strong>$1</strong>');
+        html = html.replace(/__(.+?)__/g, '<strong>$1</strong>');
+        
+        // Italic (avoid matching inside code and bold)
+        html = html.replace(/(?<!\*)\*([^*\n]+?)\*(?!\*)/g, '<em>$1</em>');
+        html = html.replace(/(?<!_)_([^_\n]+?)_(?!_)/g, '<em>$1</em>');
+        
+        // Links [text](url)
+        html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, '<a href="$2" target="_blank" rel="noopener">$1</a>');
+        
+        // Process lists line by line
+        const lines = html.split('\n');
+        const processedLines = [];
+        let inList = false;
+        let listType = null;
+        
+        for (let i = 0; i < lines.length; i++) {
+            const line = lines[i];
+            const unorderedMatch = line.match(/^(\s*)[-*+]\s+(.+)$/);
+            const orderedMatch = line.match(/^(\s*)\d+\.\s+(.+)$/);
+            
+            if (unorderedMatch || orderedMatch) {
+                const match = unorderedMatch || orderedMatch;
+                const indent = match[1].length;
+                const content = match[2];
+                const currentListType = unorderedMatch ? 'ul' : 'ol';
+                
+                if (!inList || listType !== currentListType) {
+                    if (inList) {
+                        processedLines.push(`</${listType}>`);
+                    }
+                    processedLines.push(`<${currentListType}>`);
+                    inList = true;
+                    listType = currentListType;
+                }
+                processedLines.push(`<li>${content}</li>`);
+            } else {
+                if (inList) {
+                    processedLines.push(`</${listType}>`);
+                    inList = false;
+                    listType = null;
+                }
+                processedLines.push(line);
+            }
+        }
+        
+        if (inList) {
+            processedLines.push(`</${listType}>`);
+        }
+        
+        html = processedLines.join('\n');
+        
+        // Split by double newlines for paragraphs
+        const paragraphs = html.split(/\n\n+/);
+        html = paragraphs.map(p => {
+            p = p.trim();
+            if (!p) return '';
+            // Don't wrap if it's already a block element
+            if (/^<(h[1-6]|ul|ol|pre|p)/.test(p)) {
+                return p;
+            }
+            // Convert single newlines to <br>
+            p = p.replace(/\n/g, '<br>');
+            return `<p>${p}</p>`;
+        }).join('');
+        
+        return html;
+    }
+    
+    // Add message to UI without adding to history (for rendering)
+    function addMessageToUI(content, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `ai-chat-message ${isUser ? 'user-message' : 'ai-message'}`;
+        
+        const avatar = document.createElement('div');
+        avatar.className = 'ai-chat-avatar-small';
+        avatar.innerHTML = `<i class="feather-${isUser ? 'user' : 'zap'}"></i>`;
+        
+        const bubble = document.createElement('div');
+        bubble.className = 'ai-chat-bubble';
+        
+        // Parse markdown for AI messages, plain text for user messages
+        if (isUser) {
+            const p = document.createElement('p');
+            p.textContent = content;
+            p.style.whiteSpace = 'pre-wrap';
+            bubble.appendChild(p);
+        } else {
+            bubble.innerHTML = parseMarkdown(content);
+        }
+        
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(bubble);
+        
+        chatMessages.appendChild(messageDiv);
+        scrollToBottom();
+    }
+    
+    // Check if beta notice was previously dismissed
+    const betaNoticeDismissed = localStorage.getItem('aiChatBetaNoticeDismissed');
+    if (betaNoticeDismissed === 'true') {
+        betaNotice.classList.add('hidden');
+    }
+    
+    // Close beta notice
+    betaClose.addEventListener('click', function() {
+        betaNotice.classList.add('hidden');
+        localStorage.setItem('aiChatBetaNoticeDismissed', 'true');
+    });
+    
+    // Load chat history on page load
+    loadChatHistory();
+    
+    // Toggle chat window
+    chatToggle.addEventListener('click', function() {
+        chatWindow.classList.toggle('active');
+        if (chatWindow.classList.contains('active')) {
+            chatInput.focus();
+        }
+    });
+    
+    // Close chat window
+    chatClose.addEventListener('click', function() {
+        chatWindow.classList.remove('active');
+    });
+    
+    // Auto-resize textarea
+    chatInput.addEventListener('input', function() {
+        this.style.height = 'auto';
+        this.style.height = Math.min(this.scrollHeight, 120) + 'px';
+        
+        // Enable/disable send button
+        chatSend.disabled = this.value.trim() === '' || isProcessing;
+    });
+    
+    // Send message on Enter (Shift+Enter for new line)
+    chatInput.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            if (!chatSend.disabled) {
+                sendMessage();
+            }
+        }
+    });
+    
+    // Send button click
+    chatSend.addEventListener('click', function() {
+        if (!chatSend.disabled) {
+            sendMessage();
+        }
+    });
+    
+    // Add message to chat
+    function addMessage(content, isUser = false) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `ai-chat-message ${isUser ? 'user-message' : 'ai-message'}`;
+        
+        const avatar = document.createElement('div');
+        avatar.className = 'ai-chat-avatar-small';
+        avatar.innerHTML = `<i class="feather-${isUser ? 'user' : 'zap'}"></i>`;
+        
+        const bubble = document.createElement('div');
+        bubble.className = 'ai-chat-bubble';
+        
+        // Parse markdown for AI messages, plain text for user messages
+        if (isUser) {
+            const p = document.createElement('p');
+            p.textContent = content;
+            p.style.whiteSpace = 'pre-wrap';
+            bubble.appendChild(p);
+        } else {
+            bubble.innerHTML = parseMarkdown(content);
+        }
+        
+        messageDiv.appendChild(avatar);
+        messageDiv.appendChild(bubble);
+        
+        chatMessages.appendChild(messageDiv);
+        scrollToBottom();
+        
+        // Add to conversation history
+        conversationHistory.push({
+            role: isUser ? 'user' : 'assistant',
+            content: content
+        });
+        
+        // Limit and save history after adding message
+        conversationHistory = limitConversationHistory(conversationHistory);
+        saveChatHistory();
+    }
+    
+    // Show loading indicator
+    function showLoading() {
+        const loadingDiv = document.createElement('div');
+        loadingDiv.className = 'ai-chat-message ai-message';
+        loadingDiv.id = 'aiChatLoading';
+        
+        const avatar = document.createElement('div');
+        avatar.className = 'ai-chat-avatar-small';
+        avatar.innerHTML = '<i class="feather-zap"></i>';
+        
+        const bubble = document.createElement('div');
+        bubble.className = 'ai-chat-bubble';
+        bubble.innerHTML = '<div class="ai-chat-loading"><span></span><span></span><span></span></div>';
+        
+        loadingDiv.appendChild(avatar);
+        loadingDiv.appendChild(bubble);
+        chatMessages.appendChild(loadingDiv);
+        scrollToBottom();
+    }
+    
+    // Remove loading indicator
+    function removeLoading() {
+        const loading = document.getElementById('aiChatLoading');
+        if (loading) {
+            loading.remove();
+        }
+    }
+    
+    // Scroll to bottom
+    function scrollToBottom() {
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+    
+    // Send message to server
+    function sendMessage() {
+        const message = chatInput.value.trim();
+        if (!message || isProcessing) return;
+        
+        // Add user message
+        addMessage(message, true);
+        
+        // Clear input
+        chatInput.value = '';
+        chatInput.style.height = 'auto';
+        chatSend.disabled = true;
+        
+        // Set processing state
+        isProcessing = true;
+        chatSend.disabled = true;
+        chatInput.disabled = true;
+        
+        // Show loading
+        showLoading();
+        
+        // Prepare history for sending (limit before sending to avoid large payloads)
+        const historyToSend = limitConversationHistory(conversationHistory);
+        
+        // Send to server
+        fetch('/simako-update/head-of-iha/dashboard/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+            },
+            body: new URLSearchParams({
+                message: message,
+                history: JSON.stringify(historyToSend)
+            })
+        })
+        .then(response => response.json())
+        .then(data => {
+            removeLoading();
+            
+            if (data.success) {
+                addMessage(data.message, false);
+            } else {
+                // Handle credit errors with better messaging
+                let errorMessage = data.error || 'Tidak dapat memproses permintaan';
+                
+                if (data.is_credit_error) {
+                    errorMessage = data.error || 'Maaf, kuota AI saat ini tidak mencukupi. Silakan hubungi administrator untuk menambahkan kredit API atau coba lagi nanti. Terima kasih atas pengertiannya.';
+                }
+                
+                // Don't add error messages to conversation history
+                const errorDiv = document.createElement('div');
+                errorDiv.className = 'ai-chat-message ai-message';
+                
+                const avatar = document.createElement('div');
+                avatar.className = 'ai-chat-avatar-small';
+                avatar.innerHTML = '<i class="feather-alert-circle"></i>';
+                
+                const bubble = document.createElement('div');
+                bubble.className = 'ai-chat-bubble';
+                bubble.style.borderLeft = '3px solid #ffc107';
+                const p = document.createElement('p');
+                p.textContent = errorMessage;
+                bubble.appendChild(p);
+                
+                errorDiv.appendChild(avatar);
+                errorDiv.appendChild(bubble);
+                chatMessages.appendChild(errorDiv);
+                scrollToBottom();
+            }
+        })
+        .catch(error => {
+            removeLoading();
+            const errorDiv = document.createElement('div');
+            errorDiv.className = 'ai-chat-message ai-message';
+            
+            const avatar = document.createElement('div');
+            avatar.className = 'ai-chat-avatar-small';
+            avatar.innerHTML = '<i class="feather-alert-circle"></i>';
+            
+            const bubble = document.createElement('div');
+            bubble.className = 'ai-chat-bubble';
+            bubble.style.borderLeft = '3px solid #dc3545';
+            const p = document.createElement('p');
+            p.textContent = 'Maaf, terjadi kesalahan koneksi. Silakan coba lagi.';
+            bubble.appendChild(p);
+            
+            errorDiv.appendChild(avatar);
+            errorDiv.appendChild(bubble);
+            chatMessages.appendChild(errorDiv);
+            scrollToBottom();
+            
+            console.error('Chat error:', error);
+        })
+        .finally(() => {
+            isProcessing = false;
+            chatInput.disabled = false;
+            chatInput.focus();
+        });
+    }
+});
+</script>
+
+<script>document.getElementById('s-info-terbaru').addEventListener('click',function(){ var m=document.getElementById('s-welcome'); if(m&&window.bootstrap) bootstrap.Modal.getOrCreateInstance(m).show(); });</script>
+<script>
+(function(){ var m = document.getElementById('s-welcome'); if (!m) return;
+  m.addEventListener('shown.bs.modal', function(){ if (!window.Swiper) return;
+    if (!m.__sw) m.__sw = new Swiper('.feature-swiper', { slidesPerView: 1, spaceBetween: 16, loop: true, autoplay: { delay: 3500, disableOnInteraction: false }, pagination: { el: '.feature-pagination', clickable: true }, breakpoints: { 640: { slidesPerView: 2 }, 992: { slidesPerView: 3 } } });
+    else m.__sw.update(); });
+})();
+</script>
+<script>
+/* Karusel kartu fitur tanpa pustaka: gulir snap, dua kartu per tampilan, panah, dan indikator */
+(function(){ var w = document.querySelector('.feature-swiper .swiper-wrapper'); if (!w) return;
+  var slides = w.querySelectorAll('.swiper-slide'), wrap = w.parentElement, per = function(){ return window.innerWidth < 700 ? 1 : 2; };
+  var nav = document.createElement('div'); nav.className = 's-karusel-nav';
+  nav.innerHTML = '<button type="button" class="prev" aria-label="Sebelumnya"><i class="ti ti-chevron-left"></i></button><div class="dots"></div><button type="button" class="next" aria-label="Berikutnya"><i class="ti ti-chevron-right"></i></button>';
+  wrap.appendChild(nav); var dots = nav.querySelector('.dots');
+  function halaman(){ return Math.max(1, Math.ceil(slides.length / per())); }
+  function aktif(){ var idx = Math.round(w.scrollLeft / w.clientWidth); dots.querySelectorAll('i').forEach(function(d, k){ d.classList.toggle('on', k === idx); }); }
+  function bangun(){ dots.innerHTML = ''; for (var k = 0; k < halaman(); k++) { var d = document.createElement('i'); d.addEventListener('click', (function(k){ return function(){ w.scrollTo({ left: k * w.clientWidth, behavior:'smooth' }); }; })(k)); dots.appendChild(d); } aktif(); }
+  nav.querySelector('.prev').addEventListener('click', function(){ w.scrollBy({ left: -w.clientWidth, behavior:'smooth' }); });
+  nav.querySelector('.next').addEventListener('click', function(){ w.scrollBy({ left: w.clientWidth, behavior:'smooth' }); });
+  w.addEventListener('scroll', aktif); window.addEventListener('resize', bangun); bangun();
+  var m = document.getElementById('s-welcome'); if (m) m.addEventListener('shown.bs.modal', bangun);
+})();
+</script>
+</div>
+        <!-- [ Footer ] start -->
+        <footer class="footer">
+            <p class="copyright mb-0">
+                <span>Museum dan Cagar Budaya, Kementerian Kebudayaan &middot; <script>document.write(new Date().getFullYear());</script></span>
+            </p>
+            <p class="copyright mb-0"><span>SIMAKO 1.3.0</span></p>
+        </footer>
+        <!-- [ Footer ] end -->
+    </main>
+    <!--! ================================================================ !-->
+    <!--! [End] Main Content !-->
+    <!--! ================================================================ !-->
+    <!--! ================================================================ !-->
+    <!--! BEGIN: Theme Customizer !-->
+    <!--! ================================================================ !-->
+    <div class="theme-customizer">
+        <!-- <div class="customizer-handle">
+            <a href="javascript:void(0);" class="cutomizer-open-trigger bg-primary">
+                <i class="feather-settings"></i>
+            </a>
+        </div> -->
+        <div class="customizer-sidebar-wrapper">
+            <div class="customizer-sidebar-header px-4 ht-80 border-bottom d-flex align-items-center justify-content-between">
+                <h5 class="mb-0">Theme Settings</h5>
+                <a href="javascript:void(0);" class="cutomizer-close-trigger d-flex">
+                    <i class="feather-x"></i>
+                </a>
+            </div>
+            <div class="customizer-sidebar-body position-relative p-4" data-scrollbar-target="#psScrollbarInit">
+                <!--! BEGIN: [Navigation] !-->
+                <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-5 border border-gray-2 theme-options-set">
+                    <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Navigation</label>
+                    <div class="row g-2 theme-options-items app-navigation" id="appNavigationList">
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-navigation-light" name="app-navigation" value="1" data-app-navigation="app-navigation-light" checked />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-navigation-light">Light</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-navigation-dark" name="app-navigation" value="2" data-app-navigation="app-navigation-dark" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-navigation-dark">Dark</label>
+                        </div>
+                    </div>
+                </div>
+                <!--! END: [Navigation] !-->
+                <!--! BEGIN: [Header] !-->
+                <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-5 border border-gray-2 theme-options-set mt-5">
+                    <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Header</label>
+                    <div class="row g-2 theme-options-items app-header" id="appHeaderList">
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-header-light" name="app-header" value="1" data-app-header="app-header-light" checked />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-header-light">Light</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-header-dark" name="app-header" value="2" data-app-header="app-header-dark" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-header-dark">Dark</label>
+                        </div>
+                    </div>
+                </div>
+                <!--! END: [Header] !-->
+                <!--! BEGIN: [Skins] !-->
+                <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-5 border border-gray-2 theme-options-set">
+                    <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Skins</label>
+                    <div class="row g-2 theme-options-items app-skin" id="appSkinList">
+                        <div class="col-6 text-center position-relative single-option light-button active">
+                            <input type="radio" class="btn-check" id="app-skin-light" name="app-skin" value="1" data-app-skin="app-skin-light" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-skin-light">Light</label>
+                        </div>
+                        <div class="col-6 text-center position-relative single-option dark-button">
+                            <input type="radio" class="btn-check" id="app-skin-dark" name="app-skin" value="2" data-app-skin="app-skin-dark" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-skin-dark">Dark</label>
+                        </div>
+                    </div>
+                </div>
+                <!--! END: [Skins] !-->
+                <!--! BEGIN: [Typography] !-->
+                <div class="position-relative px-3 pb-3 pt-4 mt-3 mb-0 border border-gray-2 theme-options-set">
+                    <label class="py-1 px-2 fs-8 fw-bold text-uppercase text-muted text-spacing-2 bg-white border border-gray-2 position-absolute rounded-2 options-label" style="top: -12px">Typography</label>
+                    <div class="row g-2 theme-options-items font-family" id="fontFamilyList">
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-lato" name="font-family" value="1" data-font-family="app-font-family-lato" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-lato">Lato</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-rubik" name="font-family" value="2" data-font-family="app-font-family-rubik" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-rubik">Rubik</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-inter" name="font-family" value="3" data-font-family="app-font-family-inter" checked />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-inter">Inter</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-cinzel" name="font-family" value="4" data-font-family="app-font-family-cinzel" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-cinzel">Cinzel</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-nunito" name="font-family" value="6" data-font-family="app-font-family-nunito" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-nunito">Nunito</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-roboto" name="font-family" value="7" data-font-family="app-font-family-roboto" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-roboto">Roboto</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-ubuntu" name="font-family" value="8" data-font-family="app-font-family-ubuntu" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-ubuntu">Ubuntu</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-poppins" name="font-family" value="9" data-font-family="app-font-family-poppins" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-poppins">Poppins</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-raleway" name="font-family" value="10" data-font-family="app-font-family-raleway" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-raleway">Raleway</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-system-ui" name="font-family" value="11" data-font-family="app-font-family-system-ui" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-system-ui">System UI</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-noto-sans" name="font-family" value="12" data-font-family="app-font-family-noto-sans" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-noto-sans">Noto Sans</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-fira-sans" name="font-family" value="13" data-font-family="app-font-family-fira-sans" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-fira-sans">Fira Sans</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-work-sans" name="font-family" value="14" data-font-family="app-font-family-work-sans" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-work-sans">Work Sans</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-open-sans" name="font-family" value="15" data-font-family="app-font-family-open-sans" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-open-sans">Open Sans</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-maven-pro" name="font-family" value="16" data-font-family="app-font-family-maven-pro" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-maven-pro">Maven Pro</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-quicksand" name="font-family" value="17" data-font-family="app-font-family-quicksand" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-quicksand">Quicksand</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-montserrat" name="font-family" value="18" data-font-family="app-font-family-montserrat" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-montserrat">Montserrat</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-josefin-sans" name="font-family" value="19" data-font-family="app-font-family-josefin-sans" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-josefin-sans">Josefin Sans</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-ibm-plex-sans" name="font-family" value="20" data-font-family="app-font-family-ibm-plex-sans" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-ibm-plex-sans">IBM Plex Sans</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-source-sans-pro" name="font-family" value="5" data-font-family="app-font-family-source-sans-pro" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-source-sans-pro">Source Sans Pro</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-montserrat-alt" name="font-family" value="21" data-font-family="app-font-family-montserrat-alt" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-montserrat-alt">Montserrat Alt</label>
+                        </div>
+                        <div class="col-6 text-center single-option">
+                            <input type="radio" class="btn-check" id="app-font-family-roboto-slab" name="font-family" value="22" data-font-family="app-font-family-roboto-slab" />
+                            <label class="py-2 fs-9 fw-bold text-dark text-uppercase text-spacing-1 border border-gray-2 w-100 h-100 c-pointer position-relative options-label" for="app-font-family-roboto-slab">Roboto Slab</label>
+                        </div>
+                    </div>
+                </div>
+                <!--! END: [Typography] !-->
+            </div>
+            <div class="customizer-sidebar-footer px-4 ht-60 border-top d-flex align-items-center gap-2">
+                <div class="flex-fill w-50">
+                    <a href="javascript:void(0);" class="btn btn-danger" data-style="reset-all-common-style">Reset</a>
+                </div>
+                <div class="flex-fill w-50">
+                    <a href="javascript:void(0);" class="btn btn-primary">Download</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--! ================================================================ !-->
+    <!--! [End] Theme Customizer !-->
+    <!--! ================================================================ !-->
+    <!--! ================================================================ !-->
+    <!--! Footer Script !-->
+    <!--! ================================================================ !-->
+    <!-- vendors.min.js {always must need to be top} -->
+    <script src="/simako-update/assets/vendors/js/daterangepicker.min.js"></script>
+    <script src="/simako-update/assets/vendors/js/apexcharts.min.js"></script>
+    <script src="/simako-update/assets/vendors/js/circle-progress.min.js"></script>
+    <!--! END: Vendors JS !-->
+    <script src="/simako-update/assets/vendors/js/dataTables.min.js"></script>
+    <script src="/simako-update/assets/vendors/js/dataTables.bs5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+    <!--! END: Vendors JS !-->
+    <!--! BEGIN: Apps Init  !-->
+    <script src="/simako-update/assets/js/leads-init.min.js"></script>
+    <!--! BEGIN: Apps Init  !-->
+    <script src="/simako-update/assets/js/common-init.min.js?v=20261023"></script>
+    <!-- Perilaku ponsel global: tabel kartu, lipat filter, aksi kepala halaman, laci menu (pasangan assets/css/ponsel.css) -->
+    <script src="/simako-update/assets/js/ponsel.js?v=1792834319"></script>
+   
+    <!--! END: Apps Init !-->
+    <!--! BEGIN: Theme Customizer  !-->
+    <script src="/simako-update/assets/js/theme-customizer-init.min.js"></script>
+
+    <script src="/simako-update/assets/js/theme-customizer-init.min.js"></script>
+    
+   
+    <!--! END: Theme Customizer !-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="text/javascript">
+        $(document).ready(
+        function () {
+            /* DinamicMenu() * dinamic activate menu */ 
+            var path = $(location).attr('href');
+
+            // Extract the menu ID from the end of the URL
+            var matches = path.match(/\/(\d+\.\d+)$/);
+            if (matches && !path.includes('/menu/')) {
+            var menuId = matches[1];
+            // Replace the dynamic middle part with "menu" while keeping the menu ID
+            path = path.replace(/\/[^\/]+\/[^\/]+\/\d+\.\d+$/, '/menu/' + menuId);
+            }
+            // Will only work if string in href matches with location 
+            $('.treeview-menu li a[href="'+path+'"]').parents().addClass('active');
+            $('li a[href="'+path+'"]').parents().addClass('active');
+            $('li a[href="'+path+'"]').parents().addClass('nxl-trigger');
+            setTimeout(function() {
+                $('li a[href="'+path+'"]').parents().parent().removeAttr('style');
+            }, 500);
+
+            $('.select2').select2();
+            $('.select2-tags').select2({
+                tags: true,
+                tokenSeparators: [',', ' ']
+            });
+        }
+        );    
+    </script>
+    <style>
+        .main-content {
+            margin-bottom: 150px !important;
+        }
+        /* Fix dropdown positioning for mobile only */
+        @media (max-width: 767.98px) {
+            .dropdown .dropdown-menu {
+                position: fixed !important;
+                z-index: 1200 !important;
+            }
+        }
+        
+        /* Ensure proper dropdown positioning for desktop */
+        @media (min-width: 768px) {
+            .dropdown .dropdown-menu {
+                position: absolute !important;
+                z-index: 1000 !important;
+            }
+        }
+
+        .border-top{
+            border-top:none !important;
+        }
+
+        .select2-container {
+            width: 82% !important;
+        }
+
+        .form-select{
+            font-size: .845rem !important;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,286 @@
+/* Revisi 26 butir, modul storage. Dimuat setelah custom.css. Butir 18, 19, 20. */
+
+/* Pesan kilas (flash) dengan irama 24px */
+.s-pesan{display:flex;align-items:center;gap:10px;padding:12px 16px;border-radius:var(--r-card);border:1px solid var(--s-line);margin-bottom:24px;font-size:13px}
+.s-pesan i{font-size:17px;flex:none}
+.s-pesan-ok{background:var(--s-ok-soft);color:var(--s-ok-ink);border-color:color-mix(in srgb,var(--s-ok) 35%,transparent)}
+.s-pesan-bad{background:var(--s-bad-soft);color:var(--s-bad-ink);border-color:color-mix(in srgb,var(--s-bad) 35%,transparent)}
+.s-pesan-warn{background:var(--s-warn-soft);color:var(--s-warn-ink);border-color:color-mix(in srgb,var(--s-warn) 35%,transparent)}
+
+/* Tabel di dalam .s-card: header kartu lalu DataTables tanpa jarak ganda */
+.s-card>.table-responsive{border-top:1px solid var(--s-line)}
+.s-card .dataTables_wrapper .row:first-child{border-bottom:1px solid var(--s-line)}
+.s-card .table{margin-bottom:0}
+.s-card .table thead th{font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--s-mid);white-space:nowrap}
+.s-card .table td{vertical-align:middle}
+.s-card .table td.s-num{font-variant-numeric:tabular-nums}
+
+/* Aksi per baris: tombol kecil sejajar kanan */
+.s-aksi-baris{display:inline-flex;gap:6px;justify-content:flex-end;flex-wrap:wrap}
+.s-aksi-baris .btn-sm{display:inline-flex;align-items:center;gap:5px;white-space:nowrap}
+.s-aksi-baris .btn-sm i{font-size:15px}
+.s-aksi-baris .s-tolak:hover{color:var(--s-bad)!important;border-color:color-mix(in srgb,var(--s-bad) 45%,transparent)!important}
+.s-nowrap{white-space:nowrap}
+.s-dua-baris{display:grid;gap:1px;line-height:1.3}
+.s-dua-baris b{font-weight:500;color:var(--s-ink)}
+.s-dua-baris span{font-size:12px;color:var(--s-mid)}
+
+/* Kondisi koleksi: titik warna tetap + teks */
+.s-kondisi{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.s-kondisi i{width:9px;height:9px;border-radius:9px;display:inline-block;flex:none}
+
+/* Definisi (label kiri, nilai kanan) untuk rincian */
+.s-dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px 24px;margin:0}
+.s-dl.s-dl-1{grid-template-columns:1fr;gap:10px}
+.s-dl>div{display:grid;grid-template-columns:150px minmax(0,1fr);gap:12px;align-items:start;padding-bottom:10px;border-bottom:1px solid var(--s-line2)}
+.s-dl dt{font-size:12px;font-weight:600;color:var(--s-mid);margin:0;padding-top:2px}
+.s-dl dd{margin:0;font-size:13px;color:var(--s-ink);display:grid;gap:2px}
+.s-dl dd small{font-size:12px;color:var(--s-mid)}
+.s-sub{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--s-mid);margin-bottom:12px}
+.mt24{margin-top:24px}
+
+/* Riwayat status mutasi */
+.s-riwayat{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.s-riwayat li{display:flex;gap:12px;align-items:flex-start}
+.s-riwayat .s-titik{width:10px;height:10px;border-radius:10px;margin-top:5px;flex:none;background:var(--s-info)}
+.s-titik-ok{background:var(--s-ok)}.s-titik-warn{background:var(--s-warn)}.s-titik-bad{background:var(--s-bad)}.s-titik-info{background:var(--s-info)}
+.s-riwayat li div{display:grid;gap:1px}
+.s-riwayat li b{font-size:13px;font-weight:500;color:var(--s-ink)}
+.s-riwayat li span{font-size:12px;color:var(--s-mid)}
+
+/* Filter mutasi: lima kolom + aksi */
+.s-filter-mutasi{grid-template-columns:minmax(200px,1.4fr) repeat(4,minmax(140px,1fr)) auto}
+@media (max-width:1180px){.s-filter-mutasi{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:640px){.s-filter-mutasi{grid-template-columns:1fr}}
+
+/* Koleksi Tanpa Lokasi: kepala kartu dengan lencana museum, chip jumlah, dan pencarian ringkas */
+.s-card-h-ktl{flex-wrap:wrap}
+.s-badge-museum{display:inline-flex;align-items:center;gap:6px}
+.s-badge-museum i{font-size:14px}
+.s-chip{display:inline-flex;align-items:center;gap:4px;font-size:12px;color:var(--s-mid);background:var(--s-canvas);border:1px solid var(--s-line);border-radius:var(--r-sm);padding:3px 9px;white-space:nowrap}
+.s-chip b{font-weight:600;color:var(--s-ink);font-variant-numeric:tabular-nums}
+.s-cari{position:relative;width:260px;max-width:100%}
+.s-cari i{position:absolute;left:11px;top:50%;transform:translateY(-50%);color:var(--s-mid);font-size:15px;pointer-events:none}
+.s-cari .form-control{padding-left:34px!important}
+.s-grid-ktl{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(300px,1fr);gap:24px;align-items:start}
+@media (max-width:1024px){.s-grid-ktl{grid-template-columns:1fr}.s-cari{width:100%}}
+.s-form-lokasi{display:grid;gap:14px}
+.s-form-lokasi label{display:block;font-size:12px;font-weight:600;color:var(--s-ink);margin-bottom:6px}
+.s-form-lokasi label em{font-style:normal;color:var(--s-bad)}
+.s-form-lokasi .s-aksi{display:flex;gap:8px;justify-content:flex-end;margin-top:6px}
+.s-pratinjau{font-size:12.5px;color:var(--s-mid);background:var(--s-alt);border:1px dashed var(--s-line);border-radius:var(--r-nest);padding:10px 12px}
+.s-pratinjau b{color:var(--s-ink);font-weight:500}
+.s-lokasi-baru{display:flex;align-items:center;gap:10px;padding:12px 14px;border-radius:var(--r-nest);background:var(--s-ok-soft);color:var(--s-ok-ink)}
+.s-lokasi-baru i{font-size:18px;flex:none}
+.s-lokasi-baru b{font-weight:500}
+#table-koleksi-tanpa-lokasi tr.s-baris-aktif td{background:color-mix(in srgb,var(--s-brand) 8%,var(--s-paper))!important}
+#wadah-riwayat{max-height:240px}
+#dl-rincian .s-skel{min-height:120px}
+
+/* Penjelajah lokasi (Tempat Penyimpanan): pohon di kiri 34 persen, rincian node di kanan */
+.s-jelajah{display:grid;grid-template-columns:34% minmax(0,1fr);gap:24px;align-items:start}
+.s-jelajah-kiri{position:sticky;top:88px;display:flex;flex-direction:column;max-height:calc(100vh - 112px)}
+.s-jelajah-cari{padding:0 16px 12px}
+.s-jelajah-cari .s-cari{width:100%}
+.s-pohon{border-top:1px solid var(--s-line);overflow:auto;padding:8px 8px 12px;flex:1;min-height:200px}
+.s-pohon-ul{list-style:none;margin:0;padding:0}
+.s-pohon-ul .s-pohon-ul{padding-left:18px;border-left:1px solid var(--s-line2);margin-left:15px}
+.s-pohon-baris{display:flex;align-items:center;gap:6px;padding:5px 8px 5px 2px;border-radius:var(--r-nest);cursor:pointer;font-size:13px;color:var(--s-ink);user-select:none}
+.s-pohon-baris:hover{background:var(--s-alt)}
+.s-pohon-baris.aktif{background:var(--s-brand-soft);color:var(--s-brand-ink)}
+.s-pohon-baris.aktif .s-pohon-ikon,.s-pohon-baris.aktif .s-pohon-n{color:var(--s-brand-ink)}
+.s-pohon-chev{flex:none;width:20px;height:20px;border:0;background:none;padding:0;display:inline-flex;align-items:center;justify-content:center;color:var(--s-mid);border-radius:var(--r-sm)}
+.s-pohon-chev i{font-size:14px;transition:transform .15s}
+.s-pohon-chev.s-kosong{visibility:hidden}
+.s-pohon-baris.terbuka .s-pohon-chev i{transform:rotate(90deg)}
+.s-pohon-ikon{font-size:16px;color:var(--s-mid);flex:none}
+.s-pohon-nama{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s-pohon-n{font-size:11.5px;font-weight:600;color:var(--s-mid);font-variant-numeric:tabular-nums;background:var(--s-canvas);border:1px solid var(--s-line2);border-radius:var(--r-sm);padding:1px 7px;min-width:26px;text-align:center}
+.s-pohon-nonaktif .s-pohon-nama{color:var(--s-mid);text-decoration:line-through}
+.s-pohon-tak-ada{padding:20px 12px}
+.s-lokasi-kepala{align-items:flex-start}
+.s-lokasi-kepala .t b{font-size:17px}
+.s-jejak{display:inline-flex;flex-wrap:wrap;align-items:center;gap:4px;margin-top:3px}
+.s-jejak i{font-size:12px;color:var(--s-line)}
+.s-stats-lokasi{grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:16px;margin:4px 0 0}
+.s-stats-lokasi .s-stat{padding:16px 18px;box-shadow:none;background:var(--s-alt)}
+.s-stats-lokasi .s-stat .vl b{font-size:24px}
+.s-bar-wadah{margin-top:18px}
+.s-bar-lb{display:flex;justify-content:space-between;font-size:12px;color:var(--s-mid);margin-bottom:6px}
+.s-bar-lb b{color:var(--s-ink);font-variant-numeric:tabular-nums}
+.s-bar{height:8px;border-radius:8px;background:var(--s-line2);overflow:hidden}
+.s-bar i{display:block;height:100%;background:var(--s-brand);border-radius:8px;transition:width .2s}
+.s-pesan-kecil{margin:16px 0 0;padding:9px 12px;font-size:12.5px}
+.s-tabel-isi td{vertical-align:middle}
+.s-tabel-isi th:last-child,.s-tabel-isi td:last-child{width:64px;text-align:right}
+.s-teks-mid{color:var(--s-mid)}
+.s-btn-ikon{padding:4px 7px!important;line-height:1}
+.s-btn-ikon i{font-size:15px}
+.s-badge-kondisi{font-weight:600;border:1px solid transparent}
+.s-kond-baik{background:color-mix(in srgb,var(--k-baik) 16%,transparent)!important;color:var(--k-baik-ink)!important}
+.s-kond-rawat{background:color-mix(in srgb,var(--k-rawat) 18%,transparent)!important;color:var(--k-rawat-ink)!important}
+.s-kond-ringan{background:color-mix(in srgb,var(--k-ringan) 16%,transparent)!important;color:var(--k-ringan-ink)!important}
+.s-kond-berat{background:color-mix(in srgb,var(--k-berat) 14%,transparent)!important;color:var(--k-berat-ink)!important}
+.s-kond-mid{background:var(--s-line2)!important;color:var(--s-mid)!important}
+.s-isi-kaki{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:12px 16px;border-top:1px solid var(--s-line);font-size:12.5px;color:var(--s-mid)}
+.s-halaman{display:inline-flex;gap:4px}
+.s-halaman .btn-sm{min-width:32px;padding:4px 8px!important;font-variant-numeric:tabular-nums}
+@media (max-width:1024px){.s-jelajah{grid-template-columns:1fr}.s-jelajah-kiri{position:static;max-height:420px}}
+
+/* Pindahkan koleksi (Mutasi Koleksi) */
+.s-pindah{display:grid;gap:20px}
+.s-pindah label{display:block;font-size:12px;font-weight:600;color:var(--s-ink);margin-bottom:6px}
+.s-pindah-cari{position:relative}
+.s-cari-lebar{width:100%}
+.s-saran{position:absolute;left:0;right:0;top:calc(100% + 4px);z-index:30;list-style:none;margin:0;padding:6px;background:var(--s-paper);border:1px solid var(--s-line);border-radius:var(--r-card);box-shadow:var(--s-shadow),0 12px 32px -12px rgba(0,0,0,.25);max-height:320px;overflow:auto}
+.s-saran li{display:grid;grid-template-columns:auto auto minmax(0,1fr);align-items:center;column-gap:8px;padding:8px 10px;border-radius:var(--r-nest);cursor:pointer;font-size:13px;color:var(--s-ink)}
+.s-saran li:hover{background:var(--s-alt)}
+.s-saran li b{font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s-saran li small{grid-column:1/-1;font-size:12px;color:var(--s-mid);margin-top:2px}
+.s-saran-pisah{color:var(--s-mid)}
+.s-saran-kosong{grid-template-columns:1fr!important;color:var(--s-mid)!important;cursor:default!important;text-align:center}
+.s-koleksi-terpilih{display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid var(--s-line);border-radius:var(--r-ctl);background:var(--s-alt);font-size:13px}
+.s-koleksi-terpilih>i{font-size:18px;color:var(--s-brand)}
+.s-koleksi-terpilih b{flex:1;min-width:0;font-weight:500;color:var(--s-ink);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s-lokasi-duo{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px;align-items:stretch}
+.s-lokasi-kotak{display:grid;gap:4px;align-content:start;padding:14px 16px;border:1px solid var(--s-line);border-radius:var(--r-ctl);background:var(--s-alt)}
+.s-lokasi-kotak b{font-size:14px;font-weight:600;color:var(--s-ink)}
+.s-lokasi-kotak span{font-size:12.5px;color:var(--s-mid)}
+.s-lokasi-kotak .btn{justify-self:start;margin-top:8px}
+.s-lokasi-lb{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--s-mid);margin-bottom:4px}
+.s-lokasi-tujuan{border-style:dashed}
+.s-lokasi-panah{align-self:center;width:36px;height:36px;border-radius:36px;display:flex;align-items:center;justify-content:center;background:var(--s-brand-soft);color:var(--s-brand-ink)}
+.s-lokasi-panah i{font-size:18px}
+.s-pindah-baris{display:grid;grid-template-columns:repeat(3,minmax(160px,1fr));gap:16px 20px;align-items:end}
+.s-pindah-kaki{display:flex;justify-content:flex-end;gap:8px;padding-top:16px;border-top:1px solid var(--s-line2)}
+.s-modal-pohon .modal-header{align-items:flex-start;padding:18px 24px 14px;border-bottom:0}
+.s-modal-pohon .modal-header .t b{display:block;font-size:15px;font-weight:600;color:var(--s-ink)}
+.s-modal-pohon .modal-header .t span{font-size:12.5px;color:var(--s-mid)}
+.s-modal-pohon .modal-body.s-pohon{padding:8px 8px 12px;max-height:60vh}
+.s-modal-pohon .s-jelajah-cari{padding:0 24px 12px}
+.s-badge-netral{background:var(--s-line2)!important;color:var(--s-mid)!important}
+.s-tabel-riwayat tbody tr.s-baris-tautan{cursor:pointer}
+.s-tabel-riwayat td .s-tag-inv{margin-right:4px;vertical-align:1px}
+#kartu-riwayat.s-ringkas .dataTables_wrapper>.row:has(.dataTables_length),#kartu-riwayat.s-ringkas .dataTables_wrapper>.row:has(.dataTables_paginate){display:none}
+@media (max-width:900px){.s-lokasi-duo{grid-template-columns:1fr}.s-lokasi-panah{justify-self:center;transform:rotate(90deg)}.s-pindah-baris{grid-template-columns:1fr}}
+
+/* Aksi baris pohon: tombol tambah dan sunting muncul saat baris disorot atau aktif */
+.s-pohon-aksi{display:inline-flex;gap:2px;flex:none;opacity:0;transition:opacity .12s}
+.s-pohon-baris:hover .s-pohon-aksi,.s-pohon-baris.aktif .s-pohon-aksi,.s-pohon-aksi:focus-within{opacity:1}
+.s-pohon-tombol{width:22px;height:22px;border:0;background:transparent;padding:0;border-radius:var(--r-sm);display:inline-flex;align-items:center;justify-content:center;color:var(--s-mid);cursor:pointer}
+.s-pohon-tombol i{font-size:14px}
+.s-pohon-tombol:hover{background:var(--s-paper);color:var(--s-brand-ink);box-shadow:inset 0 0 0 1px var(--s-line)}
+.s-pohon-baris.aktif .s-pohon-tombol{color:var(--s-brand-ink)}
+.s-lokasi-kepala .s-aksi-baris{flex:none;margin-top:2px}
+.s-lokasi-kepala .btn-primary.btn-sm{display:inline-flex;align-items:center;gap:5px}
+
+/* Modal tambah / sunting node lokasi */
+.s-modal-node .modal-header{align-items:flex-start;padding:18px 24px 14px;border-bottom:0}
+.s-modal-node .modal-header .t{flex:1;min-width:0}
+.s-modal-node .modal-header .t b{display:block;font-size:15px;font-weight:600;color:var(--s-ink)}
+.s-modal-node .modal-header .t span{font-size:12.5px;color:var(--s-mid)}
+.s-modal-node .modal-body{padding:4px 24px 20px}
+.s-modal-node .modal-footer{padding:12px 24px 18px;border-top:1px solid var(--s-line);gap:8px}
+.s-modal-node .modal-footer .btn{display:inline-flex;align-items:center;gap:6px;margin:0}
+.s-modal-node #node-galat{margin-top:0}
+
+/* Form gedung dua kolom (viewEditGedung): data gedung di kiri, struktur di kanan */
+.s-gedung-grid{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(320px,1fr);gap:24px;align-items:start}
+.s-form-dua{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:14px}
+.s-form-lokasi .form-check.form-switch{padding-left:2.6em}
+.s-form-lokasi .form-check-label{font-size:13px;color:var(--s-ink)}
+.s-lantai-daftar{border-top:1px solid var(--s-line);display:grid}
+.s-lantai-baris{display:flex;align-items:center;gap:12px;padding:11px 24px;border-bottom:1px solid var(--s-line2);font-size:13px}
+.s-lantai-baris>i{font-size:17px;color:var(--s-mid);flex:none}
+.s-lantai-baris .s-dua-baris{flex:1;min-width:0}
+.s-lantai-baris .s-dua-baris b{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.s-lantai-nonaktif .s-dua-baris b{color:var(--s-mid);text-decoration:line-through}
+.s-lantai-baru{background:var(--s-brand-soft)}
+.s-lantai-kosong{border-bottom:1px solid var(--s-line2)}
+.s-lantai-tambah{padding-top:18px}
+.s-form-lantai{display:grid;grid-template-columns:minmax(0,2fr) minmax(90px,1fr) auto;gap:12px;align-items:end}
+.s-form-lantai label{display:block;font-size:12px;font-weight:600;color:var(--s-ink);margin-bottom:6px}
+.s-form-lantai label em{font-style:normal;color:var(--s-bad)}
+.s-form-lantai .btn{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.s-petunjuk{display:flex;gap:9px;align-items:flex-start;margin-top:16px;padding:10px 12px;border-radius:var(--r-nest);background:var(--s-alt);color:var(--s-mid);font-size:12.5px;line-height:1.45}
+.s-petunjuk i{font-size:16px;flex:none;margin-top:1px}
+.s-petunjuk a{color:var(--s-brand-ink);font-weight:500}
+.s-petunjuk-atas{margin:0 0 18px}
+.s-hirarki{list-style:none;margin:0;padding:0;display:grid}
+.s-hirarki li{display:flex;align-items:center;gap:12px;padding:10px 0;border-bottom:1px solid var(--s-line2);position:relative}
+.s-hirarki li:last-child{border-bottom:0}
+.s-hirarki .s-dua-baris{flex:1;min-width:0}
+.s-hirarki-ikon{width:34px;height:34px;border-radius:var(--r-ctl);background:var(--s-brand-soft);color:var(--s-brand-ink);display:inline-flex;align-items:center;justify-content:center;flex:none}
+.s-hirarki-ikon i{font-size:17px}
+.s-hirarki-no{font-size:11px;font-weight:600;color:var(--s-mid);font-variant-numeric:tabular-nums;background:var(--s-canvas);border:1px solid var(--s-line2);border-radius:var(--r-sm);padding:1px 7px}
+@media (max-width:1024px){.s-gedung-grid{grid-template-columns:1fr}}
+@media (max-width:640px){.s-form-dua,.s-form-lantai{grid-template-columns:1fr}}
+
+/* ---------- Revisi pt.4 (agen pameran-storage): pohon lokasi 3.7 dan Koleksi Tanpa Lokasi 3.9 ---------- */
+/* Tag "Pameran: <nama>" pada simpul ruang yang sedang dipakai pameran */
+.s-pohon-tag{display:inline-flex;align-items:center;font-size:10.5px;font-weight:600;color:var(--s-brand-ink);background:var(--s-brand-soft);border-radius:var(--r-sm);padding:1px 7px;margin-left:6px;white-space:nowrap;max-width:180px;overflow:hidden;text-overflow:ellipsis;line-height:1.6}
+.s-pohon-baris.aktif .s-pohon-tag{background:var(--s-paper);color:var(--s-brand-ink)}
+/* Titik oranye: simpul hasil impor berkas yang belum disunting */
+.s-pohon-dot{display:inline-block;width:8px;height:8px;border-radius:8px;background:var(--k-rawat);margin-left:6px;flex:0 0 8px;box-shadow:0 0 0 2px color-mix(in srgb,var(--k-rawat) 25%,transparent)}
+.s-tipe-rak{display:grid;grid-template-columns:1fr 1fr;gap:8px}.s-tipe-rak input[hidden]{display:none}
+@media (max-width:640px){.s-tipe-rak{grid-template-columns:1fr}}
+/* Modal impor lokasi */
+.s-impor-format{background:var(--s-alt);border:1px solid var(--s-line);border-radius:var(--r-nest);padding:14px 16px;font-size:12.5px;color:var(--s-ink2)}
+.s-impor-format>b{display:block;font-size:13px;color:var(--s-ink);margin-bottom:6px}
+.s-impor-format p{margin:0 0 10px;line-height:1.55}.s-impor-format p:last-of-type{margin-bottom:12px}
+.s-tabel-format{margin:4px 0 12px;background:var(--s-paper)}.s-tabel-format td,.s-tabel-format th{padding:5px 10px;font-size:12px}
+.s-tabel-format td:first-child{font-weight:600;color:var(--s-ink);font-variant-numeric:tabular-nums}
+.s-modal-node .modal-body small.s-muted{display:block;margin-top:6px;font-size:11.5px}
+/* Koleksi Tanpa Lokasi: tingkat lokasi yang terisi, tag impor, alasan hapus */
+.s-lokasi-tingkat{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--s-ink2);white-space:nowrap}
+.s-lokasi-tingkat i{color:var(--s-mid);font-size:15px}.s-lokasi-tingkat b{font-weight:600;color:var(--s-warn-ink)}
+.s-tag-impor{display:inline-flex;align-items:center;gap:4px;font-size:10.5px;font-weight:600;color:var(--s-info-ink);background:var(--s-info-soft);border-radius:var(--r-sm);padding:1px 7px;white-space:nowrap;vertical-align:middle}
+.s-tag-impor i{font-size:12px}
+#table-koleksi-tanpa-lokasi td{white-space:nowrap}#table-koleksi-tanpa-lokasi td:nth-child(3){white-space:normal;min-width:180px}
+#table-koleksi-tanpa-lokasi .s-aksi-sejajar .btn-sm{padding:4px 9px}
+.s-hapus-alasan{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.s-hapus-alasan label{display:flex;align-items:center;gap:8px;border:1px solid var(--s-line);border-radius:var(--r-ctl);padding:9px 12px;font-size:13px;color:var(--s-ink);cursor:pointer;margin:0;font-weight:500}
+.s-hapus-alasan label:has(input:checked){border-color:var(--s-brand);background:var(--s-brand-soft)}
+.s-hapus-alasan input{margin:0;accent-color:var(--s-brand)}
+@media (max-width:640px){.s-hapus-alasan{grid-template-columns:1fr}}
+
+/* 3.7 rata atas dan irama 24 px (permintaan 12/9/2026): kedua kolom menempel ke atas, jarak dari kepala halaman 24 px */
+.s-jelajah{align-items:start!important;margin-top:24px}
+.s-jelajah-kiri,.s-jelajah-kanan{align-self:start}
+.s-jelajah-kanan>.s-card+.s-card{margin-top:0}
+.s-jelajah .s-card-h{align-items:flex-start}
+.s-pohon{padding:10px 12px 14px}
+
+/* 3.8 riwayat: aksi dua baris rapi, Setujui dan Tolak sebaris, Detail dan Hapus sebaris (revisi 12/9/2026) */
+.s-tabel-riwayat .s-aksi-baris{display:inline-grid;grid-template-columns:repeat(2,max-content);gap:6px;justify-content:end}
+.s-tabel-riwayat .s-aksi-baris .btn-primary.s-status{order:1}
+.s-tabel-riwayat .s-aksi-baris .s-tolak{order:2}
+.s-tabel-riwayat .s-aksi-baris>a.btn{order:3}
+.s-tabel-riwayat .s-aksi-baris .s-hapus{order:4;justify-self:start}
+.s-tabel-riwayat .s-aksi-baris .btn-sm{justify-content:center;min-width:88px}
+.s-tabel-riwayat .s-aksi-baris .s-hapus{min-width:0}
+
+/* ---------- Revisi pt.7 (agen storage, butir 11): ringkasan struktur di halaman sunting gedung ---------- */
+.s-struktur{border-bottom:1px solid var(--s-line);padding-bottom:18px}
+.s-struktur+.s-lantai-daftar{border-top:0}
+.s-struktur-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.s-struktur-item{display:grid;justify-items:center;gap:2px;padding:10px 6px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-alt);color:var(--s-ink);text-decoration:none;transition:border-color .15s,background .15s}
+.s-struktur-item:hover{border-color:var(--s-brand);background:var(--s-brand-soft);color:var(--s-brand-ink)}
+.s-struktur-item i{font-size:17px;color:var(--s-mid)}
+.s-struktur-item:hover i{color:var(--s-brand-ink)}
+.s-struktur-item b{font-size:20px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums;letter-spacing:-.3px}
+.s-struktur-item span{font-size:11px;color:var(--s-mid)}
+.s-struktur-kaki{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-top:14px;flex-wrap:wrap;font-size:12.5px}
+.s-struktur-aksi{display:flex;gap:8px}
+.s-struktur-aksi .btn{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
+.s-tabel-ffill td:empty::before{content:"\2193";color:var(--s-mid);font-weight:400}
+@media (max-width:640px){.s-struktur-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* Tombol hapus simpul pohon (revisi pt.7) */
+.s-pohon-tombol.s-pohon-hapus:hover{color:var(--s-bad-ink);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--s-bad) 45%,transparent)}
+/* Revisi 21/9/2026: ruang pamer dan cluster */
+.s-pohon-tag.s-pohon-tag-pamer{background:rgba(224,160,32,.14);color:#8A4B00}.app-skin-dark .s-pohon-tag.s-pohon-tag-pamer{color:#F2C078}
+.s-ruang-tipe{display:flex;gap:18px;flex-wrap:wrap;margin-top:4px}.s-ruang-tipe .form-check{margin:0;display:flex;align-items:center;gap:8px;padding:0}
+.s-ruang-cluster{margin-top:10px;padding:10px 12px 10px 34px;border:1px solid var(--s-line2);border-radius:var(--r-sm);background:var(--s-paper)}
+.s-ruang-cluster .form-check-input{margin-left:-22px}.s-ruang-cluster small{display:block;margin-top:2px;font-size:12px;line-height:1.5}
+.s-pohon-ikon.ti-cube{color:var(--s-brand-ink)}

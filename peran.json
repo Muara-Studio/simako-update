@@ -1,0 +1,44 @@
+[
+ {
+  "slug": "super-admin",
+  "label": "Super Administrator",
+  "user_id": 1,
+  "museum": "Museum Nasional Indonesia"
+ },
+ {
+  "slug": "head-of-iha",
+  "label": "Head of IHA",
+  "user_id": 3,
+  "museum": "Museum Nasional Indonesia"
+ },
+ {
+  "slug": "admin-museum",
+  "label": "Admin Museum",
+  "user_id": 17,
+  "museum": "Museum Batik Indonesia"
+ },
+ {
+  "slug": "kurator",
+  "label": "Kurator",
+  "user_id": 72,
+  "museum": "Museum Nasional Indonesia"
+ },
+ {
+  "slug": "registrar",
+  "label": "Registrar",
+  "user_id": 71,
+  "museum": "Museum Nasional Indonesia"
+ },
+ {
+  "slug": "konservator",
+  "label": "Konservator",
+  "user_id": 6,
+  "museum": "Museum Nasional Indonesia"
+ },
+ {
+  "slug": "tim-pengolah-data",
+  "label": "Tim Pengolah Data SIMAKO",
+  "user_id": 63,
+  "museum": "Museum Nasional Indonesia"
+ }
+]

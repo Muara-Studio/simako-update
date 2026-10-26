@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow, noarchive">
+    <title>SIMAKO</title>
+    <link rel="icon" type="image/x-icon" href="/simako-update/assets/images/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        try { if (localStorage.getItem('app-skin') === 'app-skin-dark') document.documentElement.classList.add('app-skin-dark'); } catch (e) {}
+    </script>
+    <style>
+        :root {
+            --s-canvas: #F4F7F6; --s-paper: #FFFFFF; --s-alt: #FAFCFB;
+            --s-ink: #14211F; --s-ink2: #24322F; --s-mid: #5B6967;
+            --s-line: #E1E7E5; --s-brand: #169E84; --s-brand-h: #127F6B; --s-brand-ink: #0B6E5B; --s-brand-btn: #10836D;
+            --s-brand-soft: rgba(22, 158, 132, .14);
+            --s-shadow: 0 0 0 1px rgba(23, 23, 23, .05), 0 1px 3px rgba(0, 0, 0, .1), 0 1px 2px -1px rgba(0, 0, 0, .1);
+            --kartu: rgba(255, 255, 255, .78); --kartu-garis: rgba(255, 255, 255, .9);
+            --r-card: 10px; --r-ctl: 8px;
+            color-scheme: light;
+        }
+        html.app-skin-dark {
+            --s-canvas: #0E1614; --s-paper: #151E1B; --s-alt: #1A2421;
+            --s-ink: #E4ECE9; --s-ink2: #C2CFCB; --s-mid: #98A8A4;
+            --s-line: #25322E; --s-brand: #35CFB0; --s-brand-h: #5BDCC2; --s-brand-ink: #5BDCC2; --s-brand-btn: #1FAA8E;
+            --s-brand-soft: rgba(53, 207, 176, .13);
+            --s-shadow: 0 0 0 1px rgba(255, 255, 255, .04), 0 1px 3px rgba(0, 0, 0, .5);
+            --kartu: rgba(21, 30, 27, .78); --kartu-garis: rgba(255, 255, 255, .08);
+            color-scheme: dark;
+        }
+        *, *::before, *::after { box-sizing: border-box; }
+        html, body { margin: 0; background: var(--s-canvas); }
+        body {
+            min-height: 100vh;
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+            font-size: 13px; line-height: 1.5; color: var(--s-ink2);
+            -webkit-font-smoothing: antialiased;
+        }
+        .bungkus {
+            position: relative; overflow: hidden; min-height: 100vh;
+            display: flex; align-items: center; justify-content: center; padding: 40px 16px;
+            background: linear-gradient(118deg, rgba(47, 111, 143, .28), rgba(74, 93, 138, .2) 45%, rgba(62, 140, 126, .26));
+        }
+        .kartu {
+            position: relative; width: 100%; max-width: 460px;
+            border-radius: var(--r-card); background: var(--kartu); border: 1px solid var(--kartu-garis);
+            -webkit-backdrop-filter: blur(28px); backdrop-filter: blur(28px);
+            box-shadow: 0 8px 24px -6px rgba(0, 0, 0, .06), var(--s-shadow);
+        }
+        .kartu[hidden] { display: block; visibility: hidden; }
+        .isi { padding: 36px; text-align: center; }
+        .ikon {
+            width: 56px; height: 56px; margin: 0 auto 16px; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            background: var(--s-brand-soft); color: var(--s-brand-ink);
+        }
+        h1 { margin: 0 0 8px; color: var(--s-ink); font-size: 22px; font-weight: 600; letter-spacing: -.3px; line-height: 1.25; }
+        p { margin: 0 0 6px; color: var(--s-mid); }
+        .alamat { margin-top: 10px; font-size: 12px; color: var(--s-mid); word-break: break-all; }
+        .aksi { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 22px; }
+        .tombol {
+            display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 40px; padding: 9px 16px;
+            border-radius: var(--r-ctl); border: 1px solid var(--s-line); background: var(--s-paper); color: var(--s-ink);
+            font: inherit; font-size: 13px; font-weight: 600; text-decoration: none; cursor: pointer;
+        }
+        .tombol:hover { border-color: var(--s-brand); }
+        .tombol.utama { background: var(--s-brand-btn); border-color: var(--s-brand-btn); color: #fff; }
+        html.app-skin-dark .tombol.utama { color: #0E1614; }
+        .tombol.utama:hover { background: var(--s-brand-h); border-color: var(--s-brand-h); }
+        .tombol:focus-visible { outline: 2px solid var(--s-brand); outline-offset: 2px; }
+        .tombol[hidden] { display: none; }
+        .kaki { padding: 14px 36px 18px; border-top: 1px solid var(--s-line); font-size: 12px; color: var(--s-mid); text-align: center; }
+        @media (max-width: 575.98px) {
+            .isi { padding: 28px 20px; }
+            .kaki { padding: 12px 20px 16px; }
+            .aksi .tombol { flex: 1 1 100%; }
+        }
+    </style>
+    <script>
+    /* GitHub Pages menyajikan berkas ini untuk setiap alamat yang tidak ada.
+       1. Varian alamat (tanpa garis miring akhir, index.html, huruf besar) dialihkan ke folder yang ada.
+       2. Akar peran dialihkan ke Beranda peran. Keluar dan login kembali ke halaman pilih peran.
+       3. Selain itu tampil pesan sesuai jenis alamat. */
+    (function (w, d) {
+        'use strict';
+        var DASAR = '/simako-update/';
+        if (DASAR.indexOf('__DA' + 'SAR__') >= 0) DASAR = '/';
+        var LABEL = {
+            'super-admin': 'Super Administrator', 'head-of-iha': 'Head of IHA', 'admin-museum': 'Admin Museum',
+            'kurator': 'Kurator', 'registrar': 'Registrar', 'konservator': 'Konservator', 'tim-pengolah-data': 'Tim Pengolah Data SIMAKO'
+        };
+        var BAHAYA = ['delete', 'hapus', 'remove', 'destroy', 'setuju', 'tolak', 'approve', 'reject', 'reset', 'restore', 'pulihkan'];
+        var EKSPOR = ['cetak', 'print', 'pdf', 'ekspor', 'export', 'excel', 'xlsx', 'csv', 'unduh', 'download'];
+        var lok = w.location, p = lok.pathname, ekor = lok.search + lok.hash;
+
+        function kata(jalur) {
+            var out = [];
+            jalur.split('/').forEach(function (s) {
+                try { s = decodeURIComponent(s); } catch (e) {}
+                s.replace(/([a-z0-9])([A-Z])/g, '$1 $2').toLowerCase().split(/[^a-z0-9]+/).forEach(function (k) { if (k) out.push(k); });
+            });
+            return out;
+        }
+        function ada(jalur, daftar) {
+            return kata(jalur).some(function (k) { return daftar.some(function (w0) { return k.indexOf(w0) === 0; }); });
+        }
+        function cek(url) {
+            if (!w.fetch) return Promise.resolve(null);
+            return w.fetch(url, { method: 'HEAD', cache: 'no-cache', redirect: 'follow' })
+                .then(function (r) { return r.ok ? (r.url || url) : null; })
+                .catch(function () { return null; });
+        }
+        function cekBerurutan(daftar) {
+            return daftar.reduce(function (janji, url) {
+                return janji.then(function (hasil) { return hasil || cek(url); });
+            }, Promise.resolve(null));
+        }
+        function pindah(url) { lok.replace(url); }
+
+        var siapDom = new Promise(function (ok) {
+            if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', ok); else ok();
+        });
+        function tampil(jenis, slug, label, beranda) {
+            siapDom.then(function () {
+                var judul = d.getElementById('judul'), teks = d.getElementById('teks'), alamat = d.getElementById('alamat');
+                var keBeranda = d.getElementById('ke-beranda'), kePeran = d.getElementById('ke-peran'), kembali = d.getElementById('kembali');
+                kePeran.href = DASAR;
+                alamat.textContent = decodeURI(p);
+                if (jenis === 'tulis') {
+                    judul.textContent = 'Perubahan tidak disimpan';
+                    teks.textContent = 'Ini adalah demo dengan data contoh. Tindakan ini tidak mengubah data.';
+                } else if (jenis === 'ekspor') {
+                    judul.textContent = 'Cetak dan ekspor tidak tersedia';
+                    teks.textContent = 'Demo ini tidak membuat berkas cetak atau berkas ekspor.';
+                } else if (jenis === 'peran-kosong') {
+                    judul.textContent = 'Peran ini tidak termasuk demo';
+                    teks.textContent = 'Pilih peran lain untuk melihat demo.';
+                } else if (jenis === 'luar') {
+                    judul.textContent = 'Halaman tidak ditemukan';
+                    teks.textContent = 'Alamat ini tidak ada di demo SIMAKO.';
+                } else {
+                    judul.textContent = 'Halaman ini tidak termasuk demo';
+                    teks.textContent = 'Demo hanya memuat halaman contoh untuk peran ' + label + '.';
+                }
+                if (beranda) { keBeranda.href = beranda; keBeranda.hidden = false; }
+                kembali.hidden = !(w.history.length > 1 && d.referrer);
+                kembali.addEventListener('click', function () { w.history.back(); });
+                d.title = judul.textContent + ' · SIMAKO';
+                d.getElementById('kartu').hidden = false;
+            });
+        }
+
+        if (p.indexOf(DASAR) !== 0) { tampil('luar'); return; }
+        var sisa = p.slice(DASAR.length), seg = sisa.split('/')[0];
+        var dalam = sisa.slice(seg.length);
+
+        var tugas = (LABEL[seg] ? Promise.resolve(true) : w.fetch
+            ? w.fetch(DASAR + 'peran.json', { cache: 'no-cache' }).then(function (r) { return r.ok ? r.json() : []; }).then(function (j) {
+                (Array.isArray(j) ? j : []).forEach(function (x) { if (x && x.slug) LABEL[x.slug] = x.label || x.slug; });
+                return !!LABEL[seg];
+            }).catch(function () { return false; })
+            : Promise.resolve(false));
+
+        tugas.then(function (peran) {
+            if (!peran) {
+                if (/^(login|logout|keluar)(\/|$)/i.test(sisa)) { pindah(DASAR); return; }
+                return cekBerurutan(varian(sisa)).then(function (u) { if (u) pindah(u + ekor); else tampil('luar'); });
+            }
+            var beranda = DASAR + seg + '/dashboard/';
+            if (/(^|\/)(logout|keluar)(\/|$)/i.test(dalam) || /^\/login(\/|$)/i.test(dalam)) { pindah(DASAR); return; }
+            if (dalam === '' || dalam === '/' || /^\/index\.html?$/i.test(dalam)) {
+                return cek(beranda).then(function (u) { if (u) pindah(beranda); else tampil('peran-kosong', seg, LABEL[seg], null); });
+            }
+            return cekBerurutan(varian(sisa)).then(function (u) {
+                if (u) { pindah(u + ekor); return; }
+                return cek(beranda).then(function (adaBeranda) {
+                    if (!adaBeranda) { tampil('peran-kosong', seg, LABEL[seg], null); return; }
+                    var jenis = ada(dalam, BAHAYA) ? 'tulis' : ada(dalam, EKSPOR) ? 'ekspor' : 'halaman';
+                    tampil(jenis, seg, LABEL[seg], beranda);
+                });
+            });
+        });
+
+        /* Varian alamat yang mungkin ada sebagai folder: /a/b, /a/b/index.html, /A/B, /a/b.html -> /a/b/ */
+        function varian(s) {
+            var dasar = s.replace(/\/index\.html?$/i, '').replace(/\.html?$/i, '').replace(/\/{2,}/g, '/').replace(/\/+$/, '');
+            var calon = [dasar + '/', dasar.toLowerCase() + '/'];
+            var hasil = [];
+            calon.forEach(function (c) {
+                var url = DASAR + c;
+                if (c !== '/' && url !== p && hasil.indexOf(url) < 0) hasil.push(url);
+            });
+            return hasil;
+        }
+    })(window, document);
+    </script>
+</head>
+<body>
+<main class="bungkus">
+    <div class="kartu" id="kartu" hidden>
+        <div class="isi">
+            <div class="ikon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0"/><path d="M12 9h.01"/><path d="M11 12h1v4h1"/></svg>
+            </div>
+            <h1 id="judul">Halaman ini tidak termasuk demo</h1>
+            <p id="teks">Demo hanya memuat halaman contoh.</p>
+            <p class="alamat" id="alamat"></p>
+            <div class="aksi">
+                <a class="tombol utama" id="ke-beranda" href="/simako-update/" hidden>Kembali ke Beranda</a>
+                <button type="button" class="tombol" id="kembali" hidden>Kembali</button>
+                <a class="tombol" id="ke-peran" href="/simako-update/">Ganti peran</a>
+            </div>
+        </div>
+        <div class="kaki">Demo SIMAKO dengan data contoh</div>
+    </div>
+</main>
+<noscript><p style="text-align:center">Halaman ini tidak termasuk demo. <a href="/simako-update/">Buka demo SIMAKO</a></p></noscript>
+</body>
+</html>

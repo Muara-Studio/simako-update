@@ -1,0 +1,128 @@
+/* Revisi pt.7: gaya modul Laporan Kondisi koleksi (kondisi/laporan). Token dari custom.css. */
+.s-kd-nomor{display:inline-block;margin-left:8px;font-size:12px;font-weight:600;color:var(--s-brand-ink);background:var(--s-brand-soft);border-radius:var(--r-sm);padding:2px 8px;vertical-align:middle;font-variant-numeric:tabular-nums}
+
+/* Kartu identitas */
+.s-kd-identitas{display:flex;gap:14px;align-items:center;padding-top:6px}
+.s-kd-identitas img{width:72px;height:72px;flex:0 0 72px;border-radius:var(--r-nest);border:1px solid var(--s-line);background:var(--s-alt);object-fit:cover}
+.s-kd-identitas h4{font-size:16px;font-weight:600;margin:0 0 3px;color:var(--s-ink)}
+.s-kd-identitas .jenis{font-size:12.5px;color:var(--s-mid)}
+.s-kd-ukuran{margin-top:20px;padding-top:16px;border-top:1px solid var(--s-line2)}
+.s-kd-ukuran-h{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:12px}
+.s-kd-ukuran-h b{flex:1;font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--s-ink)}
+.s-kd-ukuran-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 16px}
+.s-kd-ukuran-grid div{display:flex;justify-content:space-between;gap:8px;font-size:13px;padding:6px 0;border-bottom:1px dashed var(--s-line2)}
+.s-kd-ukuran-grid span{color:var(--s-mid)}
+.s-kd-ukuran-grid b{font-weight:600;color:var(--s-ink);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* Riwayat laporan */
+.s-kd-riwayat{display:grid;gap:8px}
+.s-kd-riwayat .item{display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:center;padding:10px 12px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-paper);color:inherit;text-decoration:none}
+.s-kd-riwayat .item:hover{background:var(--s-alt);border-color:color-mix(in srgb,var(--s-brand) 40%,var(--s-line))}
+.s-kd-riwayat .item.aktif{border-color:var(--s-brand);background:var(--s-brand-soft)}
+.s-kd-riwayat .ik{width:32px;height:32px;border-radius:var(--r-nest);border:1px solid var(--s-line);background:var(--s-alt);display:flex;align-items:center;justify-content:center;color:var(--s-brand);font-size:15px}
+.s-kd-riwayat .item.aktif .ik{background:var(--s-paper)}
+.s-kd-riwayat .isi{min-width:0}
+.s-kd-riwayat .isi b{display:block;font-size:13px;font-weight:600;color:var(--s-ink);font-variant-numeric:tabular-nums}
+.s-kd-riwayat .isi span{display:block;font-size:12px;color:var(--s-mid);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.s-kd-riwayat .isi span i{font-size:12px;margin:0 2px 0 4px}
+
+/* Panel kanan */
+.s-kd-pane{padding-top:22px}
+.s-kd-pane .s-seksi-h .btn span{color:inherit;font-size:inherit} /* .s-seksi-h span (koleksi.css) meredupkan teks tombol di kepala seksi */
+.s-kd-pane .s-seksi-h .btn{flex:0 0 auto}
+.s-kd-mulai{display:grid;justify-items:center;gap:8px;padding:40px 24px}
+.s-kd-mulai i{font-size:40px;color:var(--s-brand);opacity:.8}
+.s-kd-mulai b{font-size:15px;color:var(--s-ink)}
+.s-kd-mulai p{max-width:440px;margin:0 0 8px;font-size:13px;color:var(--s-mid)}
+.s-kd-aksi{display:flex;justify-content:flex-end;gap:12px;padding-top:4px}
+
+/* Enam sudut foto kondisi umum */
+.s-kd-sudut-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.s-kd-sudut{margin:0;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-alt);overflow:hidden}
+.s-kd-sudut .bingkai{position:relative;aspect-ratio:4/3;background:var(--s-canvas);display:flex;align-items:center;justify-content:center}
+.s-kd-sudut .bingkai a{display:block;width:100%;height:100%}
+.s-kd-sudut .bingkai img{display:block;width:100%;height:100%;object-fit:cover}
+.s-kd-sudut .tanpa{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:12px;color:var(--s-mid)}
+.s-kd-sudut .tanpa i{font-size:26px;color:var(--s-line)}
+.s-kd-sudut.ada .tanpa{display:none}
+.s-kd-sudut figcaption{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:8px 10px;border-top:1px solid var(--s-line)}
+.s-kd-sudut figcaption b{font-size:12.5px;font-weight:600;color:var(--s-ink)}
+.s-kd-sudut figcaption .btn{padding:3px 9px;font-size:12px}
+
+/* Foto rinci */
+.s-kd-rinci{display:grid;gap:14px}
+.s-kd-rinci-item{display:grid;grid-template-columns:28px 160px 1fr;gap:14px;align-items:start;padding:12px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-paper)}
+.s-kd-rinci-item .no{width:28px;height:28px;border-radius:var(--r-nest);background:var(--s-brand-soft);color:var(--s-brand-ink);font-size:12.5px;font-weight:600;display:flex;align-items:center;justify-content:center;font-variant-numeric:tabular-nums}
+.s-kd-rinci-item .gambar{display:block;border:1px solid var(--s-line);border-radius:var(--r-nest);overflow:hidden;background:var(--s-canvas)}
+.s-kd-rinci-item .gambar img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.s-kd-rinci-item .isi{display:grid;gap:8px;min-width:0}
+.s-kd-rinci-item textarea{font-size:13px;resize:vertical}
+.s-kd-rinci-item .aksi{display:flex;align-items:center;gap:6px}
+.s-kd-rinci-item .aksi .status{flex:1;font-size:12px}
+.s-kd-rinci-item .aksi .btn{padding:3px 8px}
+.s-kd-rinci-item .aksi .btn i{font-size:14px}
+
+/* Catatan pemeriksaan */
+.s-kd-pic{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:10px}
+.s-kd-meta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;padding:12px 14px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-alt)}
+.s-kd-meta div{display:grid;gap:3px;font-size:13px}
+.s-kd-meta span{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--s-mid)}
+.s-kd-meta span i{font-size:14px;color:var(--s-brand)}
+.s-kd-meta b{font-weight:600;color:var(--s-ink)}
+.s-kd-meta b small{display:block;font-size:11.5px;font-weight:400;color:var(--s-mid)}
+
+/* Log pergerakan: formulir tambah lalu garis waktu */
+.s-kd-gerak-form{padding:16px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-alt);margin-bottom:20px}
+.s-kd-gerak-form .s-kd-aksi{padding-top:14px}
+.s-kd-linimasa{position:relative;display:grid;gap:12px;padding-left:4px}
+.s-kd-linimasa::before{content:"";position:absolute;left:19px;top:16px;bottom:16px;width:2px;background:var(--s-line)}
+.s-kd-gerak{position:relative;display:grid;grid-template-columns:32px 1fr auto;gap:12px;align-items:start}
+.s-kd-gerak .titik{position:relative;z-index:1;width:32px;height:32px;border-radius:50%;border:2px solid var(--s-brand);background:var(--s-paper);color:var(--s-brand);display:flex;align-items:center;justify-content:center;font-size:15px}
+.s-kd-gerak .isi{padding:10px 14px;border:1px solid var(--s-line);border-radius:var(--r-nest);background:var(--s-paper);min-width:0}
+.s-kd-gerak .rute{display:flex;align-items:center;gap:8px;flex-wrap:wrap;font-size:13px}
+.s-kd-gerak .rute b{font-weight:600;color:var(--s-ink)}
+.s-kd-gerak .rute i{color:var(--s-brand);font-size:16px}
+.s-kd-gerak .meta{display:flex;flex-wrap:wrap;gap:4px 14px;margin-top:4px;font-size:12px;color:var(--s-ink2)}
+.s-kd-gerak .meta span{display:inline-flex;align-items:center;gap:4px}
+.s-kd-gerak .meta i{font-size:13px;color:var(--s-mid)}
+.s-kd-gerak>.btn{padding:3px 8px;margin-top:6px}
+
+@media (max-width:1100px){.s-kd-sudut-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){
+  .s-kd-sudut-grid,.s-kd-ukuran-grid,.s-kd-meta,.s-kd-pic{grid-template-columns:1fr}
+  .s-kd-rinci-item{grid-template-columns:28px 1fr}
+  .s-kd-rinci-item .isi{grid-column:1/-1}
+  .s-kd-gerak{grid-template-columns:32px 1fr}
+  .s-kd-gerak>.btn{grid-column:2}
+}
+
+/* ==========================================================================
+   Ponsel (MOBILE.md, agen M1, 24/10/2026). Hanya di bawah 768 px; desktop tidak berubah.
+   Urutan kartu dan tab satu baris mengikuti aturan detail koleksi di revisi/koleksi.css (.s-detail-samping, .s-tabs-detail).
+   ========================================================================== */
+@media (max-width:767.98px){
+  .s-kd-nomor{font-size:12px;vertical-align:3px}
+  .s-detail-samping .s-card-b{padding:0 16px 16px!important}
+  .s-kd-identitas img{width:64px;height:64px;flex-basis:64px}
+  .s-kd-identitas h4{font-size:18px}
+  .s-kd-ukuran{margin-top:14px;padding-top:12px}
+  .s-kd-ukuran-h .s-segmen button{min-width:40px;min-height:40px}
+  .s-kd-ukuran-grid{grid-template-columns:1fr;gap:0}
+  .s-kd-ukuran-grid div{padding:8px 0}
+  .s-kd-riwayat .item{min-height:56px}
+  .s-kd-pane{padding:16px!important}
+  .s-kd-pane .s-seksi-h{gap:8px}
+  .s-kd-pane .s-seksi-h span{font-size:13px}
+  .s-kd-pane .s-seksi-h .btn{min-height:44px;width:100%;justify-content:center}
+  /* Enam sudut dua kolom, tombol unggah selebar ubin */
+  .s-kd-sudut-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .s-kd-sudut figcaption{flex-direction:column;align-items:stretch;gap:6px;padding:8px}
+  .s-kd-sudut figcaption b{font-size:13px;line-height:1.3}
+  .s-kd-sudut figcaption .btn{min-height:40px;justify-content:center;font-size:13px;padding:0 8px}
+  .s-kd-rinci-item .btn-sm{min-width:40px;min-height:40px;justify-content:center}
+  .s-kd-pane .form-control,.s-kd-pane .form-select{min-height:44px;font-size:16px!important}
+  .s-kd-pane textarea.form-control{min-height:96px}
+  .s-kd-aksi{justify-content:stretch}
+  .s-kd-aksi .btn{flex:1 1 100%;min-height:46px;justify-content:center}
+  .s-kd-gerak>.btn{min-height:40px;min-width:40px;justify-content:center}
+}
