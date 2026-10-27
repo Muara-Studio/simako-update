@@ -623,14 +623,31 @@
             return true;
         }
         function langkahPeran(){ return LANGKAH.filter(boleh); }
-        function halamanKini(){ var p = location.href.replace(B, '').replace(/^\/+/, '').split('?')[0]; return p === '' ? 'dashboard' : p; }
+        /* Jalur halaman relatif terhadap SIMAKO.base, dibandingkan per pathname agar base absolut (http://host/)
+           maupun relatif (/simako-update/peran/, demo statis) sama hasilnya; garis miring akhir dan index.html diabaikan. */
+        function halamanKini(){
+            var pu = location.pathname, pb = new URL(B, location.href).pathname;
+            var p = pu.indexOf(pb) === 0 ? pu.slice(pb.length) : pu;
+            p = p.replace(/^\/+/, '').replace(/index\.html?$/, '').replace(/\/+$/, '');
+            return p === '' ? 'dashboard' : p;
+        }
         var KEY = 'simako_tour_idx';
+        /* Pengaman: bila tur terus mengarahkan ke halaman yang sama (alamat tidak pernah cocok), hentikan tur
+           setelah dua kali dalam 15 detik agar halaman tidak dimuat ulang tanpa henti. */
+        function bolehAlih(tujuan){
+            var c = {}; try { c = JSON.parse(sessionStorage.getItem('simako_tour_alih') || '{}'); } catch (e) {}
+            var kini = Date.now(), sama = c.p === tujuan && kini - (c.t || 0) < 15000;
+            c = { p: tujuan, n: sama ? (c.n || 0) + 1 : 1, t: kini };
+            try { sessionStorage.setItem('simako_tour_alih', JSON.stringify(c)); } catch (e) {}
+            if (c.n > 2) { localStorage.removeItem(KEY); return false; }
+            return true;
+        }
         function jalankanDari(mulai){
             if (!window.driver || !driver.js) return;
             var steps = langkahPeran(); var i = mulai || 0;
             if (i >= steps.length) { localStorage.removeItem(KEY); return; }
             var s = steps[i];
-            if (s.page !== halamanKini()) { localStorage.setItem(KEY, String(i)); location.href = d(s.page); return; }
+            if (s.page.replace(/\/+$/, '') !== halamanKini()) { if (!bolehAlih(s.page)) return; localStorage.setItem(KEY, String(i)); location.href = d(s.page); return; }
             var tersedia = []; for (var k = i; k < steps.length; k++) { if (steps[k].page !== s.page) break; var elT = document.querySelector(steps[k].el); if (elT && elT.getClientRects().length) tersedia.push(steps[k]); }   /* elemen tersembunyi (mis. layar penuh di ponsel) dilewati */
             if (!tersedia.length) { jalankanDari(i + 1); return; }
             var ke = i + tersedia.length;

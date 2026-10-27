@@ -788,6 +788,26 @@
 
   if (d.readyState === 'loading') d.addEventListener('DOMContentLoaded', siapkanDom); else siapkanDom();
 
+  /* Menu aktif di sidebar. footer.php mencocokkan href tautan dengan alamat absolut halaman; di demo href berupa
+     jalur relatif dan alamat berakhiran garis miring, jadi pencocokan aslinya selalu gagal. Di sini dicocokkan per
+     pathname tanpa garis miring akhir, lalu diberi kelas yang sama seperti footer.php. */
+  function tandaiMenuAktif() {
+    var rapi = function (p) { return p.replace(/index\.html?$/, '').replace(/\/+$/, ''); };
+    var kini = rapi(w.location.pathname), cocok = null;
+    var tautan = d.querySelectorAll('.nxl-navigation a[href], .nxl-navbar a[href]');
+    for (var i = 0; i < tautan.length; i++) {
+      var a = tautan[i], h = a.getAttribute('href') || '';
+      if (h.indexOf('javascript:') === 0 || h === '#') continue;
+      var p; try { p = rapi(new URL(a.href, w.location.href).pathname); } catch (e) { continue; }
+      if (p === kini) { cocok = a; break; }
+    }
+    if (!cocok || !w.jQuery) return;
+    var $ = w.jQuery;
+    $(cocok).parents().addClass('active');
+    $(cocok).parents('li').addClass('nxl-trigger');
+  }
+  w.addEventListener('load', function () { setTimeout(tandaiMenuAktif, 50); });
+
   w.__simakoDemo = {
     dasar: DASAR, peran: SLUG, label: LABEL_PERAN, log: log, siap: siap, indeks: INDEKS,
     kunci: kunci, urai: urai, telaah: telaah, toast: function (p) { toast(p); }, versi: 1
